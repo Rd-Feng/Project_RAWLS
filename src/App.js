@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
 import NavBar from './Models/NavBar'
-//import ContractItem from './Models/ConatractItem'
+import Contracts from './Models/Contracts'
 import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -18,6 +18,7 @@ class App extends Component {
           <Route exact={true} path='/contract' render={() => (
             <div className="App">
               <NavBar />
+              <Contracts />
             </div>
           )}/>
         </div>
