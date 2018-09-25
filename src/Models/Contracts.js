@@ -7,8 +7,6 @@ class Contracts extends Component {
     return (
       <div className="contracts">
         <ContractItem />
-        <ContractItem />
-        <ContractItem />
       </div>
     )
   }
