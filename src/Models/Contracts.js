@@ -11,7 +11,7 @@ class Contracts extends Component {
   /* function to load all contracts into state */
   getContracts () {
     this.state = {contracts:[
-      { title: "Amazon", open: true },
+      { title: "Amazon", open: false },
       { title: "Fitbit", open: false },
       { title: "Google", open: false }
     ]};
