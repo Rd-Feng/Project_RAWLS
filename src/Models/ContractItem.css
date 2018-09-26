@@ -42,6 +42,7 @@
   width: 60px;
   height: 34px;
   align: center;
+  float: right;
 }
 .switch input {display:none;}
 
@@ -89,18 +90,37 @@ input:checked + .slider:before {
   color: white;
   padding: 14px 28px;
   cursor: pointer;
-  background-color: #4CAF50;
+  background-color: #81E870;
+  margin-left: 0%;
+  margin-right:38%
 }
 .submit:hover {
-  background-color: #46a049
+  background-color: #70D642
 }
 .cancel {
   border: none;
   color: white;
-  padding: 14px 28px;
+  padding: 14px 29.5px;
   cursor: pointer;
-  background-color: #f44336;
+  background-color: #ff704d;
+   margin-right: 10%;
 }
 .cancel:hover {
-  background-color: #da190b;
+  background-color: #ff5c33;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
 }
