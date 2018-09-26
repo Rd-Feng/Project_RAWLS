@@ -1,30 +1,29 @@
-import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import './App.css';
-import NavBar from './Models/NavBar'
-import Contracts from './Models/Contracts'
-import {BrowserRouter, Route} from 'react-router-dom';
+  import React, { Component } from 'react';
+  import './App.css';
+  import NavBar from './Models/NavBar'
+  import Contracts from './Models/Contracts'
+  import {BrowserRouter, Route} from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-        <BrowserRouter>
-        <div>
-          <Route exact={true} path='/' render={() => (
-            <div className="App">
-              <NavBar />
-            </div>
-          )}/>
-          <Route exact={true} path='/contract' render={() => (
-            <div className="App">
-              <NavBar />
-              <Contracts />
-            </div>
-          )}/>
-        </div>
-      </BrowserRouter>
-    );
+  class App extends Component {
+    render() {
+      return (
+          <BrowserRouter>
+          <div>
+            <NavBar />
+            <main>
+              <Route exact={true} path='/' render={() => (
+                <h1>Home page content place holder</h1>
+              )}/>
+              <Route exact={true} path='/contract' render={() => (
+                <div className="App">
+                  <Contracts />
+                </div>
+              )}/>
+            </main>
+          </div>
+        </BrowserRouter>
+      );
+    }
   }
-}
 
-export default App;
+  export default App;

@@ -17,7 +17,7 @@ class ContractItem extends Component {
 		const accordionState = this.state.show_panel ? 'active' : '';
 		const accordionClass = `accordion ${accordionState}`;
     return (
-				<div className="main">
+				<div>
 					<button onClick={() => {this.toggleState();}}
 						className={accordionClass}>{this.props.contract.title}
 					</button>
