@@ -15,9 +15,7 @@
   margin: auto;
   text-decoration: none;
 }
-.i {
-  margin-right: auto;
-}
+
 .sidebar a.current {
   background-color: #5CA2D5;
   color: white;
@@ -27,12 +25,22 @@
   background-color: #555;
   color: white;
 }
+.cancel, .submit {
+  font-size: 1.25em;
+  border-radius: 55px;
+}
 
+@media screen and (min-width: 641px) and (max-width: 800px) {
+  .bynIcons{
+    text-align: center;
+  }
+.cancel, .submit {
+  font-size: 1.25em;
+  border-radius: 35px;
+}
 
-@media screen and (max-width: 640px) {
-
-.sidebar a {
-  width: 100%;
+.sidebar a{
+  width: 10%;
   align-items: stretch;
   flex-flow: row nowrap;
   list-style: none;
@@ -42,6 +50,24 @@
   padding: auto;
 }
 
+}
+
+
+@media screen and (max-width: 640px) {
+
+.sidebar a {
+  width: 10%;
+  align-items: stretch;
+  flex-flow: row nowrap;
+  list-style: none;
+  position: relative;
+  display: flex;
+  margin: auto;
+  padding: auto;
+}
+.bynIcons{
+  text-align: center;
+}
 .textByn {
   font-size: 0;
 }

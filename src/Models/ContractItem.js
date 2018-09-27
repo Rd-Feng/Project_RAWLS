@@ -22,18 +22,18 @@ class ContractItem extends Component {
 						className={accordionClass}>{this.props.contract.title}
 					</button>
 					<div className="panel">
-					 <span>Age</span>
-							<label className="switch">
-								<input type="checkbox"/>
-								<span className="slider round"></span>
-							</label>
-
-						<p>Gender
+					 <p className="infoText">Age
 							<label className="switch">
 								<input type="checkbox"/>
 								<span className="slider round"></span>
 							</label></p>
-						<p>Location
+
+						<p className="infoText">Gender
+							<label className="switch">
+								<input type="checkbox"/>
+								<span className="slider round"></span>
+							</label></p>
+						<p className="infoText">Location
 							<label className="switch">
 								<input type="checkbox"/>
 								<span className="slider round"></span>
