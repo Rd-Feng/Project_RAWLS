@@ -9,12 +9,15 @@
 }
 
 .sidebar a {
-  display: block;
+  display: flex;
   color: black;
   padding: 16px;
+  margin: auto;
   text-decoration: none;
 }
-
+.i {
+  margin-right: auto;
+}
 .sidebar a.current {
   background-color: #5CA2D5;
   color: white;
@@ -23,4 +26,24 @@
 .sidebar a:hover:not(.current) {
   background-color: #555;
   color: white;
+}
+
+
+@media screen and (max-width: 640px) {
+
+.sidebar a {
+  width: 100%;
+  align-items: stretch;
+  flex-flow: row nowrap;
+  list-style: none;
+  position: relative;
+  display: flex;
+  margin: auto;
+  padding: auto;
+}
+
+.textByn {
+  font-size: 0;
+}
+
 }

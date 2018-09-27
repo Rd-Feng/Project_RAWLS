@@ -39,8 +39,10 @@ class ContractItem extends Component {
 								<span className="slider round"></span>
 							</label>
 						 </p>
+						 <div className= "buttons">
 						<button className="submit">Submit</button>
 						<button className="cancel">Cancel</button>
+							</div>
 					</div>
 				</div>
 		)

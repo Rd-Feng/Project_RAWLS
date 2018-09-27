@@ -4,13 +4,25 @@
     color: #444;
     cursor: pointer;
     padding: 15px;
-    width: 70%;
+    width: 90%;
     border: none;
     text-align: center;
     outline: none;
     margin: 10px;
     transition: 0.4s;
-    font-size: 16px;
+    font-size: 20px;
+}
+.main{
+    text-align: center;
+}
+.App{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+.p {
+  text-align: left;
 }
 .active, .accordion:hover {
     background-color: #ccc;
@@ -18,7 +30,7 @@
 .panel {
     padding: 0 18px;
     background-color: white;
-    font-size: 16px;
+    font-size: 1.4em;
     display: none;
     overflow: hidden;
 }
@@ -42,6 +54,7 @@
   width: 60px;
   height: 34px;
   align: center;
+  float: right;
 }
 .switch input {display:none;}
 
@@ -55,6 +68,7 @@
   background-color: #ccc;
   -webkit-transition: .3s;
   transition: .3s;
+  margin-right: 10%
 }
 .slider:before {
   position: absolute;
@@ -87,20 +101,86 @@ input:checked + .slider:before {
 .submit {
   border: none;
   color: white;
-  padding: 14px 28px;
+  padding: 5% 10%;
   cursor: pointer;
-  background-color: #4CAF50;
+  background-color: #81E870;
+  margin: 5%
 }
 .submit:hover {
-  background-color: #46a049
+  background-color: #70D642
 }
 .cancel {
   border: none;
   color: white;
-  padding: 14px 28px;
+  padding: 5% 10%;
   cursor: pointer;
-  background-color: #f44336;
+  background-color: #ff704d;
+  margin: 5%;
 }
 .cancel:hover {
-  background-color: #da190b;
+  background-color: #ff5c33;
+}
+/* ipad 700-1000 px */
+@media screen and (min-width: 641px) and (max-width: 800px) {
+  .sidebar {
+    color: blue;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+/* for tiny stuff aka phones */
+@media screen and (max-width: 640px) {
+  .main{
+    width:100%;
+    margin: auto;
+    display: flex;
+    border-bottom: solid;
+    border-color: #2d3c49;
+    justify-content: space-between;
+  }
+  .fa{
+    width: 40px;
+    padding: 4px;
+  }
+  .mainInterface{
+    text-align: center;
+  }
+  .sidebar{
+    width: 100%;
+    height: auto;
+    position: sticky;
+    color: black;
+
+  }
+  .buttons{
+    display: inline-block;
+    width:100%;
+    text-align: center;
+  }
+  .submit{
+    display: inline-block;
+    border-radius: 25px;
+    float:left;
+  }
+  .cancel{
+    display: inline-block;
+    border-radius: 25px;
+    float: right;
+  }
+  .sidebar a {
+    text-align: center;
+    /*float: none;*/
+    display: inline;
+    white-space: nowrap;
+    white-space: pre;
+    /*width: 70px;*/
+    /*height: 100%;*/
+    /*position: relative;*/
+  }
+  .textByn {
+    font-size: 0;
+  }
 }
