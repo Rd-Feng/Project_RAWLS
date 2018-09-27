@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Models/Header'
+import Footer from './Models/Footer'
+import Homepage from './Models/Homepage'
 import NavBar from './Models/NavBar'
 import Contracts from './Models/Contracts'
 import {BrowserRouter, Route} from 'react-router-dom';
@@ -7,22 +10,24 @@ import {BrowserRouter, Route} from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-        <BrowserRouter>
+      <BrowserRouter>
         <div>
           <Header />
-          <main>
+          <div className="main">
             <NavBar />
-            <Route exact={true} path='/' render={() => (
-              <Homepage />
-            )}/>
-            <Route exact={true} path='/contract' render={() => (
-              <div className="App">
-                <Contracts />
-              </div>
-            )}/>
-          </main>
-          <Footer />
+            <div className="content">
+              <Route exact={true} path='/' render={() => (
+                <Homepage />
+              )}/>
+              <Route exact={true} path='/contract' render={() => (
+                <div>
+                  <Contracts />
+                </div>
+              )}/>
+            </div>
           </div>
+          <Footer />
+        </div>
       </BrowserRouter>
     );
   }
