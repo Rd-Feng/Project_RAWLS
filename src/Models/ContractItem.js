@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Collapse, Button, CardBody, Card, CardTitle, CardText  } from 'reactstrap'
 import './ContractItem.css'
 
 class ContractItem extends Component {
@@ -13,11 +14,11 @@ class ContractItem extends Component {
 		this.setState({show_panel: this.props.contract.open})
 	}
 
-  render () {
+	render () {
 		const accordionState = this.state.show_panel ? 'active' : '';
 		const accordionClass = `accordion ${accordionState}`;
-    return (
-				<div>
+		return (
+			<div>
 					<button onClick={() => {this.toggleState();}}
 						className={accordionClass}>{this.props.contract.title}
 					</button>
@@ -43,8 +44,9 @@ class ContractItem extends Component {
 						<button className="cancel">Cancel</button>
 					</div>
 				</div>
-		)
-	}
-}
 
-export default ContractItem;
+						)
+					}
+				}
+
+				export default ContractItem;
