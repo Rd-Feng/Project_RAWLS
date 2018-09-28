@@ -107,7 +107,11 @@ input:checked + .slider:before {
   padding: 5% 10%;
   cursor: pointer;
   background-color: #81E870;
+
   margin: 5%
+
+  margin-right:38%
+
 }
 .submit:hover {
   background-color: #70D642
@@ -119,10 +123,17 @@ input:checked + .slider:before {
   cursor: pointer;
   background-color: #ff704d;
   margin: 5%;
+
+  padding: 14px 29.5px;
+  cursor: pointer;
+  background-color: #ff704d;
+   margin-right: 10%;
+
 }
 .cancel:hover {
   background-color: #ff5c33;
 }
+
 /* ipad 700-1000 px */
 @media screen and (min-width: 641px) and (max-width: 800px) {
 
@@ -231,4 +242,22 @@ i{
   text-align: left;
 }
 
+/* rays stuff
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  */
 }
