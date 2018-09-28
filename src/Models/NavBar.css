@@ -24,3 +24,7 @@
   background-color: #555;
   color: white;
 }
+
+.profile_pic {
+  width: inherit;
+}

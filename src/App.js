@@ -12,7 +12,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Header />
           <div className="main">
             <NavBar />
             <div className="content">
@@ -26,7 +25,6 @@ class App extends Component {
               )}/>
             </div>
           </div>
-          <Footer />
         </div>
       </BrowserRouter>
     );
