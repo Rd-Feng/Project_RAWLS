@@ -15,7 +15,7 @@ class App extends Component {
           <Header />
           <div className="main">
             <NavBar />
-            <div className="content">
+            <div className="content mainInterface">
               <Route exact={true} path='/' render={() => (
                 <Homepage />
               )}/>
@@ -30,7 +30,7 @@ class App extends Component {
         </div>
       </BrowserRouter>
     );
+
   }
-}
 
 export default App;

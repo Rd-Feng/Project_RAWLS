@@ -9,9 +9,10 @@
 }
 
 .sidebar a {
-  display: block;
+  display: flex;
   color: black;
   padding: 16px;
+  margin: auto;
   text-decoration: none;
 }
 
@@ -23,4 +24,52 @@
 .sidebar a:hover:not(.current) {
   background-color: #555;
   color: white;
+}
+.cancel, .submit {
+  font-size: 1.25em;
+  border-radius: 55px;
+}
+
+@media screen and (min-width: 641px) and (max-width: 800px) {
+  .bynIcons{
+    text-align: center;
+  }
+.cancel, .submit {
+  font-size: 1.25em;
+  border-radius: 35px;
+}
+
+.sidebar a{
+  width: 10%;
+  align-items: stretch;
+  flex-flow: row nowrap;
+  list-style: none;
+  position: relative;
+  display: flex;
+  margin: auto;
+  padding: auto;
+}
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+.sidebar a {
+  width: 10%;
+  align-items: stretch;
+  flex-flow: row nowrap;
+  list-style: none;
+  position: relative;
+  display: flex;
+  margin: auto;
+  padding: auto;
+}
+.bynIcons{
+  text-align: center;
+}
+.textByn {
+  font-size: 0;
+}
+
 }
