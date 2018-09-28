@@ -1,40 +1,40 @@
 /* drop down for contracts */
 .accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 15px;
-    width: 70%;
-    border: none;
-    text-align: center;
-    outline: none;
-    margin: 10px;
-    transition: 0.4s;
-    font-size: 16px;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 15px;
+  width: 70%;
+  border: none;
+  text-align: center;
+  outline: none;
+  margin: 10px;
+  transition: 0.4s;
+  font-size: 16px;
 }
 .active, .accordion:hover {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 .panel {
-    padding: 0 18px;
-    background-color: white;
-    font-size: 16px;
-    display: none;
-    overflow: hidden;
+  width: 550px;
+  padding: 0 18px;
+  font-size: 16px;
+  display: none;
+  overflow: hidden;
 }
 .active + .panel {
   display: block;
 }
 .accordion:after {
-    content: '\02795';
-    color: #777;
-    float: right;
-    margin-left: 5px;
+  content: '\02795';
+  color: #777;
+  float: right;
+  margin-left: 5px;
 }
 
 .active:after {
-    content: "\2796";
-    margin-left: 5px;
+  content: "\2796";
+  margin-left: 5px;
 }
 .switch {
   position: relative;
@@ -103,7 +103,7 @@ input:checked + .slider:before {
   padding: 14px 29.5px;
   cursor: pointer;
   background-color: #ff704d;
-   margin-right: 10%;
+  margin-right: 10%;
 }
 .cancel:hover {
   background-color: #ff5c33;
