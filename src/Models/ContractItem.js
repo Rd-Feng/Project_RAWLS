@@ -17,20 +17,20 @@ class ContractItem extends Component {
 		const accordionState = this.state.show_panel ? 'active' : '';
 		const accordionClass = `accordion ${accordionState}`;
 		let permissions;
-			permissions = this.props.contract.perms.map(perm => {
-				return (
-					<div key={perm.title}>
-						<p>{perm.title}
-							<label className="switch">
-								<input
-									type="checkbox"
-									defaultChecked={perm.perm ? 'checked' : ''}
-								/>
-								<span className="slider round"></span>
-							</label></p>
-						</div>
-					);
-				})
+		permissions = this.props.contract.perms.map(perm => {
+			return (
+				<div key={perm.title}>
+					<p>{perm.title}
+						<label className="switch">
+							<input
+								type="checkbox"
+								defaultChecked={perm.perm ? 'checked' : ''}
+							/>
+							<span className="slider round"></span>
+						</label></p>
+					</div>
+				);
+			})
 
 			return (
 				<div>

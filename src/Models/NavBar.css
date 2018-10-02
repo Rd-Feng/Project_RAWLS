@@ -1,7 +1,7 @@
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 18%;
   background-color: #f1f1f1;
   position: fixed;
   height: 100%;
@@ -11,8 +11,19 @@
 .sidebar a {
   display: block;
   color: black;
-  padding: 16px;
+  padding: 7%;
   text-decoration: none;
+}
+
+.fa {
+  transform: scale(1.8, 1.8); /* this may cause issues in other browsers */
+  margin-right: 5%;
+}
+
+.faText {
+  float: right;
+  margin-right: 4%;
+  font-size: 130%;
 }
 
 .sidebar a.current {
@@ -26,5 +37,36 @@
 }
 
 .profile_pic {
-  width: inherit;
+  width: 100%;
 }
+
+/** 800 - 1000 px is around the avg tablets widest widths */
+@media screen and (max-width: 800px) {
+
+.sidebar {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    overflow: hidden;
+  }
+
+.profile_pic {
+  width: 10%;
+  float: right;
+  margin: 1%;
+  border-radius: 50%;
+}
+
+.faText{
+  font-size: 0;
+}
+
+.sidebar a{
+  width: 14%;
+  text-align: center;
+  float: left;
+  padding: 4%;
+}
+}
+
+/** media for 480 and mobile phones seem to be unecessary as of now */
