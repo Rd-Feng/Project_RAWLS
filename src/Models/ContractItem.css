@@ -1,3 +1,6 @@
+.right {
+  float: right;
+}
 /* drop down for contracts */
 .accordion {
   background-color: #eee;
@@ -127,7 +130,7 @@ input:checked+.slider:before {
   background-color: #70D642
 }
 
-.cancel {
+.close {
   font-size: .65em;
   border-radius: 2em;
   border: none;
@@ -146,7 +149,7 @@ input:checked+.slider:before {
   height: 100%;
 }
 
-.cancel:hover {
+.close:hover {
   background-color: #ff5c33;
 }
 

@@ -9,8 +9,14 @@ class ContractItem extends Component {
 			show_panel: false
 		}
 	}
-	toggleState () {
+	togglePanel () {
 		let news = !this.state.show_panel
+		this.setState({show_panel: news})
+	}
+	resetContract () {
+		let news = !this.state.show_panel
+		this.setState({show_panel: news})
+		news = !news
 		this.setState({show_panel: news})
 	}
 	render () {
@@ -34,13 +40,20 @@ class ContractItem extends Component {
 
 			return (
 				<div>
-					<button onClick={() => {this.toggleState();}}
+					<button onClick={() => {this.togglePanel();}}
 						className={accordionClass}>{this.props.contract.title}
 					</button>
 					<div className="panel">
 						{permissions}
-						<button className="submit">Submit</button>
-						<button className="cancel">Cancel</button>
+						<button className="close" onClick={() => {this.togglePanel();}}>
+							Close
+						</button>
+						<button className="submit right">
+							Submit
+						</button>
+						<button className="close right" onClick={() => {this.resetContract();}}>
+							Reset
+						</button>
 					</div>
 				</div>
 			)
