@@ -13,17 +13,22 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <div className="main">
-            <NavBar />
-            <div className="content">
-              <Route exact={true} path='/' render={() => (
-                <Homepage />
-              )}/>
-              <Route exact={true} path='/contract' render={() => (
-                <div>
+            <Route exact={true} path='/' render={() => (
+              <div>
+                <NavBar active="home"/>
+                <div className="content">
+                  <Homepage />
+                </div>
+              </div>
+            )}/>
+            <Route exact={true} path='/contract' render={() => (
+              <div>
+                <NavBar active="contract"/>
+                <div className="content">
                   <Contracts />
                 </div>
-              )}/>
-            </div>
+              </div>
+            )}/>
           </div>
         </div>
       </BrowserRouter>

@@ -6,47 +6,45 @@ class ContractItem extends Component {
 	constructor (props) {
 		super(props)
 		this.state = {
-			show_panel: this.props.contract.open
+			show_panel: false
 		}
 	}
 	toggleState () {
-		this.props.contract.open = !this.props.contract.open
-		this.setState({show_panel: this.props.contract.open})
+		let news = !this.state.show_panel
+		this.setState({show_panel: news})
 	}
-
 	render () {
 		const accordionState = this.state.show_panel ? 'active' : '';
 		const accordionClass = `accordion ${accordionState}`;
-		return (
-			<div>
+		let permissions;
+			permissions = this.props.contract.perms.map(perm => {
+				return (
+					<div key={perm.title}>
+						<p>{perm.title}
+							<label className="switch">
+								<input
+									type="checkbox"
+									defaultChecked={perm.perm ? 'checked' : ''}
+								/>
+								<span className="slider round"></span>
+							</label></p>
+						</div>
+					);
+				})
+
+			return (
+				<div>
 					<button onClick={() => {this.toggleState();}}
 						className={accordionClass}>{this.props.contract.title}
 					</button>
 					<div className="panel">
-					 <span>Age</span>
-							<label className="switch">
-								<input type="checkbox"/>
-								<span className="slider round"></span>
-							</label>
-
-						<p>Gender
-							<label className="switch">
-								<input type="checkbox"/>
-								<span className="slider round"></span>
-							</label></p>
-						<p>Location
-							<label className="switch">
-								<input type="checkbox"/>
-								<span className="slider round"></span>
-							</label>
-						 </p>
+						{permissions}
 						<button className="submit">Submit</button>
 						<button className="cancel">Cancel</button>
 					</div>
 				</div>
+			)
+		}
+	}
 
-						)
-					}
-				}
-
-				export default ContractItem;
+	export default ContractItem;
