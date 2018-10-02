@@ -3,8 +3,8 @@ import ContractItem from './ContractItem'
 import './Contracts.css'
 
 class Contracts extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.getContracts();
   }
 
