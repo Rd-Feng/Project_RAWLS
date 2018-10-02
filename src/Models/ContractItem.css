@@ -1,65 +1,69 @@
 /* drop down for contracts */
 .accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 15px;
-    width: 90%;
-    border: none;
-    text-align: center;
-    outline: none;
-    margin: 10px;
-    transition: 0.4s;
-    font-size: 20px;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 2%;
+  width: 70%;
+  border: none;
+  text-align: center;
+  outline: none;
+  margin: 2%;
+  transition: 0.4s;
+  font-size: 180%;
 }
+
+/*
 .main{
     text-align: center;
 }
-.slider, .switch{
+*/
+.switch {
   margin-right: 4%;
 }
-.App{
-    margin: 0;
-    padding: 0;
-    text-align: center;
 
-}
-.p {
-  text-align: left;
-}
 .active, .accordion:hover {
-    background-color: #ccc;
+  background-color: #ccc;
 }
+
 .panel {
-    padding: 0 18px;
-    background-color: white;
-    font-size: 1.4em;
-    display: none;
-    overflow: hidden;
+  width: 70%;
+  /* must match .accordion's width */
+  padding: 3%;
+  font-size: 200%;
+  display: none;
+  overflow: hidden;
 }
-.active + .panel {
+
+.active+.panel {
   display: block;
 }
+
 .accordion:after {
-    content: '\02795';
-    color: #777;
-    float: right;
-    margin-left: 5px;
+  content: '\02795';
+  color: #777;
+  float: right;
+  /*margin-left: 4%; read below*/
 }
 
 .active:after {
-    content: "\2796";
-    margin-left: 5px;
+  content: "\2796";
+  /*margin-left: 0%; no needed. just shifts text when toggled*/
 }
+
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 14%;
+  height: 1.07em;
+  /* cant turn this into % */
   align: center;
   float: right;
 }
-.switch input {display:none;}
+
+.switch input {
+  display: none
+}
 
 .slider {
   position: absolute;
@@ -73,161 +77,123 @@
   transition: .3s;
   margin-right: 10%
 }
+
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: .82em;
+  width: .82em;
+  left: .126em;
+  bottom: .126em;
   background-color: white;
   -webkit-transition: .3s;
   transition: .3s;
 }
-input:checked + .slider {
+
+input:checked+.slider {
   background-color: #5CA2D5;
 }
-input:focus + .slider {
+
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(.82em);
+  -ms-transform: translateX(.82em);
+  transform: translateX(.82em);
 }
+
 .slider.round {
-  border-radius: 34px;
+  border-radius: 1.9em;
 }
+
 .slider.round:before {
   border-radius: 50%;
 }
+
 .submit {
+  font-size: .65em;
+  border-radius: 2em;
   border: none;
   color: white;
-  padding: 5% 10%;
+  padding: .7em .9em;
   cursor: pointer;
   background-color: #81E870;
-  margin: 5%
+  margin: 3%;
 }
+
 .submit:hover {
   background-color: #70D642
 }
+
 .cancel {
+  font-size: .65em;
+  border-radius: 2em;
   border: none;
   color: white;
-  padding: 5% 10%;
+  padding: .7em .9em;
   cursor: pointer;
   background-color: #ff704d;
-  margin: 5%;
+  margin: 3%;
 }
+
+.buttonContainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .cancel:hover {
   background-color: #ff5c33;
 }
-/* ipad 700-1000 px */
-@media screen and (min-width: 641px) and (max-width: 800px) {
 
-.bynIcons {
-  margin-left: 0;
-}
-.mainInterface{
-  text-align: center;
-}
-.buttons{
-  border-radius: 25px;
-}
-.cancel, .submit{
-  width: 30%;
-  padding: 10px;
-}
+@media screen and (max-width: 800px) {
+  .content {
+    margin: 5%;
+    padding: 3%;
+  }
 
-.sidebar{
-  width: 100%;
-  height: 2em;
-  position: sticky;
-  color: black;
+  .accordion {
+    width: 95%;
+  }
 
-}
-a{
-  width: 10%;
-  height: 2em;
-}
-i{
-  height: 2em;
-}
-.sidebar a {
-  text-align: center;
-  /*float: none;*/
-  display: inline;
-  white-space: nowrap;
-  white-space: pre;
-  /*width: 70px;*/
-  height: 2em;
-  /*position: relative;*/
-}
-}
-/* for tiny stuff aka phones */
-@media screen and (max-width: 640px) {
-  .main{
-    width:100%;
-    margin: auto;
-    display: flex;
-    border-bottom: solid;
-    border-color: #2d3c49;
-    justify-content: space-between;
+  .panel {
+    width: 95%;
   }
-  .fa{
-    width: 40px;
-    padding: 4px;
+
+  .switch {
+    width: 14%;
   }
-  .mainInterface{
-    text-align: center;
-  }
-  .sidebar{
+
+  .allContracts {
     width: 100%;
-    height: auto;
-    position: sticky;
-    color: black;
   }
-  .buttons{
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-  }
-  .submit{
-    display: inline-block;
-    border-radius: 20px;
-    float:left;
-    width:40%;
-    font-size: 1em;
-    text-align: center;
-    padding: auto;
-  }
-  .cancel{
-    display: inline-block;
-    border-radius: 20px;
-    float: right;
-    width:40%;
-    font-size: 1em;
-  }
-  .sidebar a {
-    text-align: center;
-    /*float: none;*/
-    display: inline;
-    white-space: nowrap;
-    white-space: pre;
-    /*width: 70px;*/
-    /*height: 100%;*/
-    /*position: relative;*/
-  }
-  .textByn {
-    font-size: 0;
-  }
-.slider{
-  margin-right: 4%;
-}
-.infoText{
-  margin-left: 10%;
-  text-align: left;
 }
 
+/* biggest viewport as of now is 480. note 5, lg g5, 1+3,
+should check new iphone to double check though. biggest i phone was 8 plus at 414 */
+@media screen and (max-width: 480px) {
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 2%;
+    width: 95%;
+    border: none;
+    text-align: center;
+    outline: none;
+    margin: 2%;
+    transition: 0.4s;
+  }
+
+  .panel {
+    width: 95%;
+  }
+
+  .switch {
+    width: 23%;
+  }
 }
