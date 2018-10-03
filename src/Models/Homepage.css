@@ -1,4 +1,58 @@
-.homepage {
-  margin-left: 0;
-  margin-right: 200px
+* {
+    box-sizing: border-box;
+}
+
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+a{
+ color: #1aa3ff;
+}
+/* mouse over link */
+a:hover {
+    color: #007acc;
+}
+
+
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+     border: 1px ridge gray;
+     border-radius: 5px;
+     /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    */ 
+}
+/* Create two equal columns that floats next to each other */
+.leftColumn {
+    float: left;
+    width: 60%;
+    padding: 20px;	
+    background-color: white;
+}
+
+.rightColumn {
+    float: left;
+    width: 30%;
+    padding: 20px;
+    background-color: white;
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 800px) {
+    .leftColumn, .rightColumn {   
+        width: 100%;
+        padding: 0;
+    }
 }
