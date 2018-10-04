@@ -2,7 +2,14 @@
     box-sizing: border-box;
 }
 
-
+h2 {
+   background-color: #5CA2D5;
+   margin-top: -20px;
+   margin-left: -20px;
+   margin-right: -20px;
+   color: white;
+   text-align: center;
+}
 /* Fake image */
 .fakeimg {
     background-color: #aaa;
@@ -24,8 +31,7 @@ a:hover {
      margin-top: 20px;
      border: 1px solid #cccccc;
      border-radius: 5px;
-     /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    */ 
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);	
 }
 /* Create two equal columns that floats next to each other */
 .leftColumn {

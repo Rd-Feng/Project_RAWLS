@@ -45,7 +45,9 @@ class Contracts extends Component {
     if(this.state.contracts){
       contractItems = this.state.contracts.map(contract => {
         return (
+	<div className="Ccard">
           <ContractItem key={contract.title} contract={contract}/>
+	</div>
         );
       });
     }

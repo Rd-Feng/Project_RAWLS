@@ -3,6 +3,8 @@
   padding: 0;
   width: 18%;
   background-color: #f1f1f1;
+/*  background: linear-gradient(135deg, #0066cc, #0066cc 50%, #F9C44C);*/
+  background: linear-gradient(135deg, #004d99, #0066cc 50%, #cce6ff);
   position: fixed;
   height: 100%;
   overflow: hidden;

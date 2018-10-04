@@ -3,15 +3,19 @@
 }
 /* drop down for contracts */
 .accordion {
-  background-color: #eee;
+  background:  #ccc;
   color: #444;
   cursor: pointer;
   padding: 2%;
-  width: 70%;
+  width: 100%;
   border: none;
   text-align: center;
   outline: none;
   margin: 2%;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
   transition: 0.4s;
   font-size: 180%;
 }
@@ -30,7 +34,7 @@
 }
 
 .panel {
-  width: 70%;
+  width: 100%;
   /* must match .accordion's width */
   padding: 3%;
   font-size: 200%;
