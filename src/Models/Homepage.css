@@ -9,6 +9,7 @@
     width: 100%;
     padding: 20px;
 }
+/* link */
 a{
  color: #1aa3ff;
 }
@@ -16,13 +17,12 @@ a{
 a:hover {
     color: #007acc;
 }
-
-
+/* blocks */
 .card {
      background-color: white;
      padding: 20px;
      margin-top: 20px;
-     border: 1px ridge gray;
+     border: 1px solid #cccccc;
      border-radius: 5px;
      /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     */ 
@@ -31,18 +31,16 @@ a:hover {
 .leftColumn {
     float: left;
     width: 60%;
-    padding: 20px;	
+    padding: 10px;	
     background-color: white;
 }
 
 .rightColumn {
     float: left;
-    width: 30%;
-    padding: 20px;
+    width: 38%;
+    padding: 10px;
     background-color: white;
 }
-
-
 
 /* Clear floats after the columns */
 .row:after {
@@ -50,6 +48,7 @@ a:hover {
     display: table;
     clear: both;
 }
+
 @media screen and (max-width: 800px) {
     .leftColumn, .rightColumn {   
         width: 100%;
