@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   width: 18%;
-  background-color: #f1f1f1;
-/*  background: linear-gradient(135deg, #0066cc, #0066cc 50%, #F9C44C);*/
-  background: linear-gradient(135deg, #004d99, #0066cc 50%, #cce6ff);
+   /* background-color: #f1f1f1;*/
+ background-color: #29293d;
+ /*background: linear-gradient(135deg, #0066cc, #0066cc 50%, #F9C44C);*/
+/*  background: linear-gradient(135deg, #004d99, #0066cc 50%, #cce6ff);*/
   position: fixed;
   height: 100%;
   overflow: hidden;
@@ -12,7 +13,7 @@
 
 .sidebar a {
   display: flex;
-  color: black;
+  color: white;
   padding: 7%;
   text-decoration: none;
 }
@@ -38,10 +39,9 @@
   color: white;
 }
 
-.profile_pic {
+.logo_pic {
   width: 100%;
 }
-
 /** 800 - 1000 px is around the avg tablets widest widths */
 @media screen and (max-width: 800px) {
 
@@ -52,7 +52,7 @@
     overflow: hidden;
   }
 
-  .profile_pic {
+  .logo_pic {
     width: 10%;
     float: right;
     margin: 1%;
