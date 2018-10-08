@@ -13,9 +13,11 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <div className="main">
+      <Header />
             <Route exact={true} path='/' render={() => (
               <div>
                 <NavBar active="home"/>
+
                 <div className="content">
                   <Homepage />
                 </div>
