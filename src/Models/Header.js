@@ -6,8 +6,9 @@ class Header extends Component {
   render () {
     return (
       <div className="header">
-        <h3>This is the header</h3>
+      <img className="profile_pic" src={require('./userLogo.png')} />
       </div>
+
     )
   }
 }
