@@ -15,9 +15,10 @@
 
 
 .profile_pic {
-  margin-top: -15px;
+  margin-top: -1%;
   width: 3%;
   float: right;
+  font-size: 100%;
 }
 
 @media screen and (max-width: 500px) {
