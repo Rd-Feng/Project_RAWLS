@@ -26,13 +26,13 @@ class ContractItem extends Component {
 		permissions = this.props.contract.perms.map(perm => {
 			return (
 				<div key={perm.title}>
-					<p>{perm.title}
+					<p><span className="contractText">{perm.title} </span>
 						<label className="switch">
 							<input
 								type="checkbox"
 								defaultChecked={perm.perm ? 'checked' : ''}
-							/>
-							<span className="slider round"></span>
+							/> <span className="buttonWrapper">
+							<span className="slider round"></span></span>
 						</label></p>
 					</div>
 				);
