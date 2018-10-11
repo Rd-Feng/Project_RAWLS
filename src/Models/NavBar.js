@@ -7,7 +7,7 @@ class NavBar extends Component {
     this.state = {
       home: this.props.active == "home" ? 'current' : '',
       contract: this.props.active == "contract" ? 'current' : '',
-      history: this.props.active == "history" ? 'current' : '',
+      wallet: this.props.active == "wallet" ? 'current' : '',
       about: this.props.active == "about" ? 'current' : ''
     }
   }
@@ -22,10 +22,10 @@ class NavBar extends Component {
       <a className={this.state.contract} href="contract">
         <i className="fa fa-file"></i> Contracts
       </a>
-      <a className={this.state.history} href="">
-        <i className="fa fa-history"></i> History
+      <a className={this.state.wallet} href="Wallet">
+        <i className="fa fa-history"></i> Wallet
       </a>
-      <a className={this.state.about} href="">
+      <a className={this.state.about} href="about">
         <i className="fa fa-question"></i> About
       </a>
     </div>
