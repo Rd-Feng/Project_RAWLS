@@ -66,11 +66,13 @@
 
   .logo_pic {
     height: 100%;
-    width: 10%;
+    width: 15%;
+    max-width: 4em;
     float: right;
     margin: 1%;
     border-radius: 50%;
     margin-top: 1.5%;
+    font-size: 100%;
   }
 
 .faContainer{
@@ -95,7 +97,7 @@
   }
 
   .fa-history::before, .fa-question::before, .fa-home::before, .fa-file::before{
-    font-size: 150%;
+    font-size: 100%;
   }
 }
   /** media for 480 and mobile phones seem to be unecessary as of now */

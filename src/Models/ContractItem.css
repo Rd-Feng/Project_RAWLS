@@ -163,10 +163,6 @@ input:checked+.slider:before {
 
 @media screen and (max-width: 800px) {
 
-.rightColumn, .leftColumn{
-  width: 0;
-  margin: 0;
-}
 
   .content {
     width: 100%;
