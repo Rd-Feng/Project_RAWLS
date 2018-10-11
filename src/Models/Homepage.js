@@ -17,7 +17,7 @@ import './Homepage.css'
               </div>
               <div className="card">
 			         <div className="title">
-		             <h2 className="titleText">You have the potential to earn up to $15</h2></div>
+		             <h2 className="titleText">You can earn more...</h2></div>
                       <h5>add page for new contract link</h5>
                       <p><b><a href="contract" >new</a></b></p>
                       <p><b><a href="contract" >new</a></b></p>
