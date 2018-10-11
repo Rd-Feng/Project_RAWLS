@@ -26,7 +26,7 @@ class ContractItem extends Component {
 		permissions = this.props.contract.perms.map(perm => {
 			return (
 				<div key={perm.title}>
-					<p><span className="contractText">{perm.title} </span>
+					<p>{perm.title}
 						<label className="switch">
 							<input
 								type="checkbox"
@@ -45,13 +45,13 @@ class ContractItem extends Component {
 					</button>
 					<div className="panel">
 						{permissions}
-						<button className="close buttonByn" onClick={() => {this.togglePanel();}}>
+						<button className="close" onClick={() => {this.togglePanel();}}>
 							Close
 						</button>
-						<button className="submit right buttonByn">
+						<button className="submit right">
 							Submit
 						</button>
-						<button className="close right buttonByn" onClick={() => {this.resetContract();}}>
+						<button className="close right" onClick={() => {this.resetContract();}}>
 							Reset
 						</button>
 					</div>
