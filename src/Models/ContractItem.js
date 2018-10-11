@@ -31,8 +31,8 @@ class ContractItem extends Component {
 							<input
 								type="checkbox"
 								defaultChecked={perm.perm ? 'checked' : ''}
-							/> <span className="buttonWrapper">
-							<span className="slider round"></span></span>
+							/>
+							<span className="slider round"></span>
 						</label></p>
 					</div>
 				);
@@ -45,13 +45,13 @@ class ContractItem extends Component {
 					</button>
 					<div className="panel">
 						{permissions}
-						<button className="close" onClick={() => {this.togglePanel();}}>
+						<button className="close buttonByn" onClick={() => {this.togglePanel();}}>
 							Close
 						</button>
-						<button className="submit right">
+						<button className="submit right buttonByn">
 							Submit
 						</button>
-						<button className="close right" onClick={() => {this.resetContract();}}>
+						<button className="close right buttonByn" onClick={() => {this.resetContract();}}>
 							Reset
 						</button>
 					</div>

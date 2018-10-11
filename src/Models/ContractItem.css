@@ -161,6 +161,26 @@ input:checked+.slider:before {
   background-color: #ff5c33;
 }
 
+/* messes up past 260 px width but what screen is that tiny? 300 is smallest avg */
+.buttonByn{
+  font-size: 70%;
+  padding: 2.5%;
+  margin: 1%;
+}
+
+.switch {
+  width: 20%;
+  /* need these hardcoded */
+  min-width: 80px;
+  max-width: 83px;
+  margin: 0;
+}
+
+input:checked+.slider:before{
+transform: translateX(1.3em);
+
+}
+
 @media screen and (max-width: 800px) {
 
   .panel{
@@ -184,7 +204,7 @@ input:checked+.slider:before {
     width: 20%;
     /* need these hardcoded */
     min-width: 80px;
-    max-width: 120px;
+    max-width: 83px;
     margin: 0;
   }
 
@@ -193,7 +213,13 @@ input:checked+.slider:before {
   }
 
 .slider{
-margin: 0;
+  height: 100%;
+  margin: 0;
+}
+
+input:checked+.slider:before{
+transform: translateX(1.5em);
+
 }
 /*
 .buttonWrapper {
