@@ -7,7 +7,7 @@ class NavBar extends Component {
     this.state = {
       home: this.props.active == "home" ? 'current' : '',
       contract: this.props.active == "contract" ? 'current' : '',
-      history: this.props.active == "history" ? 'current' : '',
+      wallet: this.props.active == "wallet" ? 'current' : '',
       about: this.props.active == "about" ? 'current' : ''
     }
   }
@@ -17,16 +17,28 @@ class NavBar extends Component {
         <img className="logo_pic" src={require('./logo1.png')} />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <a className={this.state.home} href="/">
-        <i className="fa fa-fw fa-home"></i> Home
+        <div className="faContainer">
+          <i className="fa fa-fw fa-home faPic"></i>
+          <div className="faText">Home</div>
+        </div>
       </a>
       <a className={this.state.contract} href="contract">
-        <i className="fa fa-file"></i> Contracts
+        <div className="faContainer">
+          <i className="fa fa-file faPic"></i>
+          <div className="faText">Contracts</div>
+        </div>
       </a>
-      <a className={this.state.history} href="">
-        <i className="fa fa-history"></i> History
+      <a className={this.state.wallet} href="wallet">
+        <div className="faContainer">
+          <i className="fa fa-history faPic"></i>
+          <div className="faText">Wallet</div>
+        </div>
       </a>
-      <a className={this.state.about} href="">
-        <i className="fa fa-question"></i> About
+      <a className={this.state.about} href="about">
+        <div className="faContainer">
+          <i className="fa fa-question faPic"></i>
+          <div className="faText">About</div>
+        </div>
       </a>
     </div>
   )
