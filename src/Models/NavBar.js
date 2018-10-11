@@ -18,22 +18,26 @@ class NavBar extends Component {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <a className={this.state.home} href="/">
         <div className="faContainer">
-          <i className="fa fa-fw fa-home faPic"></i> <div className="faText">Home</div>
+          <i className="fa fa-fw fa-home faPic"></i>
+          <div className="faText">Home</div>
         </div>
       </a>
       <a className={this.state.contract} href="contract">
         <div className="faContainer">
-          <i className="fa fa-file faPic"></i> <div className="faText">Contracts</div>
+          <i className="fa fa-file faPic"></i>
+          <div className="faText">Contracts</div>
         </div>
       </a>
       <a className={this.state.wallet} href="wallet">
         <div className="faContainer">
-          <i className="fa fa-history faPic"></i> <div className="faText">Wallet</div>
+          <i className="fa fa-history faPic"></i>
+          <div className="faText">Wallet</div>
         </div>
       </a>
       <a className={this.state.about} href="about">
         <div className="faContainer">
-          <i className="fa fa-question faPic"></i> <div className="faText">About</div>
+          <i className="fa fa-question faPic"></i>
+          <div className="faText">About</div>
         </div>
       </a>
     </div>
