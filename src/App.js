@@ -147,19 +147,163 @@ class App extends Component {
     ])
 
     this.state = {
-      AmazonContractInstance: AmazonContract.at('0x7e59ed59859f94670ff7cd805c5bc1ace1e29ef4')
+      contracts:[
+        {
+          addr: '0x2d28ad98624af80c635cbcbb0ba519eecee0ad8f',
+          abi:  [
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "getCompany",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": false,
+              "inputs": [],
+              "name": "pay",
+              "outputs": [],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "constant": false,
+              "inputs": [
+                {
+                  "name": "index",
+                  "type": "uint256"
+                },
+                {
+                  "name": "state",
+                  "type": "bool"
+                }
+              ],
+              "name": "changeState",
+              "outputs": [],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "constant": false,
+              "inputs": [],
+              "name": "kill",
+              "outputs": [],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "payment",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "int256"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "numPerms",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "contractName",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "string"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "getUser",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [
+                {
+                  "name": "index",
+                  "type": "uint256"
+                }
+              ],
+              "name": "getPerms",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "string"
+                },
+                {
+                  "name": "",
+                  "type": "int256"
+                },
+                {
+                  "name": "",
+                  "type": "bool"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "name": "u",
+                  "type": "address"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "constructor"
+            },
+            {
+              "payable": true,
+              "stateMutability": "payable",
+              "type": "fallback"
+            }
+          ]
+        }
+      ]
     }
-    // This query contract. We should have a loop to get all perms in the contract
-    this.queryPerms(3);
-
-  }
-
-  queryPerms(index) {
-    const {getPerms} = this.state.AmazonContractInstance;
-    getPerms(index, (err, perm) => {
-      if (err) console.error ('An error occured::::', err);
-      this.setState({content: perm})
-    });
 
   }
 
@@ -182,7 +326,7 @@ class App extends Component {
               <div>
                 <NavBar active="contract"/>
                 <div className="content">
-                  <Contracts />
+                  <Contracts contracts={this.state.contracts}/>
                 </div>
               </div>
             )}/>
