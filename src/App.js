@@ -12,139 +12,6 @@ class App extends Component {
   constructor (props) {
     super(props)
 
-    const AmazonContract = window.web3.eth.contract([
-      {
-        "constant": false,
-        "inputs": [
-          {
-            "name": "index",
-            "type": "uint256"
-          }
-        ],
-        "name": "changeState",
-        "outputs": [],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "constant": false,
-        "inputs": [],
-        "name": "kill",
-        "outputs": [],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "constant": false,
-        "inputs": [],
-        "name": "pay",
-        "outputs": [],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "payable": true,
-        "stateMutability": "payable",
-        "type": "fallback"
-      },
-      {
-        "inputs": [
-          {
-            "name": "u",
-            "type": "address"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "constructor"
-      },
-      {
-        "constant": true,
-        "inputs": [],
-        "name": "getCompany",
-        "outputs": [
-          {
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "constant": true,
-        "inputs": [
-          {
-            "name": "index",
-            "type": "uint256"
-          }
-        ],
-        "name": "getPerms",
-        "outputs": [
-          {
-            "name": "",
-            "type": "string"
-          },
-          {
-            "name": "",
-            "type": "uint256"
-          },
-          {
-            "name": "",
-            "type": "bool"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "constant": true,
-        "inputs": [],
-        "name": "getUser",
-        "outputs": [
-          {
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "constant": true,
-        "inputs": [],
-        "name": "numPerms",
-        "outputs": [
-          {
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "constant": true,
-        "inputs": [],
-        "name": "payment",
-        "outputs": [
-          {
-            "name": "",
-            "type": "int256"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-      }
-    ])
 
     this.state = {
       contracts:[
@@ -304,7 +171,24 @@ class App extends Component {
         }
       ]
     }
-
+    const AmazonContract = window.web3.eth.contract(this.state.contracts[0].abi)
+    const contractInstance = AmazonContract.at(this.state.contracts[0].addr)
+    const { contractName } = contractInstance;
+    contractName((err, name) => {
+      if (err) console.error ('An error occured::::', err);
+      console.log ('Contract name: ', name);
+    });
+    var i = 0;
+    for (i = 0; i < 4; i++){
+      const { getPerms } = contractInstance;
+      getPerms(i, (err, perm) => {
+        if (err) console.error ('An error occured::::', err);
+        console.log('Data Name:: ')
+        console.log(perm[0])
+        console.log('Price:: ', perm[1]['c'][0])
+        console.log('Shared:: ', perm[2])
+      });
+    }
   }
 
   render() {
