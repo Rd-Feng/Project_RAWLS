@@ -6,7 +6,10 @@ import './Homepage.css'
 	render () {
 	    return (
           <div className="row">
+
+
             <div className="leftColumn">
+
               <div className="card">
 			         <div className="title">
 			            <h2 className="titleText">Current Contracts</h2></div>
@@ -15,6 +18,7 @@ import './Homepage.css'
                      <p><b><a href="contract" >Google</a></b></p>
                      <p>Some text..</p>
               </div>
+
               <div className="card">
 			         <div className="title">
 		             <h2 className="titleText">You can earn more...</h2></div>
@@ -24,7 +28,9 @@ import './Homepage.css'
                       <p><b><a href="contract" >new</a></b></p>
               </div>
             </div>
+
             <div className="rightColumn">
+
               <div className="card">
 			           <div className="title">
                   <h2 className="titleText">My Wallet</h2></div>
@@ -33,6 +39,7 @@ import './Homepage.css'
                   <div className="fakeimg">wallet Image</div>
                   <p>Some text </p>
               </div>
+
               <div className="card">
 			          <div className="title">
 			             <h2 className="titleText">title1</h2></div>
@@ -44,6 +51,7 @@ import './Homepage.css'
                   <h2 className="titleText">title3</h2></div>
                   <p>Some text..</p>
               </div>
+              
         </div>
  </div>
 		    )
