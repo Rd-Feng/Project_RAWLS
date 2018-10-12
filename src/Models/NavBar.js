@@ -24,19 +24,19 @@ class NavBar extends Component {
       </a>
       <a className={this.state.contract} href="contract">
         <div className="faContainer">
-          <i className="fa fa-file faPic"></i>
+          <i className="fa fa-fw fa-file faPic"></i>
           <div className="faText">Contracts</div>
         </div>
       </a>
       <a className={this.state.wallet} href="wallet">
         <div className="faContainer">
-          <i className="fa fa-history faPic"></i>
+          <i className="fa fa-fw fa-history faPic"></i>
           <div className="faText">Wallet</div>
         </div>
       </a>
       <a className={this.state.about} href="about">
         <div className="faContainer">
-          <i className="fa fa-question faPic"></i>
+          <i className="fa fa-fw fa-question faPic"></i>
           <div className="faText">About</div>
         </div>
       </a>
