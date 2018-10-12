@@ -15,9 +15,9 @@ class Contracts extends Component {
         title: "Amazon",
         perms: [
           {title: "name", perm: true},
-          {title: "age",  perm: false},
+          {title: "address",  perm: false},
           {title: "email", perm: true},
-          {title: "purchase_record", perm: true}
+          {title: "browsing history", perm: true}
         ]
       },
       {
