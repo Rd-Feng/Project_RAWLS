@@ -12,6 +12,7 @@ class App extends Component {
   constructor (props) {
     super(props)
 
+
     this.state = {
       contracts:[
         {
@@ -170,7 +171,24 @@ class App extends Component {
         }
       ]
     }
-
+    const AmazonContract = window.web3.eth.contract(this.state.contracts[0].abi)
+    const contractInstance = AmazonContract.at(this.state.contracts[0].addr)
+    const { contractName } = contractInstance;
+    contractName((err, name) => {
+      if (err) console.error ('An error occured::::', err);
+      console.log ('Contract name: ', name);
+    });
+    var i = 0;
+    for (i = 0; i < 4; i++){
+      const { getPerms } = contractInstance;
+      getPerms(i, (err, perm) => {
+        if (err) console.error ('An error occured::::', err);
+        console.log('Data Name:: ')
+        console.log(perm[0])
+        console.log('Price:: ', perm[1]['c'][0])
+        console.log('Shared:: ', perm[2])
+      });
+    }
   }
 
   render() {
