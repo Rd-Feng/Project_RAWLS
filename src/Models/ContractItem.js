@@ -5,7 +5,6 @@ import './ContractItem.css'
 class ContractItem extends Component {
 	constructor (props) {
 		super(props)
-		let name = this.getName();
 		//	{
 		//     title: "Google",
 		//     perms: [
@@ -15,16 +14,30 @@ class ContractItem extends Component {
 		//       {title: "home_phone", perm: false}
 		//     ]
 		//  },
-
 	}
 	componentDidMount(){
 		this.setState(
 			{
-				show_panel: false,
-				title: this.getName(),
-				perms: "TODO - load permissions"
+				show_panel: false
 			}
 		);
+		const contractABI = window.web3.eth.contract(this.props.contract.abi)
+		const contractInstance = contractABI.at(this.props.contract.addr)
+		const { contractName } = contractInstance;
+		contractName((err, name) => {
+			if (err) console.error ('An error occured::::', err);
+			console.log ('Contract name: ', name);
+		});
+		let i = 0;
+		for (i = 0; i < 4; i++){
+			let { getPerms } = contractInstance;
+			getPerms(i, (err, perm) => {
+				if (err) console.error ('An error occured::::', err);
+				console.log('Data Name:: ', perm[0])
+				console.log('Price:: ', perm[1]['c'][0])
+				console.log('Shared:: ', perm[2])
+			});
+		}
 	}
 	getName () {
 		return ("TODO - get name of contract")
