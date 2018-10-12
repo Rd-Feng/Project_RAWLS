@@ -25,6 +25,11 @@
     text-align: center;
 }
 */
+
+.contractText{
+font-size: 80%;
+
+}
 .switch {
   margin-right: 4%;
 }
@@ -110,9 +115,9 @@ input:focus+.slider {
 }
 
 input:checked+.slider:before {
-  -webkit-transform: translateX(.82em);
-  -ms-transform: translateX(.82em);
-  transform: translateX(.82em);
+  -webkit-transform: translateX(1.4em);
+  -ms-transform: translateX(1.82em);
+  transform: translateX(1.4em);
 }
 
 .slider.round {
@@ -163,25 +168,23 @@ input:checked+.slider:before {
 
 /* messes up past 260 px width but what screen is that tiny? 300 is smallest avg */
 .buttonByn{
-  font-size: 70%;
-  padding: 2.5%;
+  font-size: 50%;
+  padding: 2%;
   margin: 1%;
 }
 
 .switch {
-  width: 20%;
+  width: 15%;
   /* need these hardcoded */
-  min-width: 80px;
-  max-width: 83px;
+  min-width: 2.7em;
+  max-width: 2.7em;
   margin: 0;
 }
 
-input:checked+.slider:before{
-transform: translateX(1.3em);
 
-}
 
 @media screen and (max-width: 800px) {
+
 
   .panel{
     text-align: left;
@@ -197,14 +200,14 @@ transform: translateX(1.3em);
   }
 
   .contractText{
-    font-size: 6vw;
+    font-size: 55%;
   }
 
   .switch {
-    width: 20%;
+    width: 15%;
     /* need these hardcoded */
-    min-width: 80px;
-    max-width: 83px;
+    min-width: 2.6em;
+    max-width: 2.6em;
     margin: 0;
   }
 
