@@ -326,30 +326,6 @@ class App extends Component {
       ]
     }
   }
-
-  componentDidMount () {
-    let count, contractABI, contractInstance
-    for (count = 0; count < this.state.contracts.length - 1; count++)
-    {
-      const contractABI = window.web3.eth.contract(this.state.contracts[count].abi)
-      const contractInstance = contractABI.at(this.state.contracts[count].addr)
-      const { contractName } = contractInstance;
-      contractName((err, name) => {
-        if (err) console.error ('An error occured::::', err);
-        console.log ('Contract name: ', name);
-      });
-      let i = 0;
-      for (i = 0; i < 4; i++){
-        let { getPerms } = contractInstance;
-        getPerms(i, (err, perm) => {
-          if (err) console.error ('An error occured::::', err);
-          console.log('Data Name:: ', perm[0])
-          console.log('Price:: ', perm[1]['c'][0])
-          console.log('Shared:: ', perm[2])
-        });
-      }
-    }
-  }
   render() {
     return (
       <BrowserRouter>
