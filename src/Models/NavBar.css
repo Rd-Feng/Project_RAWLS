@@ -23,19 +23,27 @@
 
 .fa {
   transform: scale(1.9, 1.9); /* this may cause issues in other browsers */
-  margin-right: 5%;
+
 }
 
 .faPic{
-  margin-left: 3%;
+  margin-left: 10%;
     float: left;
-    display: inline-block;
+    margin-right: 10%;
+    vertical-align: middle;
 }
-
+/* not sure why the home one is off center */
+/*
+.fa-Home{
+  margin-left: 0;
+  margin-right: 2%;
+  transform: translateX(30px);
+}
+*/
 .faText {
-  display: inline-block;
-  float: right;
+  text-align: left;
   margin-right: 3%;
+  margin-left: 40%;
   font-size: 120%;
 }
 
