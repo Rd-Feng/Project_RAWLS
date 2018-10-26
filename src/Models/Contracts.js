@@ -5,55 +5,24 @@ import './Contracts.css'
 class Contracts extends Component {
   constructor(props){
     super(props);
-    this.getContracts();
-  }
-
-  /* function to load all contracts into state */
-  getContracts () {
-    this.state = {contracts:[
-      {
-        title: "Amazon",
-        perms: [
-          {title: "name", perm: true},
-          {title: "address",  perm: false},
-          {title: "email", perm: true},
-          {title: "browsing history", perm: true}
-        ]
-      },
-      {
-        title: "Fitbit",
-        perms: [
-          {title: "name", perm: true},
-          {title: "age", perm: false},
-          {title: "location", perm: true}
-        ]
-      },
-      {
-        title: "Google",
-        perms: [
-          {title: "name", perm: true},
-          {title: "age", perm: false},
-          {title: "work_phone", perm: true},
-          {title: "home_phone", perm: false}
-        ]
-      },
-    ]};
+    this.state = {contracts: this.props.contracts}
   }
 
   render () {
     let contractItems;
+    console.log(this.state.contracts)
     if(this.state.contracts){
       contractItems = this.state.contracts.map(contract => {
         return (
-	<div className="Ccard">
-          <ContractItem key={contract.title} contract={contract}/>
-	</div>
+          <div className="Ccard">
+            <ContractItem key={contract.addr} contract={contract}/>
+          </div>
         );
       });
     }
     return (
       <div className="contracts">
-          {contractItems}
+        {contractItems}
       </div>
     )
   }
