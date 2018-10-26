@@ -8,40 +8,9 @@ class Contracts extends Component {
     this.state = {contracts: this.props.contracts}
   }
 
-  /* function to load all contracts into state */
-  getContracts () {
-    // this.state = {contracts:[
-    //   {
-    //     title: "Amazon",
-    //     perms: [
-    //       {title: "name", perm: true},
-    //       {title: "age",  perm: false},
-    //       {title: "email", perm: true},
-    //       {title: "purchase_record", perm: true}
-    //     ]
-    //   },
-    //   {
-    //     title: "Fitbit",
-    //     perms: [
-    //       {title: "name", perm: true},
-    //       {title: "age", perm: false},
-    //       {title: "location", perm: true}
-    //     ]
-    //   },
-    //   {
-    //     title: "Google",
-    //     perms: [
-    //       {title: "name", perm: true},
-    //       {title: "age", perm: false},
-    //       {title: "work_phone", perm: true},
-    //       {title: "home_phone", perm: false}
-    //     ]
-    //   },
-    // ]};
-  }
-
   render () {
     let contractItems;
+    console.log(this.state.contracts)
     if(this.state.contracts){
       contractItems = this.state.contracts.map(contract => {
         return (

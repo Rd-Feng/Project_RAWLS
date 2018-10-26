@@ -9,15 +9,6 @@ class ContractItem extends Component {
 			show_panel: false,
 			perms: []
 		}
-		//	{
-		//     title: "Google",
-		//     perms: [
-		//       {title: "name", perm: true},
-		//       {title: "age", perm: false},
-		//       {title: "work_phone", perm: true},
-		//       {title: "home_phone", perm: false}
-		//     ]
-		//  },
 		this.getContractName();
 		this.getPerms();
 	}
@@ -34,9 +25,6 @@ class ContractItem extends Component {
 				let { getPerms } = contractInstance;
 				getPerms(i, (err, perm) => {
 					if (err) console.error ('An error occured::::', err);
-					// console.log(perm[0])
-					// console.log(perm[1]['c'][0])
-					// console.log(perm[2])
 					this.state.perms.push(
 						{
 							title: perm[0],
@@ -79,7 +67,6 @@ class ContractItem extends Component {
 					</div>
 				);
 			})
-
 			return (
 				<div>
 					<button onClick={() => {this.togglePanel();}}

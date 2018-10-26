@@ -337,7 +337,7 @@ class App extends Component {
                 <NavBar active="home"/>
 
                 <div className="content">
-                  <Homepage />
+                  <Homepage contracts={this.state.contracts}/>
                 </div>
               </div>
             )}/>
