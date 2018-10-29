@@ -1,0 +1,82 @@
+.CardContainer{
+
+}
+.walletCard {
+  z-index: 0px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 10%;
+  margin-right:4.1%;
+  margin-left: 2%;
+  border: 1px solid #cccccc;
+  border-radius: 5px 5px 0px 0px;
+}
+.walletText {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+}
+.balanceText{
+  margin-top: 0%;
+  margin-left:80%;
+}
+.balanceValue{
+  margin-left:1%;
+  margin-top: 0%;
+}
+.incomeText{
+  margin-top: 0%;
+  margin-left:80%;
+}
+.incomeValue{
+  margin-left:4%;
+  margin-top: 20%;
+}
+
+.redeem {
+  position: absolute;
+  font-size: .65em;
+  border-radius: 2em;
+  border: none;
+  color: white;
+  padding: .9em .9em;
+  cursor: pointer;
+  background-color: #81E870;
+  margin: 0%;
+}
+
+.redeem:hover {
+  background-color: #70D642
+}
+
+.transactionHeader{
+  color: white;
+  background-color: #29293d;
+
+}
+.transactionText {
+  text-align: left;
+  margin-left: 3%;
+  font-size: 100%;
+  margin: 0%;
+  padding: 1%;
+}
+
+.transactionTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 94%;
+    margin-top: 0%;
+    margin-left: 2%;
+    margin-right: 20%;
+
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
