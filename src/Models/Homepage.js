@@ -25,7 +25,6 @@ class Homepage extends Component {
   }
   render () {
     let contractItems;
-    console.log(this.state.list)
     contractItems = this.state.list.map(contract => {
       return (
         <div>
