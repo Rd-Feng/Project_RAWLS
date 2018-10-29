@@ -5,6 +5,7 @@ import Footer from './Models/Footer'
 import Homepage from './Models/Homepage'
 import NavBar from './Models/NavBar'
 import Contracts from './Models/Contracts'
+import Wallet from './Models/Wallet'
 import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -354,7 +355,7 @@ class App extends Component {
                 <NavBar active="wallet"/>
 
                 <div className="content">
-                  <h2>Wallet</h2>
+                  <Wallet contracts={this.state.contracts}/>
                 </div>
               </div>
             )}/>
