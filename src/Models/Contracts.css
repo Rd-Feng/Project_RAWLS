@@ -2,23 +2,19 @@
     box-sizing: border-box;
 }
 .Ccard {
-	background-color: white;
+    background-color: white;
   padding: 0px;
   margin-top: 60px;
-	margin-left: 15%;
-	margin-right: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
   border: 1px solid #cccccc;
   border-radius: 5px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
-
 @media screen and (max-width: 800px) {
-
 .header{
   width: 0;
 }
-
 .content{
   padding: 2%;
   margin: 0;
@@ -35,5 +31,4 @@
    width: 90%;
    margin:0 auto;
  }
-
 }

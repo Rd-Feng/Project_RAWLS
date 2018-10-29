@@ -19,25 +19,20 @@
   transition: 0.4s;
   font-size: 180%;
 }
-
 /*
 .main{
     text-align: center;
 }
 */
-
 .contractText{
 font-size: 80%;
-
 }
 .switch {
   margin-right: 4%;
 }
-
 .active, .accordion:hover {
   background-color: #ccc;
 }
-
 .panel {
   width: 100%;
   /* must match .accordion's width */
@@ -46,27 +41,22 @@ font-size: 80%;
   display: none;
   overflow: hidden;
 }
-
 .title{
   padding: 1%;
 }
-
 .active+.panel {
   display: block;
 }
-
 .accordion:after {
   content: '\02795';
   color: #777;
   float: right;
   /*margin-left: 4%; read below*/
 }
-
 .active:after {
   content: "\2796";
   /*margin-left: 0%; no needed. just shifts text when toggled*/
 }
-
 .switch {
   position: relative;
   display: inline-block;
@@ -76,11 +66,9 @@ font-size: 80%;
   align: center;
   float: right;
 }
-
 .switch input {
   display: none
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -93,7 +81,6 @@ font-size: 80%;
   transition: .3s;
   margin-right: 10%
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -105,29 +92,23 @@ font-size: 80%;
   -webkit-transition: .3s;
   transition: .3s;
 }
-
 input:checked+.slider {
   background-color: #5CA2D5;
 }
-
 input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
-
 input:checked+.slider:before {
   -webkit-transform: translateX(1.4em);
   -ms-transform: translateX(1.82em);
   transform: translateX(1.4em);
 }
-
 .slider.round {
   border-radius: 1.9em;
 }
-
 .slider.round:before {
   border-radius: 50%;
 }
-
 .submit {
   font-size: .65em;
   border-radius: 2em;
@@ -138,11 +119,9 @@ input:checked+.slider:before {
   background-color: #81E870;
   margin: 3%;
 }
-
 .submit:hover {
   background-color: #70D642
 }
-
 .close {
   font-size: .65em;
   border-radius: 2em;
@@ -153,7 +132,6 @@ input:checked+.slider:before {
   background-color: #ff704d;
   margin: 3%;
 }
-
 .buttonContainer {
   text-align: center;
   display: flex;
@@ -161,11 +139,9 @@ input:checked+.slider:before {
   align-items: center;
   height: 100%;
 }
-
 .close:hover {
   background-color: #ff5c33;
 }
-
 /* messes up past 260 px width but what screen is that tiny? 300 is smallest avg */
 .buttonByn{
   font-size: 50%;
@@ -175,7 +151,6 @@ input:checked+.slider:before {
   display: inline;
   position:  inherit;
 }
-
 .switch {
   width: 15%;
   /* need these hardcoded */
@@ -183,29 +158,20 @@ input:checked+.slider:before {
   max-width: 2.7em;
   margin: 0;
 }
-
-
-
 @media screen and (max-width: 800px) {
-
-
   .panel{
     text-align: left;
     width: 100%;
   }
-
   .content {
     width: 100%;
   }
-
   .accordion {
     width: 100%;
   }
-
   .contractText{
     font-size: 55%;
   }
-
   .switch {
     width: 15%;
     /* need these hardcoded */
@@ -213,19 +179,15 @@ input:checked+.slider:before {
     max-width: 2.6em;
     margin: 0;
   }
-
   .allContracts {
     width: 100%;
   }
-
 .slider{
   height: 100%;
   margin: 0;
 }
-
 input:checked+.slider:before{
 transform: translateX(1.5em);
-
 }
 /*
 .buttonWrapper {
@@ -245,7 +207,6 @@ input:checked+.slider:before {
 .slider::before{
   transform: translate(100%);
 }*/
-
 }
 /* OK SUMIN ILL get rid of mobile view!
  biggest viewport as of now is 480. note 5, lg g5, 1+3,
@@ -254,11 +215,9 @@ should check new iphone to double check though. biggest i phone was 8 plus at 41
   .accordion {
     width: 100%;
   }
-
   .panel {
     width: 95%;
   }
-
   .switch {
     width: 23%;
   }
