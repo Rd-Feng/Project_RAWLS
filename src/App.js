@@ -7,6 +7,7 @@ import NavBar from './Models/NavBar'
 import Contracts from './Models/Contracts'
 import Wallet from './Models/Wallet'
 import About from './Models/About'
+import Login from './Models/Login'
 import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -344,13 +345,19 @@ class App extends Component {
             <Header />
             <Route exact={true} path='/' render={() => (
               <div>
-                <NavBar active="home"/>
-
-                <div className="content">
-                  <Homepage contracts={this.state.contracts}/>
-                </div>
+                <Login />
               </div>
             )}/>
+
+            <Route exact={true} path='/homepage' render={() => (
+                <div>
+                    <NavBar active="home"/>
+                    <div className="content">
+                        <Homepage contracts={this.state.contracts}/>
+                    </div>
+                </div>
+            )}/>
+
             <Route exact={true} path='/contract' render={() => (
               <div>
                 <NavBar active="contract"/>
@@ -359,6 +366,7 @@ class App extends Component {
                 </div>
               </div>
             )}/>
+
             <Route exact={true} path='/wallet' render={() => (
               <div>
                 <NavBar active="wallet"/>
@@ -368,6 +376,7 @@ class App extends Component {
                 </div>
               </div>
             )}/>
+
             <Route exact={true} path='/about' render={() => (
               <div>
                 <NavBar active="about"/>

@@ -16,7 +16,7 @@ class NavBar extends Component {
       <div className="sidebar">
         <img className="logo_pic" src={require('./logo1.png')} />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <a className={this.state.home} href="/">
+        <a className={this.state.home} href="homepage">
         <div className="faContainer">
           <i className="fa fa-fw fa-home faPic"></i>
           <div className="faText">Home</div>
