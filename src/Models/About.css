@@ -1,0 +1,12 @@
+.aboutCard{
+  z-index: 0px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 10%;
+  margin-right:4.1%;
+  margin-left: 2%;
+  border: 1px solid #cccccc;
+  border-radius: 5px 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}

@@ -6,6 +6,7 @@ import Homepage from './Models/Homepage'
 import NavBar from './Models/NavBar'
 import Contracts from './Models/Contracts'
 import Wallet from './Models/Wallet'
+import About from './Models/About'
 import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -372,7 +373,7 @@ class App extends Component {
                 <NavBar active="about"/>
 
                 <div className="content">
-                  <h2>About</h2>
+                  <About contracts={this.state.contracts}/>
                 </div>
               </div>
             )}/>
