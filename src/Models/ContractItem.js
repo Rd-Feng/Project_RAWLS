@@ -5,6 +5,9 @@ import './ContractItem.css'
 class ContractItem extends Component {
 	constructor (props) {
 		super(props)
+		this.permRefs = []
+		// should be from context
+		this.account = '0xce8458cb49f4fa890bd22f936eafcca66d81ac2e'
 		this.state = {
 			show_panel: false,
 			perms: []
@@ -25,11 +28,16 @@ class ContractItem extends Component {
 				let { getPerms } = contractInstance;
 				getPerms(i, (err, perm) => {
 					if (err) console.error ('An error occured::::', err);
+					let r = React.createRef();
+					this.permRefs.push(r)
 					this.state.perms.push(
 						{
 							title: perm[0],
 							price: perm[1]['c'][0],
-							perm: perm[2]
+							perm: perm[2],
+							idx: perm[3]['c'][0],
+							reference: r,
+							changed: false
 						}
 					)
 				})
@@ -49,6 +57,24 @@ class ContractItem extends Component {
 		let news = !this.state.show_panel
 		this.setState({show_panel: news})
 	}
+	handleSubmit () {
+		// console.log(this.permRefs[0].current.checked)
+		const contractABI = window.web3.eth.contract(this.props.contract.abi)
+		const contractInstance = contractABI.at(this.props.contract.addr)
+		const { changeState } = contractInstance;
+		this.state.perms.forEach(function(perm) {
+			if (perm.changed)
+			{
+				console.log("changing::: ", perm.title)
+				let newState = perm.reference.current.checked
+				changeState(perm.idx, newState, (err) => {
+					if (err) {
+						console.log(err)
+					}
+				})
+			}
+		});
+	}
 	render () {
 		const accordionState = this.state.show_panel ? 'active' : '';
 		const accordionClass = `accordion ${accordionState}`;
@@ -59,8 +85,10 @@ class ContractItem extends Component {
 					<p className="contractText">{perm.title}
 						<label className="switch">
 							<input
+								ref={perm.reference}
 								type="checkbox"
 								defaultChecked={perm.perm ? 'checked' : ''}
+								onClick={() => {perm.changed = true}}
 							/>
 							<span className="slider round"></span>
 						</label></p>
@@ -77,16 +105,16 @@ class ContractItem extends Component {
 						<button className="close buttonByn" onClick={() => {this.togglePanel();}}>
 							Close
 						</button>
-						<button className="submit right buttonByn">
+						<button className="submit right buttonByn" onClick={() => {this.handleSubmit();}}>
 							Submit
 						</button>
-						<button className="close right buttonByn" onClick={() => {this.resetContract();}}>
-							Reset
-						</button>
-					</div>
+						{/* <button className="close right buttonByn" onClick={() => {this.resetContract();}}>
+						Reset
+					</button> */}
 				</div>
-			)
-		}
+			</div>
+		)
 	}
+}
 
-	export default ContractItem;
+export default ContractItem;

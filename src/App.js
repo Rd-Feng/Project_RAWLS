@@ -5,6 +5,7 @@ import Footer from './Models/Footer'
 import Homepage from './Models/Homepage'
 import NavBar from './Models/NavBar'
 import Contracts from './Models/Contracts'
+import Wallet from './Models/Wallet'
 import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -16,161 +17,7 @@ class App extends Component {
     this.state = {
       contracts:[
         {
-          addr: '0x2d28ad98624af80c635cbcbb0ba519eecee0ad8f',
-          abi:  [
-            {
-              "constant": true,
-              "inputs": [],
-              "name": "getCompany",
-              "outputs": [
-                {
-                  "name": "",
-                  "type": "address"
-                }
-              ],
-              "payable": false,
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "constant": false,
-              "inputs": [],
-              "name": "pay",
-              "outputs": [],
-              "payable": false,
-              "stateMutability": "nonpayable",
-              "type": "function"
-            },
-            {
-              "constant": false,
-              "inputs": [
-                {
-                  "name": "index",
-                  "type": "uint256"
-                },
-                {
-                  "name": "state",
-                  "type": "bool"
-                }
-              ],
-              "name": "changeState",
-              "outputs": [],
-              "payable": false,
-              "stateMutability": "nonpayable",
-              "type": "function"
-            },
-            {
-              "constant": false,
-              "inputs": [],
-              "name": "kill",
-              "outputs": [],
-              "payable": false,
-              "stateMutability": "nonpayable",
-              "type": "function"
-            },
-            {
-              "constant": true,
-              "inputs": [],
-              "name": "payment",
-              "outputs": [
-                {
-                  "name": "",
-                  "type": "int256"
-                }
-              ],
-              "payable": false,
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "constant": true,
-              "inputs": [],
-              "name": "numPerms",
-              "outputs": [
-                {
-                  "name": "",
-                  "type": "uint256"
-                }
-              ],
-              "payable": false,
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "constant": true,
-              "inputs": [],
-              "name": "contractName",
-              "outputs": [
-                {
-                  "name": "",
-                  "type": "string"
-                }
-              ],
-              "payable": false,
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "constant": true,
-              "inputs": [],
-              "name": "getUser",
-              "outputs": [
-                {
-                  "name": "",
-                  "type": "address"
-                }
-              ],
-              "payable": false,
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "constant": true,
-              "inputs": [
-                {
-                  "name": "index",
-                  "type": "uint256"
-                }
-              ],
-              "name": "getPerms",
-              "outputs": [
-                {
-                  "name": "",
-                  "type": "string"
-                },
-                {
-                  "name": "",
-                  "type": "int256"
-                },
-                {
-                  "name": "",
-                  "type": "bool"
-                }
-              ],
-              "payable": false,
-              "stateMutability": "view",
-              "type": "function"
-            },
-            {
-              "inputs": [
-                {
-                  "name": "u",
-                  "type": "address"
-                }
-              ],
-              "payable": false,
-              "stateMutability": "nonpayable",
-              "type": "constructor"
-            },
-            {
-              "payable": true,
-              "stateMutability": "payable",
-              "type": "fallback"
-            }
-          ]
-        },
-        {
-          addr: '0xe9eefe1b6da38614f578ebae6cc978992936dc6c',
+          addr: '0x44ef914d2b53c0f770f1ab7cabc9a352147d840c',
           abi: [
             {
               "constant": false,
@@ -186,8 +33,8 @@ class App extends Component {
               ],
               "name": "changeState",
               "outputs": [],
-              "payable": false,
-              "stateMutability": "nonpayable",
+              "payable": true,
+              "stateMutability": "payable",
               "type": "function"
             },
             {
@@ -273,6 +120,10 @@ class App extends Component {
                 {
                   "name": "",
                   "type": "bool"
+                },
+                {
+                  "name": "",
+                  "type": "uint256"
                 }
               ],
               "payable": false,
@@ -320,6 +171,164 @@ class App extends Component {
               "payable": false,
               "stateMutability": "view",
               "type": "function"
+            }
+          ]
+        },
+        {
+          addr: '0xc05f79ef09e25312975a0cb5b1aceb1ca0f2bd0a',
+          abi: [
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "getCompany",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": false,
+              "inputs": [],
+              "name": "pay",
+              "outputs": [],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "constant": false,
+              "inputs": [
+                {
+                  "name": "index",
+                  "type": "uint256"
+                },
+                {
+                  "name": "state",
+                  "type": "bool"
+                }
+              ],
+              "name": "changeState",
+              "outputs": [],
+              "payable": true,
+              "stateMutability": "payable",
+              "type": "function"
+            },
+            {
+              "constant": false,
+              "inputs": [],
+              "name": "kill",
+              "outputs": [],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "payment",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "int256"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "numPerms",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "contractName",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "string"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [],
+              "name": "getUser",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "constant": true,
+              "inputs": [
+                {
+                  "name": "index",
+                  "type": "uint256"
+                }
+              ],
+              "name": "getPerms",
+              "outputs": [
+                {
+                  "name": "",
+                  "type": "string"
+                },
+                {
+                  "name": "",
+                  "type": "int256"
+                },
+                {
+                  "name": "",
+                  "type": "bool"
+                },
+                {
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "name": "u",
+                  "type": "address"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "constructor"
+            },
+            {
+              "payable": true,
+              "stateMutability": "payable",
+              "type": "fallback"
             }
           ]
         }
@@ -354,7 +363,7 @@ class App extends Component {
                 <NavBar active="wallet"/>
 
                 <div className="content">
-                  <h2>Wallet</h2>
+                  <Wallet contracts={this.state.contracts}/>
                 </div>
               </div>
             )}/>

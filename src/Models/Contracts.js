@@ -10,12 +10,11 @@ class Contracts extends Component {
 
   render () {
     let contractItems;
-    console.log(this.state.contracts)
     if(this.state.contracts){
       contractItems = this.state.contracts.map(contract => {
         return (
-          <div className="Ccard">
-            <ContractItem key={contract.addr} contract={contract}/>
+          <div className="Ccard" key={contract.addr}>
+            <ContractItem contract={contract}/>
           </div>
         );
       });
