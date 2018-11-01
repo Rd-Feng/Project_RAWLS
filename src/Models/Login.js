@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {
-    ButtonToolbar, 
+    ButtonToolbar,
     ButtonGroup,
     Button, FormGroup,
     FormControl,
@@ -15,8 +15,8 @@ import {BrowserRouter, Route} from 'react-router-dom';
 class Login extends Component {
   constructor(props) {
     super(props);
-    
-    this.state = { 
+
+    this.state = {
         email: '',
         password: '',
         isLoggedIn: false
@@ -67,7 +67,7 @@ class Login extends Component {
                                     Login
                                 </Button>
                             </ButtonGroup>
-                            
+
                             <ButtonGroup>
                                 <Button
                                     type="submit"
