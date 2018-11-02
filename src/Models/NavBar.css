@@ -104,7 +104,8 @@
     padding: 4%;
   }
 
-  .fa-history::before, .fa-question::before, .fa-home::before, .fa-file::before{
+  .fa-history::before, .fa-question::before, .fa-home::before, .fa-file::before, 
+  .fa-logout::before {
     font-size: 100%;
   }
 }
