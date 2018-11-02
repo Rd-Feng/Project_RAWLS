@@ -57,8 +57,10 @@ class Login extends Component {
                         />
                     </FormGroup>
                     <div>
-                        <ButtonToolbar>
-                            <ButtonGroup>
+                        <ButtonToolbar >
+                        <div className='buttonDIV'>
+                            <ButtonGroup className="touchCSSJian">
+
                                 <Button
                                     bsStyle="info"
                                     disabled={!this.validateForm()}
@@ -68,13 +70,15 @@ class Login extends Component {
                                 </Button>
                             </ButtonGroup>
 
-                            <ButtonGroup>
+                            <ButtonGroup className="touchCSSJian">
                                 <Button
                                     type="submit"
                                 >
                                     Register
                                 </Button>
+
                             </ButtonGroup>
+                            </div>
                         </ButtonToolbar>
                     </div>
                 </form>
