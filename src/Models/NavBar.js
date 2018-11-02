@@ -8,7 +8,8 @@ class NavBar extends Component {
       home: this.props.active == "home" ? 'current' : '',
       contract: this.props.active == "contract" ? 'current' : '',
       wallet: this.props.active == "wallet" ? 'current' : '',
-      about: this.props.active == "about" ? 'current' : ''
+      about: this.props.active == "about" ? 'current' : '',
+      logout: this.props.active == "logout" ? 'current' : ''
     }
   }
   render () {
@@ -40,6 +41,14 @@ class NavBar extends Component {
           <div className="faText">About</div>
         </div>
       </a>
+
+      <a className={this.state.logout} href="/">
+        <div className="faContainer">
+            <i className="fa fa-fw fa-logout faPic"></i>
+            <div className="faText">Logout</div>
+        </div>
+      </a>
+
     </div>
   )
 }
