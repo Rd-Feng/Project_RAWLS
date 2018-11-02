@@ -1,15 +1,37 @@
-@media all and (min-width: 480px) {
+@media (min-width: 400px) {
+  .Login form {
+      max-width: 360px;
+  }
+
+}
+
     .Login {
-        padding: 60px 0;
+        padding: 60px 15px;
     }
 
     .Login form {
         margin: 0 auto;
-        max-width: 320px;
+        padding: 2%;
+        background-color: grey;
+
     }
+.form-control {
+  width: 80%;
 }
 
 btnAlign {
     display: inline-block;
     vertical-align: top;
+
+}
+
+.buttonDIV{
+    margin: 0 auto;
+}
+.touchCSSJian{
+  padding-right: 4px;
+}
+.header {
+
+  display: none;
 }
