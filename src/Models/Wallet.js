@@ -7,12 +7,17 @@ class Wallet extends Component {
         <div className="walletCard">
           <h2 className="walletText"> My Wallet </h2>
 
-          <p className="balanceText"> Balance
-          <span className="balanceValue"> $23 </span></p>
+          <div className="balanceContainer">
+          <p className="balanceText"> Total Balance:</p>
+          <p className="balanceValue"> $28 </p>
+          </div>
 
-          <button className="redeem">Redeem</button>
-          <p className="incomeText"> Income
-          <span className="incomeValue"> $3 </span></p>
+          <div className="incomeContainer">
+          <p className="incomeText"> Monthly Income:</p>
+          <p className="incomeValue"> $3 </p>
+          </div>
+
+            <button className="redeem">Redeem</button>
           </div>
 
           <table className="transactionTable">
@@ -25,7 +30,7 @@ class Wallet extends Component {
           <tr>
           <th>Date</th>
           <th>Type</th>
-          <th>Amount</th>
+          <th>Monthly Income</th>
           <th>Balance</th>
           </tr>
 
