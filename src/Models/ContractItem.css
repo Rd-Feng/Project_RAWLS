@@ -1,9 +1,14 @@
 .right {
   float: right;
 }
+/* remove blue outline when clicked */
+.accordion:focus,.accordion:active {
+   outline: none !important;
+   box-shadow: none;
+}
 /* drop down for contracts */
 .accordion {
-  background:  #ccc;
+  background:  #e6e6e6;
   color: #444;
   cursor: pointer;
   padding: 2%;
@@ -19,13 +24,9 @@
   transition: 0.4s;
   font-size: 180%;
 }
-/*
-.main{
-    text-align: center;
-}
-*/
+
 .contractText{
-font-size: 80%;
+  font-size: 80%;
 }
 .switch {
   margin-right: 4%;
@@ -51,18 +52,15 @@ font-size: 80%;
   content: '\02795';
   color: #777;
   float: right;
-  /*margin-left: 4%; read below*/
 }
 .active:after {
   content: "\2796";
-  /*margin-left: 0%; no needed. just shifts text when toggled*/
 }
 .switch {
   position: relative;
   display: inline-block;
   width: 14%;
   height: 1.07em;
-  /* cant turn this into % */
   align: center;
   float: right;
 }
@@ -109,28 +107,42 @@ input:checked+.slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.submit {
+.submitButton {
   font-size: .65em;
   border-radius: 2em;
   border: none;
   color: white;
-  padding: .7em .9em;
+  padding: .2em .6em;
   cursor: pointer;
   background-color: #81E870;
   margin: 3%;
 }
-.submit:hover {
-  background-color: #70D642
+.submitButton:hover {
+  background-color: #70D642;
 }
-.close {
+/* remove blue outline when clicked */
+.submitButton:focus,.submitButton:active {
+   outline: none !important;
+   box-shadow: none;
+}
+.closeButton {
   font-size: .65em;
   border-radius: 2em;
   border: none;
   color: white;
-  padding: .7em .9em;
+  padding: .2em .6em;
   cursor: pointer;
   background-color: #ff704d;
   margin: 3%;
+}
+.closeButton:hover {
+  background-color: #ff3300;
+}
+
+/* remove blue outline when clicked */
+.closeButton:focus,.closeButton:active {
+   outline: none !important;
+   box-shadow: none;
 }
 .buttonContainer {
   text-align: center;
@@ -139,10 +151,7 @@ input:checked+.slider:before {
   align-items: center;
   height: 100%;
 }
-.close:hover {
-  background-color: #ff5c33;
-}
-/* messes up past 260 px width but what screen is that tiny? 300 is smallest avg */
+
 .buttonByn{
   font-size: 50%;
   padding: 2%;
@@ -153,7 +162,6 @@ input:checked+.slider:before {
 }
 .switch {
   width: 15%;
-  /* need these hardcoded */
   min-width: 2.7em;
   max-width: 2.7em;
   margin: 0;
@@ -174,7 +182,6 @@ input:checked+.slider:before {
   }
   .switch {
     width: 15%;
-    /* need these hardcoded */
     min-width: 2.6em;
     max-width: 2.6em;
     margin: 0;
@@ -182,44 +189,11 @@ input:checked+.slider:before {
   .allContracts {
     width: 100%;
   }
-.slider{
-  height: 100%;
-  margin: 0;
-}
-input:checked+.slider:before{
-transform: translateX(1.5em);
-}
-/*
-.buttonWrapper {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    border: solid 1px green;
-}
-.buttonWrapper:hover {
-    transform: translateX(100%);
-}*/
-/*
-input:checked+.slider:before {
-  transform: translateX(180%);
-}
-*//*
-.slider::before{
-  transform: translate(100%);
-}*/
-}
-/* OK SUMIN ILL get rid of mobile view!
- biggest viewport as of now is 480. note 5, lg g5, 1+3,
-should check new iphone to double check though. biggest i phone was 8 plus at 414
-@media screen and (max-width: 480px) {
-  .accordion {
-    width: 100%;
+  .slider{
+    height: 100%;
+    margin: 0;
   }
-  .panel {
-    width: 95%;
-  }
-  .switch {
-    width: 23%;
+  input:checked+.slider:before{
+    transform: translateX(1.5em);
   }
 }
-*/

@@ -102,15 +102,12 @@ class ContractItem extends Component {
 					</button>
 					<div className="panel">
 						{permissions}
-						<button className="close buttonByn" onClick={() => {this.togglePanel();}}>
+						<button className="closeButton" onClick={() => {this.togglePanel();}}>
 							Close
 						</button>
-						<button className="submit right buttonByn" onClick={() => {this.handleSubmit();}}>
+						<button className="submitButton right" onClick={() => {this.handleSubmit();}}>
 							Submit
 						</button>
-						{/* <button className="close right buttonByn" onClick={() => {this.resetContract();}}>
-						Reset
-					</button> */}
 				</div>
 			</div>
 		)
