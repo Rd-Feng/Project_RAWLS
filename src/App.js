@@ -342,13 +342,12 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <div className="main">
-            <Header />
+          <Header />
             <Route exact={true} path='/' render={() => (
               <div>
                 <Login />
               </div>
             )}/>
-
             <Route exact={true} path='/homepage' render={() => (
                 <div>
                     <NavBar active="home"/>
