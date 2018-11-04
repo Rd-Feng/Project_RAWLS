@@ -15,7 +15,7 @@ class NavBar extends Component {
   render () {
     return (
       <div className="sidebar">
-        <img className="logo_pic" src={require('./logo1.png')} />
+        <img className="logo_pic" src={require('./logo5.png')} />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <a className={this.state.home} href="homepage">
         <div className="faContainer">
@@ -31,7 +31,7 @@ class NavBar extends Component {
       </a>
       <a className={this.state.wallet} href="wallet">
         <div className="faContainer">
-          <i className="fa fa-fw fa-history faPic"></i>
+          <i className="fa fa-fw fa-money faPic"></i>
           <div className="faText">Wallet</div>
         </div>
       </a>
@@ -39,13 +39,6 @@ class NavBar extends Component {
         <div className="faContainer">
           <i className="fa fa-fw fa-question faPic"></i>
           <div className="faText">About</div>
-        </div>
-      </a>
-
-      <a className={this.state.logout} href="/">
-        <div className="faContainer">
-            <i className="fa fa-fw fa-logout faPic"></i>
-            <div className="faText">Logout</div>
         </div>
       </a>
 

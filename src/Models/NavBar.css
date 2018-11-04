@@ -1,11 +1,9 @@
 .sidebar {
+  z-index: 2;
   margin: 0;
   padding: 0;
   width: 18%;
-   /* background-color: #f1f1f1;*/
- background-color: #29293d;
- /*background: linear-gradient(135deg, #0066cc, #0066cc 50%, #F9C44C);*/
-/*  background: linear-gradient(135deg, #004d99, #0066cc 50%, #cce6ff);*/
+  background-color: #29293d;
   position: fixed;
   height: 100%;
   overflow: hidden;
@@ -23,28 +21,20 @@
 
 .fa {
   transform: scale(1.9, 1.9); /* this may cause issues in other browsers */
-
 }
 
 .faPic{
   margin-left: 10%;
-    float: left;
-    margin-right: 10%;
-    vertical-align: middle;
+  float: left;
+  margin-right: 10%;
+  vertical-align: middle;
 }
-/* not sure why the home one is off center */
-/*
-.fa-Home{
-  margin-left: 0;
-  margin-right: 2%;
-  transform: translateX(30px);
-}
-*/
 .faText {
-  text-align: left;
+  float: center;
+  vertical-align: middle;
   margin-right: 3%;
   margin-left: 40%;
-  font-size: 120%;
+  font-size: 110%;
 }
 
 .sidebar a.current {
@@ -58,15 +48,14 @@
 }
 
 .logo_pic {
-  width: 100%;
-  margin: 2%;
+  width:90%;
+  margin: 1%;
+  margin-left: 5%;
 }
 /** 800 - 1000 px is around the avg tablets widest widths */
 @media screen and (max-width: 800px) {
-
-
   .sidebar {
-    width: 100%;
+    width:100%;
     position: -webkit-sticky;
     position: sticky;
     overflow: hidden;
@@ -83,9 +72,9 @@
     font-size: 100%;
   }
 
-.faContainer{
-  width: 100%;
-}
+  .faContainer{
+    width: 100%;
+  }
   .faText{
     font-size: 0;
     width: 0%;
@@ -104,10 +93,8 @@
     padding: 4%;
   }
 
-  .fa-history::before, .fa-question::before, .fa-home::before, .fa-file::before, 
-  .fa-logout::before {
+  .fa-history::before, .fa-question::before, .fa-home::before, .fa-file::before,
+  .fa-user::before {
     font-size: 100%;
   }
 }
-  /** media for 480 and mobile phones seem to be unecessary as of now */
-/* WOWW SUMIN I SEE HOW IT IS!!! mobile is king! */
