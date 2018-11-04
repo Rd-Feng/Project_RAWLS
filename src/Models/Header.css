@@ -1,28 +1,64 @@
 * {box-sizing: border-box;}
 
 .header {
-    overflow: visible;
- 	  width:100%;
-	   height: 50px;
-	    transition: height 0.3s;
-      	position: fixed;
-  	overflow: hidden;
-  	background-color: white;
-	border-bottom:1px solid #ccc;
-	border-bottom-width: thin;
-  	padding: 20px 10px;
+  z-index: 1;
+  overflow: visible;
+  width:100%;
+  height: 40px;
+  transition: height 0.3s;
+  position: fixed;
+  background-color: white;
+  border-bottom:1px solid #ccc;
+  border-bottom-width: thin;
+  padding: 20px 10px;
 }
-
 
 .profile_pic {
-  margin-top: -1%;
   width: 3%;
+  margin-top: -1.5%;
   float: right;
-  font-size: 100%;
+}
+.signOut {
+  color: #5CA2D5;
+  text-decoration: none;
+    display: block;
+    padding: 10% 16%;
+}
+.signOut:hover{
+  color: #29293d;
+}
+.dropdown {
+  float: right;
+  margin-top: -1.4%;
+  margin-left: 1%;
+  position: relative;
+  display: inline-block;
+  color: #5CA2D5;
+}
+.dropdown:hover{
+  color: #29293d;
+}
+.dropbtn{
+  border: none;
+  cursor: pointer;
+}
+.dropdown-content {
+  z-index: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: none;
+  right: 0%;
+  min-width: 100px;
 }
 
-@media screen and (max-width: 500px) {
-   .header{
-  display: none;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
+@media screen and (max-width: 500px) {
+  .header{
+    display: none;
+  }
 }
