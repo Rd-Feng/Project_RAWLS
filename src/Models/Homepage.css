@@ -2,7 +2,9 @@
     box-sizing: border-box;
 }
 .row{
- margin-top: 30px;
+   margin-top: 30px;
+   height: 100%;
+   width: 100%;
 }
 .title{
    background-color: #29293d;
@@ -15,12 +17,17 @@
 }
 .titleText {
   text-align: left;
-  margin-left: 3%;
-  font-size: 100%;
+  font-size: 110%;
   margin: -0.2%;
   padding: 2%;
+  font-weight: bold;
 }
-
+.Text{
+  margin: 0%;
+  text-align: left;
+  font-size: 100%;
+  padding: 2%;
+}
 /* link */
 a{
  color: #1aa3ff;
@@ -31,27 +38,29 @@ a:hover {
 }
 /* blocks */
 .card {
-     z-index: 0px;
+     margin-left: 3%;
+     z-index: 0;
      background-color: white;
      padding: 20px;
      margin-top: 50px;
      border: 1px solid #cccccc;
      border-radius: 5px;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     block-size: 60%;
 }
 /* Create two equal columns that floats next to each other */
 .leftColumn {
     float: left;
-    width: 60%;
-    padding: 1%;
+    width: 50%;
     background-color: white;
+    padding: 1%;
 }
 
 .rightColumn {
     float: left;
-    width: 38%;
-    padding: 1%;
+    width: 50%;
     background-color: white;
+    padding: 1%;
 }
 
 /* Clear floats after the columns */
@@ -63,14 +72,16 @@ a:hover {
 
 @media screen and (max-width: 800px) {
   .leftColumn, .rightColumn{
-    width: 97%;
+    width: 100%;
     padding: 0;
+    margin-left: 3%;
+    margin-right: 1%;
 
   }
 
   .card {
     margin-top: 5%;
-    margin-left: 2%;
-    margin right: 2%;
+    margin-left: 4%;
+    block-size: 150px;
   }
 }
