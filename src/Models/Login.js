@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import {
-    ButtonToolbar,
-    ButtonGroup,
-    Button, FormGroup,
-    FormControl,
-    ControlLabel
+  ButtonToolbar,
+  ButtonGroup,
+  Button, FormGroup,
+  FormControl,
+  ControlLabel
 } from "react-bootstrap";
 import "./Login.css";
 import Header from './Header';
@@ -17,74 +17,88 @@ class Login extends Component {
     super(props);
 
     this.state = {
-        email: '',
-        password: '',
-        isLoggedIn: false
+      email: '',
+      password: '',
+      isLoggedIn: false,
+      correctuname: 'asdf@asdf.com',
+      correctpasswd: '098&poiU'
     };
   }
 
-    validateForm() {
-        return this.state.email.length > 0 && this.state.password.length > 0;
+  validateForm() {
+    return this.state.email.length > 0 && this.state.password.length > 0;
+  }
+  handleKeyPress(event) {
+    if (event.keyCode !== 13) return;
+
+  }
+  handleChange = event => {
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+  }
+  handleSubmit () {
+    if (this.state.email == this.state.correctuname && this.state.password == this.state.correctpasswd)
+    {
+      window.location = "homepage"
     }
-
-    handleChange = event => {
-        this.setState({
-            [event.target.id]: event.target.value
-        });
+    else {
+      alert('Incorrect user name and password pair!!!')
     }
+  }
+  render() {
+    return (
+      <div className="Login">
+        <form onSubmit={this.checkSignIn}>
+          <FormGroup controlId="email" bsSize="large">
+            <ControlLabel> Username </ControlLabel>
+            <FormControl
+              autoFocus
+              type="text"
+              value={this.state.email}
+              onChange={this.handleChange}
+              inputRef = {ref => { this.inputEmail = ref}}
+            />
+          </FormGroup>
+          <FormGroup controlId="password" bsSize="large">
+            <ControlLabel> Password </ControlLabel>
+            <FormControl
+              value={this.state.password}
+              onChange={this.handleChange}
+              type="password"
+              inputRef = {ref => { this.inputPassword = ref}}
+            />
+          </FormGroup>
+          <div>
+            <ButtonToolbar >
+              <div className='buttonDIV'>
+                <ButtonGroup className="touchCSSJian">
 
-    render() {
-        return (
-            <div className="Login">
-                <form onSubmit={this.checkSignIn}>
-                    <FormGroup controlId="email" bsSize="large">
-                        <ControlLabel> Username </ControlLabel>
-                        <FormControl
-                            autoFocus
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                            inputRef = {ref => { this.inputEmail = ref}}
-                        />
-                    </FormGroup>
-                    <FormGroup controlId="password" bsSize="large">
-                        <ControlLabel> Password </ControlLabel>
-                        <FormControl
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                            type="password"
-                            inputRef = {ref => { this.inputPassword = ref}}
-                        />
-                    </FormGroup>
-                    <div>
-                        <ButtonToolbar >
-                        <div className='buttonDIV'>
-                            <ButtonGroup className="touchCSSJian">
+                  <Button
+                    bsStyle="info"
+                    disabled={!this.validateForm()}
+                    onClick={() => {this.handleSubmit();}}
+                    // href="/homepage"
+                    >
+                      Login
+                    </Button>
+                  </ButtonGroup>
 
-                                <Button
-                                    bsStyle="info"
-                                    disabled={!this.validateForm()}
-                                    href="/homepage"
-                                >
-                                    Login
-                                </Button>
-                            </ButtonGroup>
+                  <ButtonGroup className="touchCSSJian">
+                    <Button
+                      type="submit"
+                      >
+                        Register
+                      </Button>
 
-                            <ButtonGroup className="touchCSSJian">
-                                <Button
-                                    type="submit"
-                                >
-                                    Register
-                                </Button>
-
-                            </ButtonGroup>
-                            </div>
-                        </ButtonToolbar>
-                    </div>
-                </form>
-            </div>
+                    </ButtonGroup>
+                  </div>
+                </ButtonToolbar>
+              </div>
+            </form>
+          </div>
         );
+      }
     }
-}
 
-export default Login;
+    export default Login;

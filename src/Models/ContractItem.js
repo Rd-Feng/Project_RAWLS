@@ -59,6 +59,7 @@ class ContractItem extends Component {
 	}
 	handleSubmit () {
 		// console.log(this.permRefs[0].current.checked)
+		alert('Your changes will take effect after around 1 min')
 		const contractABI = window.web3.eth.contract(this.props.contract.abi)
 		const contractInstance = contractABI.at(this.props.contract.addr)
 		const { changeState } = contractInstance;
