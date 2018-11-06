@@ -18,9 +18,9 @@ class About extends Component {
       </div>
       <div className="aboutCard">
        <h1> Mission </h1>
-       <p> To enable organizations to maximize on consumer data while compensating them fairly</p>
-       <p> To enable organizations to differentiate their brand based on the values of trust and integrity</p>
-       <p> To give consumers control and transparency on the privacy and monetary value of their data</p>
+       <li> To enable organizations to maximize on consumer data while compensating them fairly</li>
+       <li> To enable organizations to differentiate their brand based on the values of trust and integrity</li>
+       <li> To give consumers control and transparency on the privacy and monetary value of their data</li>
       </div>
       <div className="aboutCard">
         <h1> Meet the Team </h1>
