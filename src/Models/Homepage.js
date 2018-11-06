@@ -55,34 +55,37 @@ class Homepage extends Component {
     // })
     return (
       <div className="row">
-      <div className="leftColumn">
-      <div className="card">
-      <div className="title">
-      <h2 className="titleText">Current Contracts</h2></div>
-      <p>{this.state.title}</p>
-      <p>{this.state.title2}</p>
-      <a className="Text" href="contract">See more...</a>
-      </div>
-      <div className="card">
-      <div className="title">
-      <h2 className="titleText">You can earn more...</h2></div>
-      <a className="Text" href="contract" >View Contracts</a>
-      </div>
-      </div>
+        <div className="leftColumn">
+          <div className="card">
+            <div className="title">
+              <h2 className="titleText">Current Contracts</h2></div>
+              <p className="Text">{this.state.title}</p>
+              <p className="Text">{this.state.title2}</p>
+              <a className="Text" href="contract">See more...</a>
+            </div>
+            <div className="card">
+              <div className="title">
+                <h2 className="titleText">You can earn more...</h2>
+              </div>
+              <p className="Text">{this.state.title}</p>
+              <a className="Text" href="contract" >View Contracts</a>
+            </div>
+          </div>
 
-      <div className="rightColumn">
+          <div className="rightColumn">
 
-      <div className="card">
-      <div className="title">
-      <h2 className="titleText">My Wallet</h2></div>
-      <p className="Text">Balance $32</p>
-      <p className="Text">Monthly Income $5</p>
-      </div>
+            <div className="card">
+              <div className="title">
+                <h2 className="titleText">My Wallet</h2></div>
+                <p className="Text">Balance $32</p>
+                <p className="Text">Monthly Income $5</p>
+                <a className="Text" href="wallet">See Transactions...</a>
+              </div>
 
-      </div>
-      </div>
-    )
-  }
-}
+            </div>
+          </div>
+        )
+      }
+    }
 
-export default Homepage;
+    export default Homepage;
