@@ -1,32 +1,32 @@
 * {
     box-sizing: border-box;
 }
+
 .row{
    margin-top: 30px;
    height: 100%;
    width: 100%;
 }
 .title{
-   background-color: #29293d;
+   background: #333333;
    margin-top: -21px;
    margin-left: -21px;
    margin-right: -21px;
+   margin-bottom: 20px;
    padding: 1%;
    color: white;
    border-radius: 5px 5px 0px 0px;
 }
 .titleText {
-  text-align: left;
+  margin-left: 10px !important;
   font-size: 110%;
   margin: -0.2%;
   padding: 2%;
-  font-weight: bold;
+  letter-spacing: .5px;
 }
 .Text{
-  margin: 0%;
   text-align: left;
   font-size: 100%;
-  padding: 2%;
 }
 /* link */
 a{
@@ -40,7 +40,7 @@ a:hover {
 .card {
      margin-left: 3%;
      z-index: 0;
-     background-color: white;
+     background: linear-gradient(white,#f2f2f2) !important;
      padding: 20px;
      margin-top: 50px;
      border: 1px solid #cccccc;

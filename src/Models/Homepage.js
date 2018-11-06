@@ -52,8 +52,8 @@ class Homepage extends Component {
       <div className="card">
       <div className="title">
       <h2 className="titleText">My Wallet</h2></div>
-      <p className="Text">balance $32</p>
-      <p className="Text">Income $5</p>
+      <p className="Text">Balance $32</p>
+      <p className="Text">Monthly Income $5</p>
       </div>
 
       </div>

@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   width: 18%;
-  background-color: #29293d;
+  background-color: #333333;
   position: fixed;
   height: 100%;
   overflow: hidden;
@@ -51,6 +51,7 @@
   width:90%;
   margin: 1%;
   margin-left: 5%;
+  margin-bottom: 15px;
 }
 /** 800 - 1000 px is around the avg tablets widest widths */
 @media screen and (max-width: 800px) {
