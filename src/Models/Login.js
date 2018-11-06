@@ -15,7 +15,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 class Login extends Component {
   constructor(props) {
     super(props);
-
+    this.handleKeyPress = this.handleKeyPress.bind(this);
     this.state = {
       email: '',
       password: '',
@@ -28,9 +28,15 @@ class Login extends Component {
   validateForm() {
     return this.state.email.length > 0 && this.state.password.length > 0;
   }
+  componentWillMount() {
+   document.addEventListener('keydown', this.handleKeyPress);
+  }
+  componentWillUnmount() {
+   document.removeEventListener('keydown', this.handleKeyPress);
+  }
   handleKeyPress(event) {
-    if (event.keyCode !== 13) return;
-
+    if (event.keyCode != 13) return;
+    this.handleSubmit();
   }
   handleChange = event => {
     this.setState({
@@ -78,7 +84,6 @@ class Login extends Component {
                     bsStyle="info"
                     disabled={!this.validateForm()}
                     onClick={() => {this.handleSubmit();}}
-                    // href="/homepage"
                     >
                       Login
                     </Button>
