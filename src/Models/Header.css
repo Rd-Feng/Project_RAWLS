@@ -14,8 +14,8 @@
 }
 
 .profile_pic {
-  width: 3%;
-  margin-top: -1.5%;
+  width: 30px;
+  margin-top: -15px;
   float: right;
 }
 .signOut {
@@ -29,8 +29,8 @@
 }
 .dropdown {
   float: right;
-  margin-top: -1.4%;
-  margin-left: 1%;
+  margin-top: -12px;
+  margin-left: 8px;
   position: relative;
   display: inline-block;
   color: #5CA2D5;
