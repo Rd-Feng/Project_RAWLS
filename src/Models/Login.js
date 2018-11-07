@@ -43,7 +43,6 @@ class Login extends Component {
     e.preventDefault();
     var db = fire.database();
     var ref = db.ref('Users');
-    console.log(this.state.email);
     var userRef = ref.child(this.inputEmail.value);
     userRef.set({
         Username: this.inputEmail.value,
