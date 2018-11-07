@@ -53,8 +53,7 @@ class Homepage extends Component {
             <div className="title">
               <h2 className="titleText">My Wallet</h2></div>
               <p className="Text">Balance $32</p>
-              <p className="Text">Monthly Income $5</p>
-              <a className="Text" href="wallet">See Transactions...</a>
+              <a className="Text" href="wallet">Manage My Wallet...</a>
             </div>
           </div>
         </div>
