@@ -12,8 +12,12 @@ class ContractItem extends Component {
 			show_panel: false,
 			perms: []
 		}
+	}
+	componentDidMount () {
 		this.getContractName();
 		this.getPerms();
+		this.getPayment();
+		this.getTotal();
 	}
 	getPerms () {
 		const contractABI = window.web3.eth.contract(this.props.contract.abi)
@@ -35,7 +39,7 @@ class ContractItem extends Component {
 							title: perm[0],
 							price: perm[1]['c'][0],
 							perm: perm[2],
-							idx: perm[3]['c'][0],
+							idx: perm[3],
 							reference: r,
 							changed: false
 						}
@@ -53,6 +57,26 @@ class ContractItem extends Component {
 			this.setState({title: name})
 		});
 	}
+	getPayment () {
+		const contractABI = window.web3.eth.contract(this.props.contract.abi)
+		const contractInstance = contractABI.at(this.props.contract.addr)
+		const { payment } = contractInstance;
+		payment((err, p) => {
+			if (err) console.error ('An error occured::::', err);
+			// console.log('payment::: ', p['c'][0])
+			this.setState({payment: p['c'][0]})
+		});
+	}
+	getTotal () {
+		const contractABI = window.web3.eth.contract(this.props.contract.abi)
+		const contractInstance = contractABI.at(this.props.contract.addr)
+		const { total } = contractInstance;
+		total((err, t) => {
+			if (err) console.error ('An error occured::::', err);
+			// console.log('Total::: ', t['c'][0])
+			this.setState({total: t['c'][0]})
+		});
+	}
 	togglePanel () {
 		let news = !this.state.show_panel
 		this.setState({show_panel: news})
@@ -66,9 +90,8 @@ class ContractItem extends Component {
 		this.state.perms.forEach(function(perm) {
 			if (perm.changed)
 			{
-				console.log("changing::: ", perm.title)
 				let newState = perm.reference.current.checked
-				changeState(perm.idx, newState, (err) => {
+				changeState(perm.idx.c[0], newState, (err) => {
 					if (err) {
 						console.log(err)
 					}
@@ -83,7 +106,7 @@ class ContractItem extends Component {
 		permissions = this.state.perms.map(perm => {
 			return (
 				<div key={perm.title}>
-					<p className="contractText">{perm.title}
+					<p className="contractText">{perm.title}({perm.price})
 						<label className="switch">
 							<input
 								ref={perm.reference}
@@ -99,7 +122,7 @@ class ContractItem extends Component {
 			return (
 				<div>
 					<button onClick={() => {this.togglePanel();}}
-						className={accordionClass}>{this.state.title}
+						className={accordionClass}>{this.state.title}({this.state.payment})
 					</button>
 					<div className="panel">
 						{permissions}
