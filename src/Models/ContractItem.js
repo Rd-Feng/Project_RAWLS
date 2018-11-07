@@ -82,14 +82,14 @@ class ContractItem extends Component {
 		this.setState({show_panel: news})
 	}
 	handleSubmit () {
-		// console.log(this.permRefs[0].current.checked)
-		alert('Your changes will take effect after around 1 min')
 		const contractABI = window.web3.eth.contract(this.props.contract.abi)
 		const contractInstance = contractABI.at(this.props.contract.addr)
 		const { changeState } = contractInstance;
+		let changed = false;
 		this.state.perms.forEach(function(perm) {
 			if (perm.changed)
 			{
+				changed = true;
 				let newState = perm.reference.current.checked
 				changeState(perm.idx.c[0], newState, (err) => {
 					if (err) {
@@ -98,6 +98,7 @@ class ContractItem extends Component {
 				})
 			}
 		});
+		if (changed) alert('Your changes will take effect after around 1 min');
 	}
 	render () {
 		const accordionState = this.state.show_panel ? 'active' : '';
@@ -112,7 +113,7 @@ class ContractItem extends Component {
 								ref={perm.reference}
 								type="checkbox"
 								defaultChecked={perm.perm ? 'checked' : ''}
-								onClick={() => {perm.changed = true}}
+								onClick={() => {perm.changed = !perm.changed}}
 							/>
 							<span className="slider round"></span>
 						</label></p>
