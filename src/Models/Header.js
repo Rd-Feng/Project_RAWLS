@@ -14,9 +14,9 @@ class Header extends Component {
 
       <div className="header">
 
-      <div class="dropdown">
+      <div className="dropdown">
       <div className="dropbtn"> Hi, Username</div>
-      <div class="dropdown-content">
+      <div className="dropdown-content">
       <a className="signOut left" href="/" >sign out</a>
       </div>
       </div>
