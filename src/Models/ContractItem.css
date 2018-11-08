@@ -1,6 +1,16 @@
 .right {
   float: right;
 }
+.Total{
+  text-align: right;
+  font-size: 20px;
+  color: #5CA2D5;
+}
+.PermPrice{
+  font-size: 20px;
+  color: #5CA2D5;
+
+}
 /* remove blue outline when clicked */
 .accordion:focus,.accordion:active {
    outline: none !important;
@@ -152,14 +162,6 @@ input:checked+.slider:before {
   height: 100%;
 }
 
-.buttonByn{
-  font-size: 50%;
-  padding: 2%;
-  margin: 1%;
-  margin-bottom: 2%;
-  display: inline;
-  position:  inherit;
-}
 .switch {
   width: 15%;
   min-width: 2.7em;
