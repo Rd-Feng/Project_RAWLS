@@ -6,6 +6,7 @@ class ContractItem extends Component {
 	constructor (props) {
 		super(props)
 		this.permRefs = []
+		this.l = []
 		// should be from context
 		this.account = '0xce8458cb49f4fa890bd22f936eafcca66d81ac2e'
 		this.state = {
@@ -34,19 +35,28 @@ class ContractItem extends Component {
 					if (err) console.error ('An error occured::::', err);
 					let r = React.createRef();
 					this.permRefs.push(r)
-					this.state.perms.push(
-						{
-							title: perm[0],
-							price: perm[1]['c'][0],
-							perm: perm[2],
-							idx: perm[3],
-							reference: r,
-							changed: false
-						}
-					)
+					this.l.push({
+						title: perm[0],
+						price: perm[1]['c'][0],
+						perm: perm[2],
+						idx: perm[3],
+						reference: r,
+						changed: false
+					})
+					// this.state.perms.push(
+					// 	{
+					// 		title: perm[0],
+					// 		price: perm[1]['c'][0],
+					// 		perm: perm[2],
+					// 		idx: perm[3],
+					// 		reference: r,
+					// 		changed: false
+					// 	}
+					// )
 				})
 			}
 		});
+		this.setState({perms: this.l})
 	}
 	getContractName () {
 		const contractABI = window.web3.eth.contract(this.props.contract.abi)
