@@ -107,7 +107,8 @@ class ContractItem extends Component {
 		permissions = this.state.perms.map(perm => {
 			return (
 				<div key={perm.title}>
-					<p className="contractText">{perm.title}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}${perm.price}
+					<p className="contractText">{perm.title}
+					<span className="PermPrice"> {'\u00A0'}${perm.price}</span>
 						<label className="switch">
 							<input
 								ref={perm.reference}
@@ -124,10 +125,11 @@ class ContractItem extends Component {
 			return (
 				<div>
 					<button onClick={() => {this.togglePanel();}}
-						className={accordionClass}>{this.state.title}({this.state.payment})
+						className={accordionClass}>{this.state.title}
 					</button>
 					<div className="panel">
 						{permissions}
+						<p className="Total"> Total: ${this.state.payment} </p>
 						<button className="closeButton" onClick={() => {this.togglePanel();}}>
 							Close
 						</button>
