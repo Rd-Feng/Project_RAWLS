@@ -43,16 +43,6 @@ class ContractItem extends Component {
 						reference: r,
 						changed: false
 					})
-					// this.state.perms.push(
-					// 	{
-					// 		title: perm[0],
-					// 		price: perm[1]['c'][0],
-					// 		perm: perm[2],
-					// 		idx: perm[3],
-					// 		reference: r,
-					// 		changed: false
-					// 	}
-					// )
 				})
 			}
 		});
