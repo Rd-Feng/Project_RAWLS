@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route , withRouter} from 'react-router-dom';
 import {
   ButtonToolbar,
   ButtonGroup,
@@ -71,11 +72,10 @@ class Login extends Component {
       [event.target.id]: event.target.value
     });
   }
-
   handleSubmit () {
     if (this.state.email == this.state.correctuname && this.state.password == this.state.correctpasswd)
     {
-      window.location = "homepage"
+      this.props.history.push('/homepage')
     }
     else
     {
