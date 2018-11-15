@@ -8,10 +8,8 @@ import {
 } from "react-bootstrap";
 import fire from './fire'
 import "./Login.css";
-import Header from './Header';
-import Homepage from './Homepage';
-import NavBar from './NavBar';
-import {BrowserRouter, Route} from 'react-router-dom';
+
+const UsernameContext = React.createContext();
 
 class Login extends Component {
   constructor(props) {
@@ -32,7 +30,7 @@ class Login extends Component {
     var ref = db.ref('Users');
 
     db.ref('Users').child(uname).once('value').then(
-        data => {this.setState({correctpasswd: data.val().Password})}
+      data => {this.setState({correctpasswd: data.val().Password})}
     ).catch(err => {});
 
     this.setState({correctuname: this.state.email});
@@ -45,8 +43,8 @@ class Login extends Component {
     var ref = db.ref('Users');
     var userRef = ref.child(this.inputEmail.value);
     userRef.set({
-        Username: this.inputEmail.value,
-        Password: this.inputPassword.value
+      Username: this.inputEmail.value,
+      Password: this.inputPassword.value
     });
     alert('Your account has been successfull created. Please login');
   }
@@ -56,11 +54,11 @@ class Login extends Component {
   }
 
   componentWillMount() {
-   document.addEventListener('keydown', this.handleKeyPress);
+    document.addEventListener('keydown', this.handleKeyPress);
   }
 
   componentWillUnmount() {
-   document.removeEventListener('keydown', this.handleKeyPress);
+    document.removeEventListener('keydown', this.handleKeyPress);
   }
 
   handleKeyPress(event) {
@@ -73,15 +71,15 @@ class Login extends Component {
       [event.target.id]: event.target.value
     });
   }
-  
+
   handleSubmit () {
     if (this.state.email == this.state.correctuname && this.state.password == this.state.correctpasswd)
     {
-        window.location = "homepage"
+      window.location = "homepage"
     }
     else
     {
-        alert("Please enter valid credentials or register for an account");
+      alert("Please enter valid credentials or register for an account");
     }
   }
 
@@ -113,12 +111,11 @@ class Login extends Component {
             <ButtonToolbar >
               <div className='buttonDIV'>
                 <ButtonGroup className="touchCSSJian">
-
                   <Button
                     bsStyle="info"
                     disabled={!this.validateForm()}
                     onClick={() => {
-                        this.queryDatabase(this.state.email);
+                      this.queryDatabase(this.state.email);
                     }}
                     >
                       Login
@@ -128,7 +125,7 @@ class Login extends Component {
                   <ButtonGroup className="touchCSSJian">
                     <Button
                       type="submit"
-                    >
+                      >
                         Register
                       </Button>
 
@@ -141,5 +138,4 @@ class Login extends Component {
         );
       }
     }
-
-export default Login;
+    export default Login;

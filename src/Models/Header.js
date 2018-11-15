@@ -15,7 +15,7 @@ class Header extends Component {
       <div className="header">
 
       <div className="dropdown">
-      <div className="dropbtn"> Hi, Username</div>
+      <div className="dropbtn"> Hi, {this.props.username}</div>
       <div className="dropdown-content">
       <a className="signOut left" href="/" >sign out</a>
       </div>

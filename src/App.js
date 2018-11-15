@@ -15,7 +15,6 @@ class App extends Component {
   constructor (props) {
     super(props)
 
-
     this.state = {
       contracts:[
         { //Amazon Prime
@@ -570,11 +569,12 @@ class App extends Component {
     }
   }
   render() {
+    console.log(this.state.username)
     return (
       <BrowserRouter>
         <div>
           <div className="main">
-            <Header />
+            <Header username=' Welcome to RAWLS'/>
             <Route exact={true} path='/' render={() => (
               <div>
                 <Login />
