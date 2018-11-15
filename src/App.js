@@ -575,11 +575,12 @@ class App extends Component {
         <div>
           <div className="main">
             <Header username=' Welcome to RAWLS'/>
-            <Route exact={true} path='/' render={() => (
+            {/* <Route exact={true} path='/' render={() => (
               <div>
                 <Login />
               </div>
-            )}/>
+            )}/> */}
+            <Route exact={true} path='/' component={Login}/>
             <Route exact={true} path='/homepage' render={() => (
               <div>
                 <NavBar active="home"/>
