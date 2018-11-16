@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Homepage.css'
 
 class Homepage extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       list: []
@@ -10,31 +10,39 @@ class Homepage extends Component {
     this.getContractName();
     this.getContractName2();
   }
-  getContractName () {
+  getContractName() {
     let contractABI = window.web3.eth.contract(this.props.contracts[0].abi)
     let contractInstance = contractABI.at(this.props.contracts[0].addr)
     let { contractName } = contractInstance;
     contractName((err, name) => {
-      if (err) console.error ('An error occured::::', err);
-      this.setState({title1: name})
+      if (err) console.error('An error occured::::', err);
+      this.setState({ title1: name })
     });
   }
-  getContractName2 () {
+  getContractName2() {
     let contractABI = window.web3.eth.contract(this.props.contracts[1].abi)
     let contractInstance = contractABI.at(this.props.contracts[1].addr)
     let { contractName } = contractInstance;
     contractName((err, name) => {
-      if (err) console.error ('An error occured::::', err);
-      this.setState({title2: name})
+      if (err) console.error('An error occured::::', err);
+      this.setState({ title2: name })
     });
   }
-  render () {
+  render() {
     return (
       <div className="row">
         <div className="leftColumn">
           <div className="card">
             <div className="title">
               <h2 className="titleText">Current Contracts</h2>
+              <div className="info_dp">
+                <i className="fa fa-fw fa-info info_class"></i>
+                <div className="info_dp-content">
+                  <p className="infoText">Click on the link below to see your current contract</p>
+                </div>
+              </div>
+
+
             </div>
             <p className="Text">{this.state.title1}</p>
             <p className="Text">{this.state.title2}</p>
@@ -43,6 +51,14 @@ class Homepage extends Component {
           <div className="card">
             <div className="title">
               <h2 className="titleText">You can earn more...</h2>
+
+              <div className="info_dp">
+                <i className="fa fa-fw fa-info info_class"></i>
+                <div className="info_dp-content">
+                  <p className="infoText">You have the potential to earn more.  </p>
+                </div>
+              </div>
+
             </div>
             <p className="Text">{this.state.title1}</p>
             <a className="Text" href="contract" >View Contracts</a>
@@ -51,23 +67,37 @@ class Homepage extends Component {
         <div className="rightColumn">
           <div className="card">
             <div className="title">
-              <h2 className="titleText">My Wallet</h2></div>
-              <p className="Text">Balance $32</p>
-              <p className="Text">Monthly Income $3</p>
-              <a className="Text" href="wallet">Manage My Wallet...</a>
-            </div>
-
-            <div className="card">
-              <div className="title">
-                <h2 className="titleText">Partnerships</h2></div>
-                <p>You can earn more. Click on link below to see list of Project RAWLS partnerships</p>
-                <a className="Text" href="https://www.projectrawls.com/" target="_blank">Project RAWLS Partnerships</a>
+              <h2 className="titleText">My Wallet</h2>
+              <div className="info_dp">
+                <i className="fa fa-fw fa-info info_class"></i>
+                <div className="info_dp-content">
+                  <p className="infoText">your current financial information</p>
+                </div>
               </div>
-
+            </div>
+            <p className="Text">Balance $32</p>
+            <p className="Text">Monthly Income $3</p>
+            <a className="Text" href="wallet">Manage My Wallet...</a>
           </div>
-        </div>
-      )
-    }
-  }
 
-  export default Homepage;
+          <div className="card">
+            <div className="title">
+              <h2 className="titleText">Partnerships</h2>
+              <div className="info_dp">
+                <i className="fa fa-fw fa-info info_class"></i>
+                <div className="info_dp-content">
+                  <p className="infoText">You can earn more. Click on link below to see list of Project RAWLS partnerships</p>
+                </div>
+              </div>
+            </div>
+            <p>You can earn more. Click on link below to see list of Project RAWLS partnerships</p>
+            <a className="Text" href="https://www.projectrawls.com/" target="_blank">Project RAWLS Partnerships</a>
+          </div>
+
+        </div>
+      </div>
+    )
+  }
+}
+
+export default Homepage;
