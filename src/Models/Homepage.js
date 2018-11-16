@@ -61,7 +61,7 @@ class Homepage extends Component {
               <div className="title">
                 <h2 className="titleText">Partnerships</h2></div>
                 <p>You can earn more. Click on link below to see list of Project RAWLS partnerships</p>
-                <a className="Text" href="https://www.projectrawls.com/">Project RAWLS Partnerships</a>
+                <a className="Text" href="https://www.projectrawls.com/" target="_blank">Project RAWLS Partnerships</a>
               </div>
 
           </div>
