@@ -21,8 +21,8 @@
 .signOut {
   color: #5CA2D5;
   text-decoration: none;
-    display: block;
-    padding: 10% 16%;
+  display: block;
+  padding: 10% 16%;
 }
 .signOut:hover{
   color: #29293d;
