@@ -116,14 +116,15 @@ class ContractItem extends Component {
 		permissions = this.state.perms.map(perm => {
 			return (
 				<div key={perm.title}>
-					<p className="contractText">{perm.title}
-						<span className="PermPrice"> {'\u00A0'}${perm.price}</span>
-						<div className="info_dp_contract">
+				<div className="info_dp_contract">
 							<i className="fa fa-fw fa-info info_contract"></i>
 							<div className="info_dp-content_contract">
 								<p className="infoTextContract">PermPrice info</p>
 							</div>
 						</div>
+					<p className="contractText">{perm.title}
+						<span className="PermPrice"> {'\u00A0'}${perm.price}</span>
+						
 						<label className="switch">
 							<input
 								ref={perm.reference}

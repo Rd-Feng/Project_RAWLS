@@ -57,16 +57,16 @@
 }
 .info_contract{
   padding: 1px;
-  color: #444;
+  color: lightslategray;
   font-size: 10px !important;
-  border: 1px solid #444;
-  margin-right: 11px;
+  border: 1px solid lightslategray;
+  margin-right: 16px;
   border-radius: 50%;
 }
 .info_dp_contract{
-  margin-left: 5px;
-  margin-top: -12px;
-  float: right;
+  margin-top: -13px;
+  margin-left: 10px;
+  float: left;
   position: relative;
   display: inline-block;
   color: #5CA2D5;
@@ -79,7 +79,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   display: none;
-  right: 0%;
+  left: 0%;
   min-width: 220px;
 }
 .infoTextContract{
