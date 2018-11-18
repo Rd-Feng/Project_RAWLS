@@ -570,6 +570,10 @@ class App extends Component {
     }
   }
   render() {
+    if (!window.ethereum && !window.web3)
+      return (
+        <div>No Metamask installed. Please add Metamask extension to your browser!</div>
+      )
     return (
       <BrowserRouter>
         <div>

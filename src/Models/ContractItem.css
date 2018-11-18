@@ -4,11 +4,11 @@
 .Total{
   text-align: right;
   font-size: 20px;
-  color: #5CA2D5;
+  color: #444;
 }
 .PermPrice{
   font-size: 20px;
-  color: #5CA2D5;
+  color: #444;
 
 }
 /* remove blue outline when clicked */
@@ -54,6 +54,43 @@
 }
 .title{
   padding: 1%;
+}
+.info_contract{
+  padding: 1px;
+  color: lightslategray;
+  font-size: 10px !important;
+  border: 1px solid lightslategray;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+.info_dp_contract{
+  margin-top: -13px;
+  margin-left: 10px;
+  float: left;
+  position: relative;
+  display: inline-block;
+  color: #5CA2D5;
+}
+.info_dp-content_contract {
+  z-index: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: none;
+  left: 0%;
+  min-width: 220px;
+}
+.infoTextContract{
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 10px 10px;
+}
+.info_dp_contract:hover .info_dp-content_contract{
+  display: block;
 }
 .active+.panel {
   display: block;

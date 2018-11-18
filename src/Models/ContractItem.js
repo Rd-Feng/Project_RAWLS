@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { Collapse, Button, CardBody, Card, CardTitle, CardText  } from 'reactstrap'
+import { Collapse, Button, CardBody, Card, CardTitle, CardText } from 'reactstrap'
 import './ContractItem.css'
 import Web3 from 'web3'
 
 class ContractItem extends Component {
-	constructor (props) {
+	constructor(props) {
 		super(props)
 		this.permRefs = []
 		var web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/"))
@@ -45,21 +45,20 @@ class ContractItem extends Component {
 	getTotal () {
 		return this.curContract.total().toNumber()
 	}
-	togglePanel () {
+	togglePanel() {
 		let news = !this.state.show_panel
-		this.setState({show_panel: news})
+		this.setState({ show_panel: news })
 	}
-	handleSubmit () {
+	handleSubmit() {
 		const contractABI = window.web3.eth.contract(this.props.contract.abi)
 		const contractInstance = contractABI.at(this.props.contract.addr)
 		const { changeState } = contractInstance;
 		let changed = false;
-		this.perms.forEach(function(perm) {
-			if (perm.changed)
-			{
+		this.perms.forEach(function (perm) {
+			if (perm.changed) {
 				changed = true;
 				let newState = perm.reference.current.checked
-				changeState(perm.idx.toNumber(), newState, (err) => {
+				changeState(perm.idx.c[0], newState, (err) => {
 					if (err) {
 						console.log(err)
 					}
@@ -68,13 +67,19 @@ class ContractItem extends Component {
 		});
 		if (changed) alert('Your changes will take effect after around 1 min');
 	}
-	render () {
+	render() {
 		const accordionState = this.state.show_panel ? 'active' : '';
 		const accordionClass = `accordion ${accordionState}`;
 		let permissions;
 		permissions = this.perms.map(perm => {
 			return (
 				<div key={perm.title}>
+				<div className="info_dp_contract">
+							<i className="fa fa-fw fa-info info_contract"></i>
+							<div className="info_dp-content_contract">
+								<p className="infoTextContract">PermPrice info</p>
+							</div>
+						</div>
 					<p className="contractText">{perm.title}
 						<span className="PermPrice"> {'\u00A0'}${perm.price}</span>
 						<label className="switch">
@@ -82,7 +87,7 @@ class ContractItem extends Component {
 								ref={perm.reference}
 								type="checkbox"
 								defaultChecked={perm.perm ? 'checked' : ''}
-								onClick={() => {perm.changed = !perm.changed}}
+								onClick={() => { perm.changed = !perm.changed }}
 							/>
 							<span className="slider round"></span>
 						</label></p>
@@ -101,8 +106,8 @@ class ContractItem extends Component {
 						<button className="closeButton" onClick={() => {this.togglePanel();}}>
 							Close
 						</button>
-						<button className="submitButton right" onClick={() => {this.handleSubmit();}}>
-							Submit
+					<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
+						Submit
 						</button>
 					</div>
 				</div>

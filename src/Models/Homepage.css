@@ -8,6 +8,7 @@
    width: 100%;
 }
 .title{
+   z-index: 0;
    background: #333333;
    margin-top: -21px;
    margin-left: -21px;
@@ -18,11 +19,49 @@
    border-radius: 5px 5px 0px 0px;
 }
 .titleText {
+  float: left;
   margin-left: 10px !important;
   font-size: 110%;
   margin: -0.2%;
   padding: 2%;
   letter-spacing: .5px;
+}
+.info_class{
+  padding: 1px;
+  color: white;
+  font-size: 10px !important;
+  border: 1px solid white;
+  margin-right: 11px;
+  border-radius: 50%;
+}
+.info_dp {
+  margin-top: 2px;
+  float: right;
+  position: relative;
+  display: inline-block;
+  color: #5CA2D5;
+}
+
+.info_dp-content {
+  z-index: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: none;
+  right: 0%;
+  min-width: 220px;
+}
+.infoText{
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 10px 10px;
+}
+
+.info_dp:hover .info_dp-content{
+  display: block;
 }
 .Text{
   text-align: left;

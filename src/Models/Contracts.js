@@ -14,7 +14,7 @@ class Contracts extends Component {
       contractItems = this.state.contracts.map(contract => {
         return (
           <div className="Ccard" key={contract.addr}>
-            <ContractItem contract={contract}/>
+            <ContractItem contract={contract} account={this.props.account}/>
           </div>
         );
       });
