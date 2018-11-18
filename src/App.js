@@ -16,6 +16,7 @@ class App extends Component {
     super(props)
 
     this.state = {
+      ethAccount: '0xce8458cb49f4fa890bd22f936eafcca66d81ac2e',
       contracts:[
         { //Amazon Prime
           addr: '0x7d390a6fc5f2945f7f16e52a179eb8340fb868c9',
@@ -569,17 +570,11 @@ class App extends Component {
     }
   }
   render() {
-    console.log(this.state.username)
     return (
       <BrowserRouter>
         <div>
           <div className="main">
             <Header username=' Welcome to RAWLS'/>
-            {/* <Route exact={true} path='/' render={() => (
-              <div>
-                <Login />
-              </div>
-            )}/> */}
             <Route exact={true} path='/' component={Login}/>
             <Route exact={true} path='/homepage' render={() => (
               <div>
@@ -594,7 +589,7 @@ class App extends Component {
               <div>
                 <NavBar active="contract"/>
                 <div className="content">
-                  <Contracts contracts={this.state.contracts}/>
+                  <Contracts contracts={this.state.contracts} account={this.state.ethAccount}/>
                 </div>
               </div>
             )}/>
