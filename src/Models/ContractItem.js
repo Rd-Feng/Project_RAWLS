@@ -17,6 +17,7 @@ class ContractItem extends Component {
 		this.perms = this.getPerms()
 		this.payment = this.getPayment()
 		this.totle = this.getTotal();
+		console.log(web3.eth.defaultAccount)
 	}
 	getPerms () {
 		let i, l, r
@@ -58,11 +59,18 @@ class ContractItem extends Component {
 			if (perm.changed) {
 				changed = true;
 				let newState = perm.reference.current.checked
-				changeState(perm.idx.c[0], newState, (err) => {
-					if (err) {
-						console.log(err)
-					}
-				})
+				try
+				{
+					changeState(perm.idx.c[0], newState, (err) => {
+						if (err) {
+							console.log(err)
+						}
+					})
+				} catch (err) {
+					alert(err)
+					changed = false
+				}
+
 			}
 		});
 		if (changed) alert('Your changes will take effect after around 1 min');
@@ -74,12 +82,12 @@ class ContractItem extends Component {
 		permissions = this.perms.map(perm => {
 			return (
 				<div key={perm.title}>
-				<div className="info_dp_contract">
-							<i className="fa fa-fw fa-info info_contract"></i>
-							<div className="info_dp-content_contract">
-								<p className="infoTextContract">PermPrice info</p>
-							</div>
+					<div className="info_dp_contract">
+						<i className="fa fa-fw fa-info info_contract"></i>
+						<div className="info_dp-content_contract">
+							<p className="infoTextContract">PermPrice info</p>
 						</div>
+					</div>
 					<p className="contractText">{perm.title}
 						<span className="PermPrice"> {'\u00A0'}${perm.price}</span>
 						<label className="switch">
@@ -106,8 +114,8 @@ class ContractItem extends Component {
 						<button className="closeButton" onClick={() => {this.togglePanel();}}>
 							Close
 						</button>
-					<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
-						Submit
+						<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
+							Submit
 						</button>
 					</div>
 				</div>
