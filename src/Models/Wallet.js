@@ -8,13 +8,13 @@ class Wallet extends Component {
           <h2 className="walletText"> My Wallet </h2>
 
           <div className="balanceContainer">
-          <p className="balanceText"> Total Balance:</p>
+          <p className="balanceText"> Current Balance:</p>
           <p className="balanceValue"> $28 </p>
           </div>
 
           <div className="incomeContainer">
-          <p className="incomeText"> Monthly Income:</p>
-          <p className="incomeValue"> $3 </p>
+          {/* <p className="incomeText"> Monthly Income:</p>
+          <p className="incomeValue"> $3 </p> */}
           </div>
 
             <button className="redeem">Redeem</button>
@@ -23,15 +23,15 @@ class Wallet extends Component {
           <table className="transactionTable">
           <caption className="transactionHeader">
           <div className="transactionText">
-          Transaction
+          Transaction History
           </div>
           </caption>
 
           <tr>
           <th>Date</th>
           <th>Type</th>
-          <th>Monthly Income</th>
-          <th>Balance</th>
+          <th>Transaction</th>
+          <th>Current Balance</th>
           </tr>
 
           <tr>
