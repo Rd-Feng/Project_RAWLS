@@ -98,23 +98,6 @@ class ContractItem extends Component {
 							/>
 							<span className="slider round"></span>
 						</label></p>
-<<<<<<< HEAD
-					<hr />
-				</div>
-			);
-		})
-		return (
-			<div>
-				<button onClick={() => { this.togglePanel(); }}
-					className={accordionClass}>{this.state.title}
-				</button>
-				<div className="panel">
-					{permissions}
-					<p className="Total"> Potential earning: ${this.state.payment} </p>
-					<p className="Total"> Total: ${this.state.payment} </p>
-					<button className="closeButton" onClick={() => { this.togglePanel(); }}>
-						Close
-=======
 						<hr />
 					</div>
 				);
@@ -127,9 +110,9 @@ class ContractItem extends Component {
 					<div className="panel">
 						{permissions}
 						<p className="Total"> Total: ${this.payment} </p>
+						<p className="Total"> Potential earning: ${this.totle} </p>
 						<button className="closeButton" onClick={() => {this.togglePanel();}}>
 							Close
->>>>>>> f8003f142c42458572fb1ed3abc39c1279822cd7
 						</button>
 						<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
 							Submit
