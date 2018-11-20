@@ -145,6 +145,7 @@ class ContractItem extends Component {
 				</button>
 				<div className="panel">
 					{permissions}
+					<p className="Total"> Potential earning: ${this.state.payment} </p>
 					<p className="Total"> Total: ${this.state.payment} </p>
 					<button className="closeButton" onClick={() => { this.togglePanel(); }}>
 						Close
