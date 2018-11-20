@@ -17,7 +17,6 @@ class ContractItem extends Component {
 		this.perms = this.getPerms()
 		this.payment = this.getPayment()
 		this.totle = this.getTotal();
-		console.log(web3.eth.defaultAccount)
 	}
 	getPerms () {
 		let i, l, r
