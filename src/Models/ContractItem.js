@@ -1,91 +1,49 @@
 import React, { Component } from 'react'
 import { Collapse, Button, CardBody, Card, CardTitle, CardText } from 'reactstrap'
 import './ContractItem.css'
+import Web3 from 'web3'
 
 class ContractItem extends Component {
 	constructor(props) {
 		super(props)
 		this.permRefs = []
-		this.l = []
-		// should be from context
-		this.account = '0xce8458cb49f4fa890bd22f936eafcca66d81ac2e'
+		var web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/"))
+		web3.eth.defaultAccount = this.props.account
+		this.curContract = web3.eth.contract(this.props.contract.abi).at(this.props.contract.addr);
 		this.state = {
-			show_panel: false,
-			perms: []
+			show_panel: false
 		}
+		this.title = this.getContractName()
+		this.perms = this.getPerms()
+		this.payment = this.getPayment()
+		this.totle = this.getTotal();
 	}
-	componentDidMount() {
-		this.getContractName();
-		this.getPerms();
-		this.getPayment();
-		this.getTotal();
+	getPerms () {
+		let i, l, r
+		l = []
+		for (i = 0; i < this.curContract.numPerms(); i++){
+			r = React.createRef()
+			this.permRefs.push(r)
+			let perm = this.curContract.getPerms(i)
+			l.push({
+				title: perm[0],
+				price: perm[1].toNumber(),
+				perm: perm[2],
+				idx: perm[3],
+				reference: r,
+				changed: false
+			})
+		}
+		return l
 	}
-	getPerms() {
-		const contractABI = window.web3.eth.contract(this.props.contract.abi)
-		const contractInstance = contractABI.at(this.props.contract.addr)
-		const { numPerms } = contractInstance;
-		numPerms((err, permsCount) => {
-			if (err) console.error('An error occured::::', err);
-			const contractABI = window.web3.eth.contract(this.props.contract.abi)
-			const contractInstance = contractABI.at(this.props.contract.addr)
-			let i;
-			for (i = 0; i < permsCount; i++) {
-				let { getPerms } = contractInstance;
-				getPerms(i, (err, perm) => {
-					if (err) console.error('An error occured::::', err);
-					let r = React.createRef();
-					this.permRefs.push(r)
-					this.l.push({
-						title: perm[0],
-						price: perm[1]['c'][0],
-						perm: perm[2],
-						idx: perm[3],
-						reference: r,
-						changed: false
-					})
-					// this.state.perms.push(
-					// 	{
-					// 		title: perm[0],
-					// 		price: perm[1]['c'][0],
-					// 		perm: perm[2],
-					// 		idx: perm[3],
-					// 		reference: r,
-					// 		changed: false
-					// 	}
-					// )
-				})
-			}
-		});
-		this.setState({ perms: this.l })
+	getContractName () {
+		return this.curContract.contractName()
 	}
-	getContractName() {
-		const contractABI = window.web3.eth.contract(this.props.contract.abi)
-		const contractInstance = contractABI.at(this.props.contract.addr)
-		const { contractName } = contractInstance;
-		contractName((err, name) => {
-			if (err) console.error('An error occured::::', err);
-			this.setState({ title: name })
-		});
+	getPayment () {
+		return this.curContract.payment().toNumber()
 	}
-	getPayment() {
-		const contractABI = window.web3.eth.contract(this.props.contract.abi)
-		const contractInstance = contractABI.at(this.props.contract.addr)
-		const { payment } = contractInstance;
-		payment((err, p) => {
-			if (err) console.error('An error occured::::', err);
-			// console.log('payment::: ', p['c'][0])
-			this.setState({ payment: p['c'][0] })
-		});
-	}
-	getTotal() {
-		const contractABI = window.web3.eth.contract(this.props.contract.abi)
-		const contractInstance = contractABI.at(this.props.contract.addr)
-		const { total } = contractInstance;
-		total((err, t) => {
-			if (err) console.error('An error occured::::', err);
-			// console.log('Total::: ', t['c'][0])
-			this.setState({ total: t['c'][0] })
-		});
+	getTotal () {
+		return this.curContract.total().toNumber()
 	}
 	togglePanel() {
 		let news = !this.state.show_panel
@@ -96,15 +54,22 @@ class ContractItem extends Component {
 		const contractInstance = contractABI.at(this.props.contract.addr)
 		const { changeState } = contractInstance;
 		let changed = false;
-		this.state.perms.forEach(function (perm) {
+		this.perms.forEach(function (perm) {
 			if (perm.changed) {
 				changed = true;
 				let newState = perm.reference.current.checked
-				changeState(perm.idx.c[0], newState, (err) => {
-					if (err) {
-						console.log(err)
-					}
-				})
+				try
+				{
+					changeState(perm.idx.c[0], newState, (err) => {
+						if (err) {
+							console.log(err)
+						}
+					})
+				} catch (err) {
+					alert(err)
+					changed = false
+				}
+
 			}
 		});
 		if (changed) alert('Your changes will take effect after around 1 min');
@@ -113,18 +78,17 @@ class ContractItem extends Component {
 		const accordionState = this.state.show_panel ? 'active' : '';
 		const accordionClass = `accordion ${accordionState}`;
 		let permissions;
-		permissions = this.state.perms.map(perm => {
+		permissions = this.perms.map(perm => {
 			return (
 				<div key={perm.title}>
-				<div className="info_dp_contract">
-							<i className="fa fa-fw fa-info info_contract"></i>
-							<div className="info_dp-content_contract">
-								<p className="infoTextContract">PermPrice info</p>
-							</div>
+					<div className="info_dp_contract">
+						<i className="fa fa-fw fa-info info_contract"></i>
+						<div className="info_dp-content_contract">
+							<p className="infoTextContract">PermPrice info</p>
 						</div>
+					</div>
 					<p className="contractText">{perm.title}
 						<span className="PermPrice"> {'\u00A0'}${perm.price}</span>
-						
 						<label className="switch">
 							<input
 								ref={perm.reference}
@@ -134,6 +98,7 @@ class ContractItem extends Component {
 							/>
 							<span className="slider round"></span>
 						</label></p>
+<<<<<<< HEAD
 					<hr />
 				</div>
 			);
@@ -149,14 +114,30 @@ class ContractItem extends Component {
 					<p className="Total"> Total: ${this.state.payment} </p>
 					<button className="closeButton" onClick={() => { this.togglePanel(); }}>
 						Close
+=======
+						<hr />
+					</div>
+				);
+			})
+			return (
+				<div>
+					<button onClick={() => {this.togglePanel();}}
+						className={accordionClass}>{this.title}
+					</button>
+					<div className="panel">
+						{permissions}
+						<p className="Total"> Total: ${this.payment} </p>
+						<button className="closeButton" onClick={() => {this.togglePanel();}}>
+							Close
+>>>>>>> f8003f142c42458572fb1ed3abc39c1279822cd7
 						</button>
-					<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
-						Submit
+						<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
+							Submit
 						</button>
+					</div>
 				</div>
-			</div>
-		)
+			)
+		}
 	}
-}
 
-export default ContractItem;
+	export default ContractItem;

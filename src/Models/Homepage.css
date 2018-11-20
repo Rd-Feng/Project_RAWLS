@@ -26,6 +26,9 @@
   padding: 2%;
   letter-spacing: .5px;
 }
+.DescText{
+  font-size: 11px;
+}
 .info_class{
   padding: 1px;
   color: white;

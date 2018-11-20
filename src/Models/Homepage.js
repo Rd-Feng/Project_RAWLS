@@ -44,6 +44,7 @@ class Homepage extends Component {
 
 
             </div>
+            <p className="DescText">Click on the link below to see your current contract</p>
             <p className="Text">{this.state.title1}</p>
             <p className="Text">{this.state.title2}</p>
             <a className="Text" href="contract">See more...</a>
@@ -60,6 +61,7 @@ class Homepage extends Component {
               </div>
 
             </div>
+            <p className="DescText">Click on the link below to earn more by sharing more data </p>
             <p className="Text">{this.state.title1}</p>
             <a className="Text" href="contract" >View Contracts</a>
           </div>
@@ -75,6 +77,7 @@ class Homepage extends Component {
                 </div>
               </div>
             </div>
+            <p className="DescText">Click on the link below to see your wallet</p>
             <p className="Text">Balance $32</p>
             <p className="Text">Monthly Income $3</p>
             <a className="Text" href="wallet">Manage My Wallet...</a>
@@ -90,7 +93,7 @@ class Homepage extends Component {
                 </div>
               </div>
             </div>
-            <p>You can earn more. Click on link below to see list of Project RAWLS partnerships</p>
+            <p className="DescText">You can earn more. Click on link below to see list of Project RAWLS partnerships</p>
             <a className="Text" href="https://www.projectrawls.com/" target="_blank">Project RAWLS Partnerships</a>
           </div>
 
