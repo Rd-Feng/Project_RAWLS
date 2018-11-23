@@ -8,6 +8,7 @@ import Contracts from './Models/Contracts'
 import Wallet from './Models/Wallet'
 import About from './Models/About'
 import Login from './Models/Login'
+import Signup from './Models/Signup'
 import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -580,6 +581,7 @@ class App extends Component {
           <div className="main">
             <Header username=' Welcome to RAWLS'/>
             <Route exact={true} path='/' component={Login}/>
+            <Route exact={true} path='/Signup' component={Signup}/> 
             <Route exact={true} path='/homepage' render={() => (
               <div>
                 <NavBar active="home"/>

@@ -1,15 +1,14 @@
 @media (min-width: 400px) {
-  .Login form {
+  .Signup form {
       max-width: 360px;
   }
 
 }
-
-    .Login {
+    .Signup {
         padding: 60px 15px;
     }
 
-    .Login form {
+    .Signup form {
         margin: 0 auto;
         padding: 2%;
         background-color: #B0C4DE;
@@ -24,10 +23,10 @@ btnAlign {
 
 }
 
-.buttonDIV{
+.submit{
     margin: 0 auto;
 }
-.touchCSSJian{
+.buttons{
   padding-right: 4px;
 }
 .header {

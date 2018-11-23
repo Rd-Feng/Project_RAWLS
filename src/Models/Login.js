@@ -23,7 +23,6 @@ class Login extends Component {
       correctpasswd: ''
     };
 
-    this.registerUser = this.registerUser.bind(this);
   }
 
   queryDatabase(uname) {
@@ -31,23 +30,13 @@ class Login extends Component {
     var ref = db.ref('Users');
 
     db.ref('Users').child(uname).once('value').then(
-      data => {this.setState({correctpasswd: data.val().Password})}
+      data => {this.setState({
+          correctpasswd: data.val().Password,
+          correctuname: this.state.email
+      }, () => {
+          this.handleSubmit();
+      })}
     ).catch(err => {});
-
-    this.setState({correctuname: this.state.email});
-    this.handleSubmit();
-  }
-
-  registerUser(e) {
-    e.preventDefault();
-    var db = fire.database();
-    var ref = db.ref('Users');
-    var userRef = ref.child(this.inputEmail.value);
-    userRef.set({
-      Username: this.inputEmail.value,
-      Password: this.inputPassword.value
-    });
-    alert('Your account has been successfull created. Please login');
   }
 
   validateForm() {
@@ -82,6 +71,10 @@ class Login extends Component {
       alert("Please enter valid credentials or register for an account");
     }
   }
+
+    handleRegister () {
+        this.props.history.push('/Signup')
+    }
 
 
   render() {
@@ -125,6 +118,9 @@ class Login extends Component {
                   <ButtonGroup className="touchCSSJian">
                     <Button
                       type="submit"
+                      onClick={() => {
+                          this.handleRegister();
+                        }}
                       >
                         Register
                       </Button>
