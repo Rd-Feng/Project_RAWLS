@@ -29,53 +29,16 @@
 .DescText{
   font-size: 11px;
 }
-.info_class{
-  padding: 1px;
-  color: white;
-  font-size: 10px !important;
-  border: 1px solid white;
-  margin-right: 11px;
-  border-radius: 50%;
-}
-.info_dp {
-  margin-top: 2px;
-  float: right;
-  position: relative;
-  display: inline-block;
-  color: #5CA2D5;
-}
-
-.info_dp-content {
-  z-index: 1;
-  background-color: #f9f9f9;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  position: absolute;
-  display: none;
-  right: 0%;
-  min-width: 220px;
-}
-.infoText{
-  color: black;
-  text-decoration: none;
-  display: block;
-  padding: 10px 10px;
-}
-
-.info_dp:hover .info_dp-content{
-  display: block;
-}
 .Text{
   text-align: left;
   font-size: 100%;
 }
 /* link */
-a{
- color: #1aa3ff;
+a.Text{
+ color: #5CA2D5;
 }
 /* mouse over link */
-a:hover {
+a.Text:hover {
     color: #007acc;
 }
 /* blocks */

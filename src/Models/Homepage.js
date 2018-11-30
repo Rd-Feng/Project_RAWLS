@@ -35,14 +35,6 @@ class Homepage extends Component {
           <div className="card">
             <div className="title">
               <h2 className="titleText">Current Contracts</h2>
-              <div className="info_dp">
-                <i className="fa fa-fw fa-info info_class"></i>
-                <div className="info_dp-content">
-                  <p className="infoText">Click on the link below to see your current contract</p>
-                </div>
-              </div>
-
-
             </div>
             <p className="DescText">Click on the link below to see your current contract</p>
             <p className="Text">{this.state.title1}</p>
@@ -52,14 +44,6 @@ class Homepage extends Component {
           <div className="card">
             <div className="title">
               <h2 className="titleText">You can earn more...</h2>
-
-              <div className="info_dp">
-                <i className="fa fa-fw fa-info info_class"></i>
-                <div className="info_dp-content">
-                  <p className="infoText">You have the potential to earn more.  </p>
-                </div>
-              </div>
-
             </div>
             <p className="DescText">Click on the link below to earn more by sharing more data </p>
             <p className="Text">{this.state.title1}</p>
@@ -70,28 +54,15 @@ class Homepage extends Component {
           <div className="card">
             <div className="title">
               <h2 className="titleText">My Wallet</h2>
-              <div className="info_dp">
-                <i className="fa fa-fw fa-info info_class"></i>
-                <div className="info_dp-content">
-                  <p className="infoText">your current financial information</p>
-                </div>
-              </div>
             </div>
             <p className="DescText">Click on the link below to see your wallet</p>
             <p className="Text">Balance $32</p>
             <p className="Text">Monthly Income $3</p>
             <a className="Text" href="wallet">Manage My Wallet...</a>
           </div>
-
           <div className="card">
             <div className="title">
               <h2 className="titleText">Partnerships</h2>
-              <div className="info_dp">
-                <i className="fa fa-fw fa-info info_class"></i>
-                <div className="info_dp-content">
-                  <p className="infoText">You can earn more. Click on link below to see list of Project RAWLS partnerships</p>
-                </div>
-              </div>
             </div>
             <p className="DescText">You can earn more. Click on link below to see list of Project RAWLS partnerships</p>
             <a className="Text" href="https://www.projectrawls.com/" target="_blank">Project RAWLS Partnerships</a>

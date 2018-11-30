@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route , withRouter} from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import {
   ButtonToolbar,
   ButtonGroup,
@@ -30,13 +30,15 @@ class Login extends Component {
     var ref = db.ref('Users');
 
     db.ref('Users').child(uname).once('value').then(
-      data => {this.setState({
+      data => {
+        this.setState({
           correctpasswd: data.val().Password,
           correctuname: this.state.email
-      }, () => {
+        }, () => {
           this.handleSubmit();
-      })}
-    ).catch(err => {});
+        })
+      }
+    ).catch(err => { });
   }
 
   validateForm() {
@@ -61,26 +63,25 @@ class Login extends Component {
       [event.target.id]: event.target.value
     });
   }
-  handleSubmit () {
-    if (this.state.email == this.state.correctuname && this.state.password == this.state.correctpasswd)
-    {
+  handleSubmit() {
+    if (this.state.email == this.state.correctuname && this.state.password == this.state.correctpasswd) {
       this.props.history.push('/homepage')
     }
-    else
-    {
+    else {
       alert("Please enter valid credentials or register for an account");
     }
   }
 
-    handleRegister () {
-        this.props.history.push('/Signup')
-    }
+  handleRegister() {
+    this.props.history.push('/Signup')
+  }
 
 
   render() {
     return (
       <div className="Login">
         <form onSubmit={this.registerUser}>
+        <img className="logo_login" src={require('./logo5.png')} />
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel> Username </ControlLabel>
             <FormControl
@@ -88,7 +89,7 @@ class Login extends Component {
               type="text"
               value={this.state.email}
               onChange={this.handleChange}
-              inputRef = {ref => { this.inputEmail = ref}}
+              inputRef={ref => { this.inputEmail = ref }}
             />
           </FormGroup>
           <FormGroup controlId="password" bsSize="large">
@@ -97,7 +98,7 @@ class Login extends Component {
               value={this.state.password}
               onChange={this.handleChange}
               type="password"
-              inputRef = {ref => { this.inputPassword = ref}}
+              inputRef={ref => { this.inputPassword = ref }}
             />
           </FormGroup>
           <div>
@@ -110,28 +111,28 @@ class Login extends Component {
                     onClick={() => {
                       this.queryDatabase(this.state.email);
                     }}
-                    >
-                      Login
+                  >
+                    Login
                     </Button>
-                  </ButtonGroup>
+                </ButtonGroup>
 
-                  <ButtonGroup className="touchCSSJian">
-                    <Button
-                      type="submit"
-                      onClick={() => {
-                          this.handleRegister();
-                        }}
-                      >
-                        Register
+                <ButtonGroup className="touchCSSJian">
+                  <Button
+                    type="submit"
+                    onClick={() => {
+                      this.handleRegister();
+                    }}
+                  >
+                    Register
                       </Button>
 
-                    </ButtonGroup>
-                  </div>
-                </ButtonToolbar>
+                </ButtonGroup>
               </div>
-            </form>
+            </ButtonToolbar>
           </div>
-        );
-      }
-    }
-    export default Login;
+        </form>
+      </div>
+    );
+  }
+}
+export default Login;

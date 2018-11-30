@@ -10,6 +10,9 @@ class Header extends Component {
     if(window.location.pathname==='/'){
       return null;
     }
+    if(window.location.pathname==='/Signup'){
+      return null;
+    }
     return (
 
       <div className="header">

@@ -5,23 +5,24 @@
 
 }
 
-    .Login {
-        padding: 60px 15px;
-    }
-
-    .Login form {
-        margin: 0 auto;
-        padding: 2%;
-        background-color: #B0C4DE;
-    }
+.Login {
+    padding: 60px 15px;
+}
+.logo_login{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.Login form {
+    margin: 0 auto;
+    padding: 2%;
+    background-color: #B0C4DE;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 .form-control {
   width: 80%;
-}
-
-btnAlign {
-    display: inline-block;
-    vertical-align: top;
-
 }
 
 .buttonDIV{
@@ -29,8 +30,4 @@ btnAlign {
 }
 .touchCSSJian{
   padding-right: 4px;
-}
-.header {
-
-  /*display: none;*/
 }
