@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Homepage.css'
+import './styles/Homepage.css'
 
 class Homepage extends Component {
   constructor(props) {

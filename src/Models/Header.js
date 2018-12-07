@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Header.css'
+import './styles/Header.css'
 
 class Header extends Component {
   constructor(props){
@@ -23,7 +23,7 @@ class Header extends Component {
       <a className="signOut left" href="/" >sign out</a>
       </div>
       </div>
-      <img className="profile_pic" src={require('./userLogo.png')} />
+      <img className="profile_pic" src={require('./images/userLogo.png')} />
 
       </div>
 
