@@ -8,7 +8,7 @@ import {
   ControlLabel
 } from "react-bootstrap";
 import fire from './fire'
-import "./Login.css";
+import "./styles/Login.css";
 
 const UsernameContext = React.createContext();
 
@@ -81,7 +81,7 @@ class Login extends Component {
     return (
       <div className="Login">
         <form onSubmit={this.registerUser}>
-        <img className="logo_login" src={require('./logo5.png')} />
+        <img className="logo_login" src={require('./images/logo5.png')} />
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel> Username </ControlLabel>
             <FormControl

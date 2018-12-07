@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Collapse, Button, CardBody, Card, CardTitle, CardText } from 'reactstrap'
-import './ContractItem.css'
+import './styles/ContractItem.css'
 import Web3 from 'web3'
 
 class ContractItem extends Component {

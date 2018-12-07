@@ -7,7 +7,7 @@ import {
     ControlLabel
 } from "react-bootstrap";
 import fire from './fire'
-import "./Signup.css";
+import "./styles/Signup.css";
 
 class Signup extends Component {
     constructor(props) {

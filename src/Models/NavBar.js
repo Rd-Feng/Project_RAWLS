@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './NavBar.css'
+import './styles/NavBar.css'
 
 class NavBar extends Component {
   constructor (props) {
@@ -15,7 +15,7 @@ class NavBar extends Component {
   render () {
     return (
       <div className="sidebar">
-        <img className="logo_pic" src={require('./logo5.png')} />
+        <img className="logo_pic" src={require('./images/logo5.png')} />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <a className={this.state.home} href="homepage">
         <div className="faContainer">

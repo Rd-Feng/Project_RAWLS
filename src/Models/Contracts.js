@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ContractItem from './ContractItem'
-import './Contracts.css'
+import './styles/Contracts.css'
 
 class Contracts extends Component {
   constructor(props){
