@@ -1,0 +1,48 @@
+.hompage_container{
+  padding: 0px;
+  margin: 0px;
+}
+.hompage_info_collapse{
+  padding: 30px 100px;
+  text-align: left;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+div.hompage_info_container ul{
+  list-style: none;
+  text-align: left;
+  padding: 0px;
+}
+ul.hompage_info_title h2{
+  font-weight: 600;
+}
+ul.hompage_info_title li{
+  color:#737373;
+}
+ul.hompage_info_title li a{
+  color:#737373;
+}
+.contract_instruction{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 98%);
+  height: 300px;
+}
+.contract_instruct_text{
+  padding: 30px 50px;
+}
+.contract_instruct_pic{
+  width: 342px;
+}
+.partnership_instruction{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+  height: 300px;
+}
+.partnership_pic{
+  width: 400px;
+}

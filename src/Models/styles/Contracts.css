@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+.Ccard {
+    background-color: white;
+  padding: 0px;
+  margin-top: 60px;
+    margin-left: 15%;
+    margin-right: 15%;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+

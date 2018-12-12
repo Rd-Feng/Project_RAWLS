@@ -3,7 +3,6 @@ import './App.css';
 import Header from './Models/Header'
 import Footer from './Models/Footer'
 import Homepage from './Models/Homepage'
-import NavBar from './Models/NavBar'
 import Contracts from './Models/Contracts'
 import Wallet from './Models/Wallet'
 import About from './Models/About'
@@ -577,50 +576,55 @@ class App extends Component {
       )
     return (
       <BrowserRouter>
-        <div>
           <div className="main">
-            <Header username=' Welcome to RAWLS'/>
             <Route exact={true} path='/' component={Login}/>
             <Route exact={true} path='/Signup' component={Signup}/> 
             <Route exact={true} path='/homepage' render={() => (
               <div>
-                <NavBar active="home"/>
+                <Header active="home"/>
                 <div className="content">
                   <Homepage contracts={this.state.contracts}/>
                 </div>
+                <br></br>
+                <Footer/>
               </div>
             )}/>
 
             <Route exact={true} path='/contract' render={() => (
               <div>
-                <NavBar active="contract"/>
+                <Header active="contract"/>
                 <div className="content">
                   <Contracts contracts={this.state.contracts} account={this.state.ethAccount}/>
                 </div>
+                <br></br>
+                <Footer/>
               </div>
             )}/>
 
             <Route exact={true} path='/wallet' render={() => (
               <div>
-                <NavBar active="wallet"/>
+                <Header active="wallet"/>
 
                 <div className="content">
                   <Wallet contracts={this.state.contracts}/>
                 </div>
+                <br></br>
+                <Footer/>
               </div>
             )}/>
 
             <Route exact={true} path='/about' render={() => (
               <div>
-                <NavBar active="about"/>
+                <Header active="about"/>
 
                 <div className="content">
                   <About contracts={this.state.contracts}/>
                 </div>
+                <br></br>
+                <Footer/>
               </div>
             )}/>
           </div>
-        </div>
       </BrowserRouter>
     );
   }
