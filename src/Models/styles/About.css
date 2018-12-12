@@ -1,63 +1,217 @@
-.aboutContainer{
-  display: flex;
+
+.content {
+  padding: 0;
+}
+
+/*
+header or
+.header_main or
+.header_content {
+  display: none;
+}
+
+can hide the same repeated banner ??
+*/
+
+
+
+.aboutContainer {
+  display: block;
+}
+
+.aboutLogo {
+  width: 100%;
+  display: block;
   flex-direction: column;
-}
-
-.aboutCard{
-  z-index: 0px;
-  background-color: white;
-  padding: 5%;
-  margin-top: 10%;
-  margin-right:4.1%;
-  margin-left: 2%;
-  border: 1px solid #cccccc;
-  border-radius: 5px 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: linear-gradient(white,#f2f2f2);
-
-}
-
-.aboutCard h1{
-	text-align: center;
-	color: #5CA2D5;
-}
-
-.aboutCard .teamMembers{
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 20vh;
+  min-height: 70vh;
 }
 
-.person {
-  border-radius: 50%;
-  max-height: 55%;
-}
 
-.teamMembers {
+.about {
+  display: inline-block;
+  width: 60%;
   text-align: center;
 }
 
-@media screen and (max-width: 950px) {
-  .person {
-    max-height: 50%;
-  }
-  .aboutCard .teamMembers > div {
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    width: calc(1/3*100% - (1 - 1/3)*20px);
-    margin-top: 20px;
-  }
+.aboutTitle {
+  display: block;
+  font-family: "Courier New";
+
+}
+
+.aboutTitle h1 {
+  font-size: calc(2rem + 20px);
+  margin-top: 7%;
+}
+
+.aboutText {
+  display: block;
+  margin: 10%;
+  font-size: calc(1.5rem);
+  font-family: "Times New Roman";
+
 }
 
 
-@media screen and (max-width: 550px) {
-  .person {
-    max-height: 40%;
-  }
-  .aboutCard .teamMembers > div {
-     box-sizing: border-box;
-     margin-bottom: 10px;
-     width: calc(1/2*100% - (1 - 1/3)*20px);
-  }
+.logo {
+  height: 50%;
+  max-width: 25vw;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.flexLogo {
+  max-height: 270px;
+  transform: translateX(15%);
+}
+
+
+
+/* ABOVE THIS IS THE WHAT IS PROJECT RAWLS COMPONENTS */
+
+.mission {
+  background-image: url("../team/background1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 25vh;
+
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+}
+
+.missionTitle {
+  font-size: calc(4rem + 20px);
+  padding-bottom: 5vh;
+  font-family: Verdana;
+}
+
+.mission ul {
+  list-style: none;
+}
+
+.mission li {
+  padding: 10px;
+  font-size: calc(1.5rem);
+
+}
+
+
+/* above this is the mission section */
+
+.meet {
+  padding-top: 15vh;
+  min-height: 50vh;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+}
+
+.meetTitle {
+  font-size: calc(4rem + 20px);
+
+  font-family: Arial;
+}
+
+.meet p {
+  font-size: calc(2rem);
+  color: RGB(80, 80, 80);
+  width: 50%;
+  padding-top: 2%;
+  margin: 0 auto;
+  padding-bottom: 9%;
+  font-family: Georgia;
+}
+
+
+
+
+/* PICTURE TIMEEEEE about us pert */
+
+.photo {
+  height: 30vh;
+  border-radius: 50%;
+  display: inline-flex;
+  margin-left: 10%;
+  box-shadow: 8px 8px 15px RGB(90,90,90);
+
+}
+
+.infoText {
+  display: inline-flex;
+  width: 50%;
+  margin-left: 8%;
+  vertical-align: middle;
+}
+
+.sumin,
+.rui,
+.bryan,
+.jian,
+.nicole {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+
+  min-height: 45vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  box-shadow: inset 0px 10px 10px 20px RGB(5, 60, 30);
+  font-size: calc(1.4rem);
+  font-style: oblique;
+  font-weight: bold;
+  text-shadow: 1.25px 1px #121212;
+
+
+}
+
+
+.sumin {
+  background-image: url("../team/suminbackground2.png");
+  color: #4F42FF;
+  font-family: Arial;
+
+}
+
+
+.rui {
+  background-image: url("../team/ruibackground.png");
+  font-family: "Helvetica Neue";
+    color: #00FFFF;
+}
+
+
+.bryan {
+  background-image: url("../team/bryanbackground.png");
+    font-family: Helvetica;
+}
+
+
+.jian {
+  background-image: url("../team/jianbackground.png");
+  font-family: sans-serif;
+  color: #FFA37B;
+}
+
+
+.nicole {
+  background-image: url("../team/nicolebackground.png");
+  font-family: serif;
+  color: #111111;
 }
