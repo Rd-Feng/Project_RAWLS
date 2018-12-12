@@ -30,46 +30,58 @@ class Homepage extends Component {
   }
   render() {
     return (
-      <div className="row">
-        <div className="leftColumn">
-          <div className="card">
-            <div className="title">
-              <h2 className="titleText">Current Contracts</h2>
-            </div>
-            <p className="DescText">Click on the link below to see your current contract</p>
-            <p className="Text">{this.state.title1}</p>
-            <p className="Text">{this.state.title2}</p>
-            <a className="Text" href="contract">See more...</a>
-          </div>
-          <div className="card">
-            <div className="title">
-              <h2 className="titleText">You can earn more...</h2>
-            </div>
-            <p className="DescText">Click on the link below to earn more by sharing more data </p>
-            <p className="Text">{this.state.title1}</p>
-            <a className="Text" href="contract" >View Contracts</a>
-          </div>
-        </div>
-        <div className="rightColumn">
-          <div className="card">
-            <div className="title">
-              <h2 className="titleText">My Wallet</h2>
-            </div>
-            <p className="DescText">Click on the link below to see your wallet</p>
-            <p className="Text">Balance $32</p>
-            <p className="Text">Monthly Income $3</p>
-            <a className="Text" href="wallet">Manage My Wallet...</a>
-          </div>
-          <div className="card">
-            <div className="title">
-              <h2 className="titleText">Partnerships</h2>
-            </div>
-            <p className="DescText">You can earn more. Click on link below to see list of Project RAWLS partnerships</p>
-            <a className="Text" href="https://www.projectrawls.com/" target="_blank">Project RAWLS Partnerships</a>
+      <div className="hompage_container">
+        <section className="hompage_info_collapse">
+          <div className="hompage_info_container">
+            <ul className="hompage_info_title">
+              <h2>Current Contracts</h2>
+              <li>{this.state.title1}</li>
+              <li>{this.state.title2}</li>
+              <li>
+                <a className="hompage_info_text" href="contract">See more...</a>
+              </li>
+            </ul>
           </div>
 
-        </div>
-      </div>
+          <div className="hompage_info_container">
+            <ul className="hompage_info_title">
+              <h2>My wallect</h2>
+              <li>Balance $32</li>
+              <li>Monthly Income $3</li>
+              <li>
+                <a className="hompage_info_text" href="wallet">Manage My Wallet...</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="hompage_info_container">
+            <ul className="hompage_info_title">
+              <h2>Partnerships</h2>
+              <li>
+                <a className="hompage_info_text" href="https://www.projectrawls.com/" target="_blank">Project RAWLS Partnerships</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section className="contract_instruction">
+          <div className="contract_instruct_pic_container">
+            <img className="contract_instruct_pic" src={require('./images/socialShareImage.img.png')} />
+          </div>
+          <div className="contract_instruct_text">
+            <h2>How to change permission?</h2>
+            <p>You can go to your Contracts Page. Then, click on the contract that you want to change........ </p>
+          </div>
+        </section>
+        <section className="partnership_instruction">
+          <div className="partnership_text">
+            <h2>How to earn more?</h2>
+            <p>Go to visit our Partnerships' Homepage to explore more useful products. Once you become a customer of our Partnerships, a new contract will automatically add to your contract page. Then, you can start sharing your permission by turning on the toggle button </p>
+          </div>
+          <div className="partnership_pic_container">
+            <img className="partnership_pic" src={require('./images/partnership_logo.png')} />
+          </div>
+        </section>
+      </div >
     )
   }
 }
