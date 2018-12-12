@@ -24,9 +24,17 @@ ul.hompage_info_title li a{
   color:#737373;
 }
 .contract_instruction{
-  background-color: #f2f2f2;
-  padding: 30px 50px;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 98%);
   height: 300px;
+}
+.contract_instruct_text{
+  padding: 30px 50px;
+}
+.contract_instruct_pic{
+  width: 342px;
 }
 .partnership_instruction{
   flex-direction: row;

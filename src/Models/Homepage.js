@@ -64,16 +64,21 @@ class Homepage extends Component {
           </div>
         </section>
         <section className="contract_instruction">
-          <h2>How to change permission?</h2>
-          <p>You can go to your Contracts Page. Then, click on the contract that you want to change........ </p>
+          <div className="contract_instruct_pic_container">
+            <img className="contract_instruct_pic" src={require('./images/socialShareImage.img.png')} />
+          </div>
+          <div className="contract_instruct_text">
+            <h2>How to change permission?</h2>
+            <p>You can go to your Contracts Page. Then, click on the contract that you want to change........ </p>
+          </div>
         </section>
         <section className="partnership_instruction">
           <div className="partnership_text">
-          <h2>How to earn more?</h2>
-          <p>Go to visit our Partnerships' Homepage to explore more useful products. Once you become a customer of our Partnerships, a new contract will automatically add to your contract page. Then, you can start sharing your permission by turning on the toggle button </p>
+            <h2>How to earn more?</h2>
+            <p>Go to visit our Partnerships' Homepage to explore more useful products. Once you become a customer of our Partnerships, a new contract will automatically add to your contract page. Then, you can start sharing your permission by turning on the toggle button </p>
           </div>
           <div className="partnership_pic_container">
-          <img className="partnership_pic" src={require('./images/partnership_logo.png')} />
+            <img className="partnership_pic" src={require('./images/partnership_logo.png')} />
           </div>
         </section>
       </div >
