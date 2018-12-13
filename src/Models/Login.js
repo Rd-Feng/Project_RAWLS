@@ -55,7 +55,8 @@ class Login extends Component {
 
   handleKeyPress(event) {
     if (event.keyCode != 13) return;
-    this.handleSubmit();
+    // this.handleSubmit();
+    this.queryDatabase(this.state.email);
   }
 
   handleChange = event => {
@@ -113,7 +114,7 @@ class Login extends Component {
                   >
                     Login
                     </Button>
-                </ButtonGroup>              
+                </ButtonGroup>
               </div>
             </ButtonToolbar>
           </div>
