@@ -49,34 +49,49 @@ class About extends Component {
       <section className="meet">
         <h1 className="meetTitle">MEET THE TEAM</h1>
         <p>A team of 5 Holberton students created this as a side project
-        and they are seeking more challenges in the future.</p>
+        and they are seeking more challenges in the future.
+        The pictures also link to their Twitter accounts.
+        Follow or DM any of us!</p>
+
+        <div className="photosContainer">
+          <div className="photos">
+
+            <a href="https://twitter.com/3_sumin" target="_blank">
+              <img src={require('./team/sumin.jpg')} className="photo sumin" alt="picture of Sumin"/>
+            </a>
+            <span className="nameText">Sumin Yu</span>
+          </div>
+
+          <div className="photos">
+            <a href="https://twitter.com/FengRui94" target="_blank">
+            <img src={require('./team/rui.JPG')} className="photo rui" alt="picture of Rui"/>
+            </a>
+            <span className="nameText">Rui Feng</span>
+          </div>
+
+          <div className="photos">
+            <a href="https://twitter.com/BynLeung" target="_blank">
+              <img src={require('./team/bryan.jpeg')} className="photo bryan" alt="picture of Bryan"/>
+            </a>
+            <span className="nameText">Bryan Leung</span>
+          </div>
+
+          <div className="photos">
+            <a href="https://twitter.com/GeonAitch" target="_blank">
+              <img src={require('./team/jian.png')} className="photo jian" alt="picture of Jian"/>
+            </a>
+            <span className="nameText">Jian Huang</span>
+          </div>
+
+          <div className="photos">
+            <a href="https://twitter.com/Nicolette_Swan" target="_blank">
+              <img src={require('./team/nicole.jpg')} className="photo nicole" alt="picture of Nicole"/>
+            </a>
+            <span className="nameText">Nicole Swanson</span>
+          </div>
+        </div>
       </section>
 
-
-      <section className="sumin">
-        <img src={require('./team/sumin.jpg')} className="photo"/>
-        <p className="infoText">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
-      </section>
-
-      <section className="rui">
-        <img src={require('./team/rui.JPG')} className="photo"/>
-        <p className="infoText">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
-      </section>
-
-      <section className="bryan">
-        <img src={require('./team/bryan.jpeg')} className="photo"/>
-        <p className="infoText">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
-      </section>
-
-      <section className="jian">
-        <img src={require('./team/jian.png')} className="photo"/>
-        <p className="infoText">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
-      </section>
-
-      <section className="nicole">
-        <img src={require('./team/nicole.jpg')} className="photo"/>
-        <p className="infoText">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
-      </section>
 
 
     </div>
