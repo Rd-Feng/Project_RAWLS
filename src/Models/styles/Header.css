@@ -58,7 +58,6 @@ header.header_main {
   
 }
 header.header_main .header_content {
-  z-index: 1;
   position: relative;
 }
 .header_container{
