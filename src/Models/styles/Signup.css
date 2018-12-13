@@ -1,26 +1,33 @@
-@media (min-width: 400px) {
-  .Signup form {
-      max-width: 360px;
-  }
-
+.Signup {
+    padding: 0px;
 }
-    .Signup {
-        padding: 60px 15px;
-    }
 
-    .Signup form {
-        margin: 0 auto;
-        padding: 2%;
-        background-color: #B0C4DE;
-    }
+.Signup form {
+    margin: 0 auto;
+    padding: 0px;
+    background-color: #B0C4DE;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.signup_intro{
+    border-radius: 20px 20px 0px 0px;
+    background-image: url('../images/signupBackground.jpg');
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px -20px; 
+    min-height: 200px;
+    color: black;
+}
+.signup_content{
+    padding-left: 50px;
+    padding-right:50px;
+    padding-bottom: 10px;
+}
 .form-control {
   width: 80%;
-}
-
-btnAlign {
-    display: inline-block;
-    vertical-align: top;
-
 }
 
 .submit{
@@ -29,7 +36,9 @@ btnAlign {
 .buttons{
   padding-right: 4px;
 }
-.header {
-
-  /*display: none;*/
+.control-label{
+    margin-bottom:0px;
+}
+.signup_content .form-group{
+    margin-bottom:5px;
 }

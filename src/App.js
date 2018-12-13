@@ -8,16 +8,18 @@ import Wallet from './Models/Wallet'
 import About from './Models/About'
 import Login from './Models/Login'
 import Signup from './Models/Signup'
-import {BrowserRouter, Route} from 'react-router-dom';
+import GeneralHeader from './Models/GeneralHeader'
+import GeneralHomepage from './Models/generalHomepage'
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     this.state = {
       ethAccount: '0xce8458cb49f4fa890bd22f936eafcca66d81ac2e',
-      contracts:[
+      contracts: [
         { //Amazon Prime
           addr: '0x7d390a6fc5f2945f7f16e52a179eb8340fb868c9',
           abi: [
@@ -576,55 +578,65 @@ class App extends Component {
       )
     return (
       <BrowserRouter>
-          <div className="main">
-            <Route exact={true} path='/' component={Login}/>
-            <Route exact={true} path='/Signup' component={Signup}/> 
-            <Route exact={true} path='/homepage' render={() => (
-              <div>
-                <Header active="home"/>
-                <div className="content">
-                  <Homepage contracts={this.state.contracts}/>
-                </div>
-                <br></br>
-                <Footer/>
+        <div className="main">
+          <Route exact={true} path='/' render={() => (
+            <div>
+              <GeneralHeader active="/" />
+              <div className="content">
+                <GeneralHomepage contracts={this.state.contracts} />
               </div>
-            )}/>
+              <br></br>
+              <Footer />
+            </div>
+          )} />
 
-            <Route exact={true} path='/contract' render={() => (
-              <div>
-                <Header active="contract"/>
-                <div className="content">
-                  <Contracts contracts={this.state.contracts} account={this.state.ethAccount}/>
-                </div>
-                <br></br>
-                <Footer/>
+          <Route exact={true} path='/Signup' component={Signup} />
+          <Route exact={true} path='/homepage' render={() => (
+            <div>
+              <Header active="home" />
+              <div className="content">
+                <Homepage contracts={this.state.contracts} />
               </div>
-            )}/>
+              <br></br>
+              <Footer />
+            </div>
+          )} />
 
-            <Route exact={true} path='/wallet' render={() => (
-              <div>
-                <Header active="wallet"/>
-
-                <div className="content">
-                  <Wallet contracts={this.state.contracts}/>
-                </div>
-                <br></br>
-                <Footer/>
+          <Route exact={true} path='/contract' render={() => (
+            <div>
+              <Header active="contract" />
+              <div className="content">
+                <Contracts contracts={this.state.contracts} account={this.state.ethAccount} />
               </div>
-            )}/>
+              <br></br>
+              <Footer />
+            </div>
+          )} />
 
-            <Route exact={true} path='/about' render={() => (
-              <div>
-                <Header active="about"/>
+          <Route exact={true} path='/wallet' render={() => (
+            <div>
+              <Header active="wallet" />
 
-                <div className="content">
-                  <About contracts={this.state.contracts}/>
-                </div>
-                <br></br>
-                <Footer/>
+              <div className="content">
+                <Wallet contracts={this.state.contracts} />
               </div>
-            )}/>
-          </div>
+              <br></br>
+              <Footer />
+            </div>
+          )} />
+
+          <Route exact={true} path='/about' render={() => (
+            <div>
+              <Header active="about" />
+
+              <div className="content">
+                <About contracts={this.state.contracts} />
+              </div>
+              <br></br>
+              <Footer />
+            </div>
+          )} />
+        </div>
       </BrowserRouter>
     );
   }

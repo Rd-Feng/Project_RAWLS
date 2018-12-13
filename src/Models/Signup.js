@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom';
 import {
     ButtonToolbar,
     ButtonGroup,
@@ -55,6 +56,11 @@ class Signup extends Component {
         return (
             <div className="Signup">
                 <form onSubmit={this.registerUser}>
+                <div className="signup_intro">
+        <h3>RAWLS</h3>
+        <p>Giving control and transparency on the privacy and monetary value of your data.</p>
+        </div>
+        <div className="signup_content">
                     <ControlLabel> Register for an Account </ControlLabel>
                     <FormGroup controlId="uname" bsSize="large">
                       <ControlLabel> Username </ControlLabel>
@@ -99,22 +105,12 @@ class Signup extends Component {
                           Submit
                         </Button>
                       </ButtonGroup>
-                        
-                      <ButtonGroup className="buttons">
-                        <Button
-                          bsStyle="info"
-                          onClick={() => {
-                              this.props.history.push('/')
-                          }}
-                        >
-                            Back
-                        </Button>
-                      </ButtonGroup>
                     </div>
                   </ButtonToolbar>
+                  </div>
                 </form>
             </div>
         )
     }
 }
-export default Signup;
+export default withRouter (Signup);

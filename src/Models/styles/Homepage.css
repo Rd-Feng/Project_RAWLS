@@ -28,7 +28,8 @@ ul.hompage_info_title li a{
   display: flex;
   justify-content: space-between;
   background-color: hsl(0, 0%, 98%);
-  height: 300px;
+  min-height: 70vh;
+  padding: 50px 50px;
 }
 .contract_instruct_text{
   padding: 30px 50px;
@@ -40,8 +41,8 @@ ul.hompage_info_title li a{
   flex-direction: row;
   display: flex;
   justify-content: space-between;
-  padding: 30px 50px;
-  height: 300px;
+  padding: 50px 50px;
+  min-height: 70vh;
 }
 .partnership_pic{
   width: 400px;

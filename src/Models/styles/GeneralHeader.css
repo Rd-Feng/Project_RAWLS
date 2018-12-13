@@ -1,3 +1,55 @@
+.sign_in_overlay {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.sign_in_overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.signIn_popup{
+  border-radius: 20px;
+  z-index: 2;
+  margin: 30px auto;
+  padding: 0px;
+  background: #fff;
+  width: 35%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.signIn_popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.signIn_popup .Gclose {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.signIn_popup .Gclose:hover {
+  color: orangered;
+}
+.signIn_popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
 .navbar_main {
   height: 70px;
 	width: 100%;
@@ -44,7 +96,7 @@ li.navbar_item{
   padding-left: 20px; 
 }
 
-header.header_main {
+header.Gheader_main {
   position: relative;
   overflow: hidden;
   padding-top: calc(7rem + 72px);
@@ -57,10 +109,10 @@ header.header_main {
   background-size: cover;
   
 }
-header.header_main .header_content {
+header.Gheader_main .Gheader_content {
   position: relative;
 }
-.header_container{
+.Gheader_container{
   text-align: center;
   color: #f2f2f2;
 }

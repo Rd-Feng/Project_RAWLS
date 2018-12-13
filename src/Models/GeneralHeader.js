@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import './styles/Header.css'
+import './styles/GeneralHeader.css'
+import Login from './Login'
+import Signup from './Signup'
 
-class Header extends Component {
+class GeneralHeader extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,9 +16,6 @@ class Header extends Component {
     }
   }
   render() {
-    if (window.location.pathname === '/') {
-      return null;
-    }
     if (window.location.pathname === '/Signup') {
       return null;
     }
@@ -29,37 +28,44 @@ class Header extends Component {
             </div>
             <div className="navbar_collapse">
               <ul className="nav_item_container">
-                <li className="Home">
-                  <a className={this.state.home} href="homepage">Home</a>
+                <li className="navbar_item">
+                  <a className="header_button" href="#sign_in_popup">sign in</a>
                 </li>
                 <li className="navbar_item">
-                  <a className={this.state.contract} href="contract">Contracts</a>
-                </li>
-                <li className="navbar_item">
-                  <a className={this.state.wallet} href="wallet">Wallet</a>
-                </li>
-                <li className="navbar_item">
-                  <a className={this.state.about} href="about">About</a>
-                </li>
-                <li className="navbar_item">
-                  <a className={this.state.logout} href="/">sign out</a>
+                  <a className="header_button" href="#sign_up_popup">sign up</a>
                 </li>
               </ul>
             </div>
           </div>
+
+          <div id="sign_in_popup" class="sign_in_overlay">
+            <div class="signIn_popup">
+              <a class="Gclose" href="#">&times;</a>
+              <Login />
+            </div>
+          </div>
+
+          <div id="sign_up_popup" class="sign_in_overlay">
+            <div class="signIn_popup">
+              <a class="Gclose" href="#">&times;</a>
+              <Signup />
+            </div>
+          </div>
+
         </nav>
 
-        <header className="header_main">
-          <div className="header_content">
-            <div className="header_container">
+        <header className="Gheader_main">
+          <div className="Gheader_content">
+            <div className="Gheader_container">
               <h2>Share Your Data</h2>
               <h3>To Earn Money Every Month</h3>
             </div>
           </div>
         </header>
+
       </div>
     )
   }
 }
 
-export default Header;
+export default GeneralHeader;
