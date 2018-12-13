@@ -6,10 +6,6 @@
   position: fixed;
   padding: 1rem 1rem;
   background-color: rgba(0, 0, 0, 0.7);
-  /*
-  background-image: url("../images/logo5.png");
-  background-size: 50px;
-  background-repeat: no-repeat;*/
 }
 div.container {
   display: flex;
@@ -45,18 +41,9 @@ ul.nav_item_container li a:hover{
   color: #f2f2f2;
 }
 li.navbar_item{
-  padding-left: 10px; 
+  padding-left: 20px; 
 }
-/*
-ul.nav_item_container li.navbar_item_logout a{
-  font-size: 0.7rem;
-  padding-left: 10px; 
-}
-.profile_pic {
-  width: 30px;
-  margin-top: -15px;
-  float: right;
-}*/
+
 header.header_main {
   position: relative;
   overflow: hidden;
@@ -78,42 +65,3 @@ header.header_main .header_content {
   text-align: center;
   color: #f2f2f2;
 }
-.signOut {
-  color: #5CA2D5;
-  text-decoration: none;
-    display: block;
-    padding: 10% 16%;
-}
-.signOut:hover{
-  color: #29293d;
-}
-.dropdown {
-  float: right;
-  margin-top: -12px;
-  margin-left: 8px;
-  position: relative;
-  color: #5CA2D5;
-}
-.dropdown:hover{
-  color: #29293d;
-}
-.dropbtn{
-  border: none;
-  cursor: pointer;
-}
-.dropdown-content {
-  z-index: 1;
-  background-color: #f9f9f9;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  position: absolute;
-  display: none;
-  right: 0%;
-  min-width: 100px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
