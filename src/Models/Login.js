@@ -72,16 +72,15 @@ class Login extends Component {
     }
   }
 
-  handleRegister() {
-    this.props.history.push('/Signup')
-  }
-
-
   render() {
     return (
       <div className="Login">
         <form onSubmit={this.registerUser}>
-        <img className="logo_login" src={require('./images/logo5.png')} />
+        <div className="login_intro">
+        <h3>RAWLS</h3>
+        <p>Giving control and transparency on the privacy and monetary value of your data.</p>
+        </div>
+        <div className="login_content">
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel> Username </ControlLabel>
             <FormControl
@@ -104,7 +103,7 @@ class Login extends Component {
           <div>
             <ButtonToolbar >
               <div className='buttonDIV'>
-                <ButtonGroup className="touchCSSJian">
+                <ButtonGroup className="touch">
                   <Button
                     bsStyle="info"
                     disabled={!this.validateForm()}
@@ -114,25 +113,14 @@ class Login extends Component {
                   >
                     Login
                     </Button>
-                </ButtonGroup>
-
-                <ButtonGroup className="touchCSSJian">
-                  <Button
-                    type="submit"
-                    onClick={() => {
-                      this.handleRegister();
-                    }}
-                  >
-                    Register
-                      </Button>
-
-                </ButtonGroup>
+                </ButtonGroup>              
               </div>
             </ButtonToolbar>
+          </div>
           </div>
         </form>
       </div>
     );
   }
 }
-export default Login;
+export default withRouter (Login);

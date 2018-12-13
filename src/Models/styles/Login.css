@@ -1,24 +1,28 @@
-@media (min-width: 400px) {
-  .Login form {
-      max-width: 360px;
-  }
-
-}
-
 .Login {
-    padding: 60px 15px;
+    padding: 0px;
 }
-.logo_login{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.login_intro{
+    border-radius: 20px 20px 0px 0px;
+    background-image: url('../images/loginBackground.png');
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px -20px; 
+    min-height: 240px;
+    color: white;
+}
+.login_content{
+    padding-left: 50px;
+    padding-right:50px;
+    padding-bottom: 10px;
 }
 .Login form {
     margin: 0 auto;
-    padding: 2%;
+    padding: 0px;
     background-color: #B0C4DE;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .form-control {
@@ -28,6 +32,6 @@
 .buttonDIV{
     margin: 0 auto;
 }
-.touchCSSJian{
+.touch{
   padding-right: 4px;
 }
