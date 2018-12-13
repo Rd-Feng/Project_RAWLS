@@ -38,7 +38,7 @@ class Login extends Component {
           this.handleSubmit();
         })
       }
-    ).catch(err => { });
+    ).catch(err => {this.handleSubmit();});
   }
 
   validateForm() {
@@ -65,11 +65,17 @@ class Login extends Component {
     });
   }
   handleSubmit() {
-    if (this.state.email == this.state.correctuname && this.state.password == this.state.correctpasswd) {
+	if (this.state.email != this.state.correctuname)
+	{
+		alert("Username not found. Try again or register for new user.")
+	}
+	else if (this.state.password != this.state.correctpasswd)
+	{
+		alert("Incorrect password.")
+	}
+    else
+	{
       this.props.history.push('/homepage')
-    }
-    else {
-      alert("Please enter valid credentials or register for an account");
     }
   }
 
