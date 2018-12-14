@@ -74,15 +74,14 @@ class ContractItem extends Component {
 		});
 		if (changed) alert('Your changes will take effect after around 1 min');
 	}
+
 	render() {
-		const accordionState = this.state.show_panel ? 'active' : '';
-		const accordionClass = `accordion ${accordionState}`;
-		let permissions;
+	    let permissions;
 		permissions = this.perms.map(perm => {
-			return (
+			return(
 				<div key={perm.title}>
 					<div className="info_dp_contract">
-						<i className="fa fa-fw fa-info info_contract"></i>
+						<div className="info_contract">i</div>
 						<div className="info_dp-content_contract">
 							<p className="infoTextContract">PermPrice info</p>
 						</div>
@@ -98,25 +97,28 @@ class ContractItem extends Component {
 							/>
 							<span className="slider round"></span>
 						</label></p>
-						<hr />
+					<hr />
 					</div>
-				);
-			})
+			)
+		})
 			return (
-				<div>
-					<button onClick={() => {this.togglePanel();}}
-						className={accordionClass}>{this.title}
-					</button>
-					<div className="panel">
-						{permissions}
-						<p className="Total"> Total: ${this.payment} </p>
-						<p className="Total"> Potential earning: ${this.totle} </p>
-						<button className="closeButton" onClick={() => {this.togglePanel();}}>
-							Close
-						</button>
-						<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
-							Submit
-						</button>
+				<div className="contract_container">
+					<div className="contract_box">	
+						<a className="contract_item" href="#popup">	
+						<img className="comany_logo" src={require(`./images/${this.title}.png`)}/></a>
+					</div>
+					<div id="popup" className="contract_overlay">
+						<div className="contract_content">
+							<a className="contract_close" href="#contract_box">&times;</a>
+							<div className="text_box">
+								{permissions}
+								<p className="Total"> Total: ${this.payment} </p>
+								<p className="Total"> Potential earning: ${this.totle} </p>
+								<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
+									Submit
+			 					</button>
+							 </div>
+						</div>
 					</div>
 				</div>
 			)
