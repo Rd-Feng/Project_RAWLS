@@ -52,14 +52,6 @@ class Header extends Component {
         return (
           <div className="body">
           <NavBar/>
-            <header className="header_wallet">
-              <div className="header_content">
-                <div className="header_container">
-                  <h2>Share Your Data</h2>
-                  <h3>To Earn Money Every Month</h3>
-                </div>
-              </div>
-            </header>
           </div>
         )}
         if (window.location.pathname === '/about') {
