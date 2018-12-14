@@ -9,7 +9,7 @@
     padding-top: 40px;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 0px -20px; 
+    background-position: 0px -20px;
     min-height: 240px;
     color: white;
 }
@@ -32,6 +32,13 @@
 .buttonDIV{
     margin: 0 auto;
 }
+
 .touch{
   padding-right: 4px;
+}
+
+.errormsg{
+	color: red;
+	font-size: 80%;
+	text-align: center;
 }
