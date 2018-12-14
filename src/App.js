@@ -620,7 +620,6 @@ class App extends Component {
               <div className="content">
                 <Wallet contracts={this.state.contracts} />
               </div>
-              <br></br>
               <Footer />
             </div>
           )} />
