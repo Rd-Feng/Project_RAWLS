@@ -1,61 +1,32 @@
-.navbar_main {
-  height: 70px;
-	width: 100%;
-  z-index: 1;
-  overflow: visible;
-  position: fixed;
-  padding: 1rem 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-div.container {
-  display: flex;
-  justify-content: space-between; 
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
-ul.nav_item_container {
-  display: flex;
-  justify-content: space-between; 
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-.company_name{
-  color: #f2f2f2;
-}
-ul.nav_item_container li a{
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: #808c99;
-  line-height: 40px;
 
-}
-ul.nav_item_container li a:hover{
-  color: #f2f2f2;
-}
-li.navbar_item{
-  padding-left: 20px; 
-}
-
-header.header_main {
+header{
   position: relative;
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979));
-  background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
+  
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
   
+}
+.header_home{
+  background: -webkit-gradient(linear, left bottom, left top, from(#6666ff), to(#ee0979));
+  background: linear-gradient(0deg, #6666ff 0%, #ee0979 100%);
+}
+.header_contract{
+  background: -webkit-gradient(linear, left bottom, left top, from(#4db8ff), to(#6666ff));
+  background: linear-gradient(0deg, #4db8ff 0%, #6666ff 100%);
+}
+.header_wallet{
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff99ff), to(#9999ff));
+  background: linear-gradient(0deg, #ff99ff 0%, #9999ff 100%);
+}
+.header_about{
+  background: -webkit-gradient(linear, left bottom, left top, from(#00e600), to(#47d1d1));
+  background: linear-gradient(0deg, #00e600 0%, #47d1d1 100%);
 }
 header.header_main .header_content {
   position: relative;

@@ -1,68 +1,102 @@
-.right {
-  float: right;
-}
-.Total{
-  text-align: right;
-  font-size: 20px;
-  color: #444;
-}
-.PermPrice{
-  font-size: 20px;
-  color: #444;
 
-}
-/* remove blue outline when clicked */
-.accordion:focus,.accordion:active {
-   outline: none !important;
-   box-shadow: none;
-}
-/* drop down for contracts */
-.accordion {
-  background:  #e6e6e6;
-  color: #444;
-  cursor: pointer;
-  padding: 2%;
-  width: 100%;
-  border: none;
+.contract_item {
   text-align: center;
-  outline: none;
-  margin: 2%;
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 0px;
-  transition: 0.4s;
-  font-size: 180%;
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 300px;
+  height: 150px;
+  padding: 0;
+  margin: 0;
+  border-radius: 20px;
 }
 
-.contractText{
-  font-size: 80%;
-}
-.switch {
-  margin-right: 4%;
-}
-.active, .accordion:hover {
-  background-color: #ccc;
-}
-.panel {
+img.company_logo {
+  padding: 0px;
+  margin: 0px;
   width: 100%;
-  /* must match .accordion's width */
-  padding: 3%;
-  font-size: 200%;
-  display: none;
-  overflow: hidden;
+  height: 100%;
+  max-width: 300px;
+  max-height: 200px;
+  border-radius: 20px;
+  
 }
+
+.contract_box:hover {
+  opacity: .7;
+  text-decoration: none;
+}
+
+.contract_box a.contract_item:hover {
+  color: rgb(236, 234, 234);
+}
+
+.contract_overlay {
+ visibility: hidden;
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background: rgba(0, 0, 0, 0.7);
+ transition: opacity 500ms;
+ visibility: hidden;
+ opacity: 0;
+}
+
+.contract_overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.contract_content {
+  margin: 200px auto;
+  padding: 20px;
+  min-width: 200px;
+  min-height: 300px;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 35%;
+  position: relative;
+  /* transition: all 5s ease-in-out; */
+  z-index: 2;
+  padding: 20px;
+}
+
+.contract_close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.contract_close:hover {
+  color: orangered;
+}
+
+/* contract popup items */
 .title{
   padding: 1%;
 }
-.info_contract{
-  padding: 1px;
+div.info_contract {
+  margin-top: 15px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
   color: lightslategray;
   font-size: 10px !important;
-  border: 1px solid lightslategray;
+  border: 2px solid lightslategray;
   margin-right: 16px;
   border-radius: 50%;
+  font-weight: bold;
+  font-size: 50px;
 }
+
 .info_dp_contract{
   margin-top: -13px;
   margin-left: 10px;
@@ -75,7 +109,7 @@
   z-index: 1;
   background-color: #f9f9f9;
   border: 1px solid #cccccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   display: none;
@@ -92,17 +126,12 @@
 .info_dp_contract:hover .info_dp-content_contract{
   display: block;
 }
-.active+.panel {
-  display: block;
+
+.text_box {
+  padding-top: 20px;
+  margin: 10px;
 }
-.accordion:after {
-  content: '\02795';
-  color: #777;
-  float: right;
-}
-.active:after {
-  content: "\2796";
-}
+/* toggles */
 .switch {
   position: relative;
   display: inline-block;
@@ -159,7 +188,7 @@ input:checked+.slider:before {
   border-radius: 2em;
   border: none;
   color: white;
-  padding: .2em .6em;
+  padding: .6em 1em;
   cursor: pointer;
   background-color: #81E870;
   margin: 3%;
@@ -169,70 +198,26 @@ input:checked+.slider:before {
 }
 /* remove blue outline when clicked */
 .submitButton:focus,.submitButton:active {
-   outline: none !important;
-   box-shadow: none;
-}
-.closeButton {
-  font-size: .65em;
-  border-radius: 2em;
-  border: none;
-  color: white;
-  padding: .2em .6em;
-  cursor: pointer;
-  background-color: #ff704d;
-  margin: 3%;
-}
-.closeButton:hover {
-  background-color: #ff3300;
+  outline: none !important;
+  box-shadow: none;
 }
 
 /* remove blue outline when clicked */
 .closeButton:focus,.closeButton:active {
-   outline: none !important;
-   box-shadow: none;
-}
+  outline: none !important;
+  box-shadow: none;
+} */
 .buttonContainer {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100%;
 }
 
 .switch {
-  width: 15%;
-  min-width: 2.7em;
-  max-width: 2.7em;
-  margin: 0;
-}
-@media screen and (max-width: 800px) {
-  .panel{
-    text-align: left;
-    width: 100%;
-  }
-  .content {
-    width: 100%;
-  }
-  .accordion {
-    width: 100%;
-  }
-  .contractText{
-    font-size: 55%;
-  }
-  .switch {
-    width: 15%;
-    min-width: 2.6em;
-    max-width: 2.6em;
-    margin: 0;
-  }
-  .allContracts {
-    width: 100%;
-  }
-  .slider{
-    height: 100%;
-    margin: 0;
-  }
-  input:checked+.slider:before{
-    transform: translateX(1.5em);
-  }
+ width: 15%;
+ min-width: 2.7em;
+ max-width: 2.7em;
+ margin: 0;
 }

@@ -39,15 +39,15 @@ class GeneralHeader extends Component {
           </div>
 
           <div id="sign_in_popup" class="sign_in_overlay">
-            <div class="signIn_popup">
-              <a class="Gclose" href="#">&times;</a>
+            <div className="signIn_popup">
+              <a className="Gclose" href="#">&times;</a>
               <Login />
             </div>
           </div>
 
           <div id="sign_up_popup" class="sign_in_overlay">
-            <div class="signIn_popup">
-              <a class="Gclose" href="#">&times;</a>
+            <div className="signIn_popup">
+              <a className="Gclose" href="#">&times;</a>
               <Signup />
             </div>
           </div>

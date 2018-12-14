@@ -1,92 +1,91 @@
-.CardContainer{
-
-}
-.walletCard {
-  z-index: 0px;
-background: linear-gradient(white, #f2f2f2);
-  padding: 20px;
-  margin-top: 10%;
-  margin-right:4.1%;
-  margin-left: 2%;
-  border: 1px solid #cccccc;
-  border-radius: 5px 5px 0px 0px;
-}
-.walletText {
-  margin-top: 0%;
-  margin-bottom: 0%;
-  font-weight: bold;
-}
-.balanceContainer{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1%;
-}
-.balanceText{
-  margin-top: 0%;
-  font-weight: bold;
-}
-.balanceValue{
-  margin-top: 0%;
-  font-weight: normal;
-
-}
-.incomeContainer{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-}
-.incomeText{
-  margin-top: 0%;
-  font-weight: bold;
-}
-.incomeValue{
-  margin-top: 0%;
-  font-weight: normal;
+.wallet-container {
+    font-family: 'Lora', serif;
+    font-weight: 100;
+    border: solid 3px #DDDDDD;
 }
 
-.redeem {
-  font-size: .78em;
-  border-radius: 2em;
-  border: none;
-  color: white;
-  padding: .9em .9em;
-  background-color: #81E870;
-
+hr.main-hr{
+    /*
+    width: 65%;
+    color: black;
+    size:"30";
+    */
+    width: 50%;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:black;
+    color:#FF0066;
+    border: 0 none;
 }
 
-.redeem:hover {
-  background-color: #70D642
+hr {
+    width: 125%;
+    margin: 0px;
+    padding: 0px;
 }
 
-.transactionHeader{
-  color: white;
-  background-color: #333333;
-  caption-side: top;
-}
-.transactionText {
-  text-align: left;
-  margin-left: 1%;
-  font-size: 120%;
-  padding: 0%;
-  letter-spacing: 1px;
+.trans-label {
+    font-size:24px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    right: 300px;
 }
 
-.transactionTable {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 94%;
-    margin-top: 0%;
-    margin-left: 2%;
-    margin-right: 20%;
+.trans-history {
+    font-size:18px;
+}
 
+
+.table-labels {
+    position: relative;
+    left: 300px;
 }
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+
+.table-labels span {
+    display: inline;
+    padding-left: 100px;
 }
-tr:nth-child(odd) {
-    background-color: #dddddd;
+
+.transaction-list {
+    width: 45%;
+    position: relative;
+    margin: auto;
+    right: 70px;
+    padding: 20px;
+}
+
+div.transaction:hover {
+    background-color: #F3F1F1;
+    padding: 10px;
+    font-size: 18px;
+    border-left: solid 5px #C70606;
+    border-radius: 5px;
+    box-shadow: 1px 3px 5px #888888;
+    width: 115%;
+}
+
+.transaction {
+    margin: 20px;
+}
+
+.transaction p{
+    padding: 30px;
+    display: inline;
+    white-space:pre;
+}
+
+.wallet-balance p{
+    margin: 0px;
+    padding: 155px;
+    display: inline;
+}
+
+.wallet-balance {
+    width: 55%;
+    text-align: center;
+    position: relative;
+    left: 265px;
+    font-size: 20px;
 }

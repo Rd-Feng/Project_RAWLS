@@ -3,59 +3,76 @@ import './styles/Wallet.css'
 class Wallet extends Component {
   render(){
     return (
-      <div className="CardContainer">
-        <div className="walletCard">
-          <h2 className="walletText"> My Wallet </h2>
-
-          <div className="balanceContainer">
-          <p className="balanceText"> Current Balance:</p>
-          <p className="balanceValue"> $28 </p>
-          </div>
-
-          <div className="incomeContainer">
-          {/* <p className="incomeText"> Monthly Income:</p>
-          <p className="incomeValue"> $3 </p> */}
-          </div>
-
-            <button className="redeem">Redeem</button>
-          </div>
-
-          <table className="transactionTable">
-          <caption className="transactionHeader">
-          <div className="transactionText">
-          Transaction History
-          </div>
-          </caption>
-
-          <tr>
-          <th>Date</th>
-          <th>Type</th>
-          <th>Transaction</th>
-          <th>Current Balance</th>
-          </tr>
-
-          <tr>
-          <td>10/28/2018</td>
-          <td>Amazon</td>
-          <td>$1</td>
-          <th>$6</th>
-          </tr>
-          <tr>
-          <td>10/27/2018</td>
-          <td>Google</td>
-          <td>$3</td>
-          <th>$5</th>
-          </tr>
-          <tr>
-          <td>09/26/2018</td>
-          <td>Amazon</td>
-          <td>$2</td>
-          <th>$2</th>
-          </tr>
-          </table>
-      </div>
-
-
+        <div className="wallet-container">
+            <div className="trans-label">
+                <p> Transaction History </p>
+            </div>
+            <div className="trans-history">
+                <div className="table-labels">
+                    <span> Date </span>
+                    <span> Company </span>
+                    <span> Type </span>
+                    <span> Amount </span>
+                </div>
+                <hr className="main-hr"/>
+                <div className="transaction-list">
+                    <div className="transaction">
+                        <p>    June 6, 2018  </p>
+                        <p>    Google      </p>
+                        <p>    Deposit    </p>
+                        <p>    + $1.00     </p>
+                    </div>
+                    <hr className="sub-hr"/>
+                    <div className="transaction">
+                        <p>    June 6, 2018   </p>
+                        <p>    Fitbit        </p>
+                        <p>    Deposit    </p>
+                        <p>    + $3.00     </p>
+                    </div>
+                    <hr className="sub-hr"/>
+                    <div className="transaction">
+                        <p>    June 25, 2018</p>
+                        <p>    Amazon    </p>
+                        <p>    Deposit    </p>
+                        <p>    + $3.00 </p>
+                    </div>
+                    <hr className="sub-hr"/>
+                    <div className="transaction">
+                        <p>    July 2, 2018 </p>
+                        <p>         ---         </p>
+                        <p>  Withdrawal</p>
+                        <p>     - $7.00 </p>
+                    </div>
+                    <hr className="sub-hr"/>
+                    <div className="transaction">
+                        <p>    July 6, 2018  </p>
+                        <p>    Google      </p>
+                        <p>    Deposit    </p>
+                        <p>    + $1.00     </p>
+                    </div>
+                    <hr className="sub-hr"/>
+                    <div className="transaction">
+                        <p>    July 6, 2018   </p>
+                        <p>    Fitbit        </p>
+                        <p>    Deposit    </p>
+                        <p>    + $3.00     </p>
+                    </div>
+                    <hr className="sub-hr"/>
+                    <div className="transaction">
+                        <p>    July 25, 2018</p>
+                        <p>    Amazon    </p>
+                        <p>    Deposit    </p>
+                        <p>    + $3.00 </p>
+                    </div>
+                </div>
+            </div>
+            <hr className="main-hr"/>
+            <div className="wallet-balance">
+                <p> Balance </p>
+                <p> $ 7.00 </p>
+            </div>
+            <br/>
+        </div>
     )
   }
 }

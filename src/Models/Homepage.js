@@ -45,7 +45,7 @@ class Homepage extends Component {
 
           <div className="hompage_info_container">
             <ul className="hompage_info_title">
-              <h2>My wallect</h2>
+              <h2>My wallet</h2>
               <li>Balance $32</li>
               <li>Monthly Income $3</li>
               <li>
