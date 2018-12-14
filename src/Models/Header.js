@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './styles/Header.css'
-
+import NavBar from './NavBar'
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -20,36 +20,11 @@ class Header extends Component {
     if (window.location.pathname === '/Signup') {
       return null;
     }
+    if (window.location.pathname === '/homepage') {
     return (
       <div className="body">
-        <nav className="navbar_main">
-          <div className="container">
-            <div className="company_name">
-              <h2>RAWLS</h2>
-            </div>
-            <div className="navbar_collapse">
-              <ul className="nav_item_container">
-                <li className="Home">
-                  <a className={this.state.home} href="homepage">Home</a>
-                </li>
-                <li className="navbar_item">
-                  <a className={this.state.contract} href="contract">Contracts</a>
-                </li>
-                <li className="navbar_item">
-                  <a className={this.state.wallet} href="wallet">Wallet</a>
-                </li>
-                <li className="navbar_item">
-                  <a className={this.state.about} href="about">About</a>
-                </li>
-                <li className="navbar_item">
-                  <a className={this.state.logout} href="/">sign out</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        <header className="header_main">
+      <NavBar/>
+        <header className="header_home">
           <div className="header_content">
             <div className="header_container">
               <h2>Share Your Data</h2>
@@ -58,7 +33,49 @@ class Header extends Component {
           </div>
         </header>
       </div>
-    )
+    )}
+    if (window.location.pathname === '/contract') {
+      return (
+        <div className="body">
+        <NavBar/>
+          <header className="header_contract">
+            <div className="header_content">
+              <div className="header_container">
+                <h2>Share Your Data</h2>
+                <h3>To Earn Money Every Month</h3>
+              </div>
+            </div>
+          </header>
+        </div>
+      )}
+      if (window.location.pathname === '/wallet') {
+        return (
+          <div className="body">
+          <NavBar/>
+            <header className="header_wallet">
+              <div className="header_content">
+                <div className="header_container">
+                  <h2>Share Your Data</h2>
+                  <h3>To Earn Money Every Month</h3>
+                </div>
+              </div>
+            </header>
+          </div>
+        )}
+        if (window.location.pathname === '/about') {
+          return (
+            <div className="body">
+            <NavBar/>
+              <header className="header_about">
+                <div className="header_content">
+                  <div className="header_container">
+                    <h2>Share Your Data</h2>
+                    <h3>To Earn Money Every Month</h3>
+                  </div>
+                </div>
+              </header>
+            </div>
+          )}
   }
 }
 
