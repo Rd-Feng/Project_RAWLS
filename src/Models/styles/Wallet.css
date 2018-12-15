@@ -1,91 +1,136 @@
-.wallet-container {
-    font-family: 'Lora', serif;
-    font-weight: 100;
-    border: solid 3px #DDDDDD;
+.background-container {
+  background-image: url("../images/mountains.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-hr.main-hr{
-    /*
-    width: 65%;
-    color: black;
-    size:"30";
-    */
-    width: 50%;
-    height: 2px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:black;
-    color:#FF0066;
-    border: 0 none;
+.transaction-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  min-height:750px;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
+.balance-container{
+  width: 30%;
+  min-height: 300px;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: solid 1px #DDDDDD;
+  border-radius: 4px;
+  box-shadow: 2px 3px 4px grey;
+}
+
+.transaction-history{
+  width: 65%;
+  min-height: 600px;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 1px #DDDDDD;
+  border-radius: 4px;
+  box-shadow: 2px 3px 4px grey;
+}
+
+.balance-container .balance {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
+.balance p {
+  margin-bottom: 0px;
+  text-align: center;
+  color: white;
+  opacity: 0.9;
+}
+
+.balance .balance-amount {
+  font-size: 20px;
+}
+
+.balance-amount b {
+  font-size:30px;
+}
+
+.balance .redeemed {
+  font-size: 14px;
+}
+
+.balance-container .current-contracts {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: Helvetica;
+  color: white;
+  opacity: 0.8;
+}
+
+.current-contracts p {
+  margin-bottom: 0px;
+  text-align: left;
+  margin-left: 65px;
+}
+
+.redemption {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.redemption button{
+  color: #4682b4;
+  border: 1px solid powderblue;
+  border-radius: 2px;
+}
+
+.transaction-history .history-label {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
+.transaction-history p {
+  text-align: left;
+  width: 20%;
+  margin: 0 auto;
+  padding-left: 10px;
 }
 
 hr {
-    width: 125%;
-    margin: 0px;
-    padding: 0px;
+  height: 3px;
+  margin: 10px 0 10px 0;
 }
 
-.trans-label {
-    font-size:24px;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    right: 300px;
-}
-
-.trans-history {
-    font-size:18px;
-}
-
-
-.table-labels {
-    position: relative;
-    left: 300px;
-}
-
-.table-labels span {
-    display: inline;
-    padding-left: 100px;
-}
-
-.transaction-list {
-    width: 45%;
-    position: relative;
-    margin: auto;
-    right: 70px;
-    padding: 20px;
-}
-
-div.transaction:hover {
-    background-color: #F3F1F1;
-    padding: 10px;
-    font-size: 18px;
-    border-left: solid 5px #C70606;
-    border-radius: 5px;
-    box-shadow: 1px 3px 5px #888888;
-    width: 115%;
+.transaction-history img {
+  width: 55%;
+  height: 80%;
 }
 
 .transaction {
-    margin: 20px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDDDDD;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.transaction:hover{
+  background-color: #FCFCFC;
 }
 
 .transaction p{
-    padding: 30px;
-    display: inline;
-    white-space:pre;
+  margin: 0px;
 }
 
-.wallet-balance p{
-    margin: 0px;
-    padding: 155px;
-    display: inline;
+.Deposit-Amount {
+  color: green;
 }
 
-.wallet-balance {
-    width: 55%;
-    text-align: center;
-    position: relative;
-    left: 265px;
-    font-size: 20px;
+.Withdrawal-Amount {
+  color: red;
 }
