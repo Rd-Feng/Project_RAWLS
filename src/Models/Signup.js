@@ -16,7 +16,8 @@ class Signup extends Component {
         this.state = {
             uname: '',
             password: '',
-            cpassword: ''
+            cpassword: '',
+            err_msg: ''
         };
     }
 
@@ -26,15 +27,17 @@ class Signup extends Component {
             this.state.cpassword.length > 0
         )
     }
+
     handleChange = event => {
         this.setState({
             [event.target.id]: event.target.value
         });
     }
+
     handleSubmit () {
         if (this.state.password != this.state.cpassword)
         {
-            alert("Your passwords do not match.")
+            this.setState({err_msg: "Passwords do not match"});
         }
         else
         {
@@ -43,13 +46,24 @@ class Signup extends Component {
     }
 
     registerUser() {
-        var userRef = fire.database().ref('Users').child(this.inputUname.value);
-        userRef.set({
-            Username: this.inputUname.value,
-            Password: this.inputPassword.value
-        });
-        alert('Your account has been successfully created. Please login');
-        this.props.history.push('/')
+      var ref = fire.database().ref('Users')
+
+      ref.child(this.inputUname.value).once('value').then(
+        data => {
+          if (data.val()) {
+            this.setState({err_msg: "Account already exists"});
+          }
+          else {
+            var userRef = ref.child(this.inputUname.value);
+            userRef.set({
+                Username: this.inputUname.value,
+                Password: this.inputPassword.value
+            });
+            alert('Your account has been successfully created. Please login');
+            this.props.history.push('/')
+          }
+        }
+      );
     }
 
     render() {
@@ -61,7 +75,8 @@ class Signup extends Component {
         <p>Giving control and transparency on the privacy and monetary value of your data.</p>
         </div>
         <div className="signup_content">
-                    <ControlLabel> Register for an Account </ControlLabel>
+                    <ControlLabel> Register for an account </ControlLabel>
+                    <hr/>
                     <FormGroup controlId="uname" bsSize="large">
                       <ControlLabel> Username </ControlLabel>
                       <FormControl
@@ -92,6 +107,9 @@ class Signup extends Component {
                         inputRef = {ref => {this.inputcassword = ref}}
                       />
                     </FormGroup>
+                  <div className="errormsg">
+      							<p>{this.state.err_msg}</p>
+      						</div>
                   <ButtonToolbar>
                     <div className='submit'>
                       <ButtonGroup className="buttons">
