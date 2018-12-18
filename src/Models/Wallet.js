@@ -10,7 +10,7 @@ class Wallet extends Component {
             <div className="balance">
               <p> Balance of this account</p>
               <p className="balance-amount"> $ <b>73</b>.00 </p>
-              <p className="redeemed"> Amount redeemed: $2.00 </p>
+              <p className="redeemed"> Amount redeemed: $25.00 </p>
             </div>
             <br></br>
             <div className="current-contracts">
