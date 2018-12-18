@@ -111,6 +111,7 @@ class ContractItem extends Component {
 						<div id={popupId} className="contract_overlay">
 							<div className="contract_content">
 								<a className="contract_close" href="#contract_box">&times;</a>
+								<p>{this.title}</p>
 								<div className="text_box">
 									{permissions}
 									<p className="Total"> Total: ${this.payment} </p>
