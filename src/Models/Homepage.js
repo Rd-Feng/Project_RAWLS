@@ -30,7 +30,7 @@ class Homepage extends Component {
   }
   render() {
     return (
-      <div className="hompage_container">
+      <div id="hompage_container">
         <section className="hompage_info_collapse">
           <div className="hompage_info_container">
             <ul className="hompage_info_title">
@@ -75,7 +75,7 @@ class Homepage extends Component {
         <section className="partnership_instruction">
           <div className="partnership_text">
             <h2>How to earn more?</h2>
-            <p>Go to visit our Partnerships' Homepage to explore more useful products. Once you become a customer of our Partnerships, a new contract will automatically add to your contract page. Then, you can start sharing your permission by turning on the toggle button </p>
+            <p>Go to visit our <a href="#hompage_container">Partnerships</a> ' Homepage to explore more useful products. Once you become a customer of our Partnerships, a new contract will automatically add to your contract page. Then, you can start sharing your permission by turning on the toggle button </p>
           </div>
           <div className="partnership_pic_container">
             <img className="partnership_pic" src={require('./images/partnership_logo.png')} />
