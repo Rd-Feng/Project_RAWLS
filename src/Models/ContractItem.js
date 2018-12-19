@@ -69,14 +69,15 @@ class ContractItem extends Component {
 					alert(err)
 					changed = false
 				}
-
 			}
 		});
 		if (changed) alert('Your changes will take effect after around 1 min');
 	}
 
 	render() {
-	    let permissions;
+		let permissions, popupRef, popupId;
+		popupRef = "#popup" + this.title.split(' ').join('_');
+		popupId = "popup" + this.title.split(' ').join('_');
 		permissions = this.perms.map(perm => {
 			return(
 				<div key={perm.title}>
@@ -97,32 +98,32 @@ class ContractItem extends Component {
 							/>
 							<span className="slider round"></span>
 						</label></p>
-					<hr />
+						<hr />
 					</div>
-			)
-		})
+				)
+			})
 			return (
 				<div className="contract_container">
-					<div className="contract_box">	
-						<a className="contract_item" href="#popup">	
-						<img className="comany_logo" src={require(`./images/${this.title}.png`)}/></a>
-					</div>
-					<div id="popup" className="contract_overlay">
-						<div className="contract_content">
-							<a className="contract_close" href="#contract_box">&times;</a>
-							<div className="text_box">
-								{permissions}
-								<p className="Total"> Total: ${this.payment} </p>
-								<p className="Total"> Potential earning: ${this.totle} </p>
-								<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
-									Submit
-			 					</button>
-							 </div>
+					<div className="contract_box">
+						<a className="contract_item" href={popupRef}>
+							<img className="comany_logo" src={require(`./images/${this.title}.png`)}/></a>
+						</div>
+						<div id={popupId} className="contract_overlay">
+							<div className="contract_content">
+								<a className="contract_close" href="#contract_box">&times;</a>
+								<p>{this.title}</p>
+								<div className="text_box">
+									{permissions}
+									<p className="Total"> Total: ${this.payment} </p>
+									<p className="Total"> Potential earning: ${this.totle} </p>
+									<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
+										Submit
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			)
+				)
 		}
-	}
-
-	export default ContractItem;
+}
+export default ContractItem;
