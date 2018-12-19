@@ -12,7 +12,12 @@
 }
 .sign_in_overlay:target {
   visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
   opacity: 1;
+  z-index: 2;
 }
 
 .signIn_popup{
@@ -23,7 +28,6 @@
   background: #fff;
   width: 35%;
   position: relative;
-  transition: all 5s ease-in-out;
 }
 
 .signIn_popup h2 {
@@ -101,8 +105,8 @@ header.Gheader_main {
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979));
-  background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ee0979), to(#ff6a00));
+  background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -115,4 +119,25 @@ header.Gheader_main .Gheader_content {
 .Gheader_container{
   text-align: center;
   color: #f2f2f2;
+}
+.start{
+  background-color: #944dff;
+  border-radius: 20px;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border: none;
+}
+.button_container{
+  text-align:  center;
+}
+.button_container a{
+  color: red;
+  text-decoration: none;
+}
+.start:focus,.start:active {
+  outline: none !important;
+  box-shadow: none;
 }

@@ -40,14 +40,14 @@ class GeneralHeader extends Component {
 
           <div id="sign_in_popup" class="sign_in_overlay">
             <div className="signIn_popup">
-              <a className="Gclose" href="#">&times;</a>
+              <a className="Gclose" href="/">&times;</a>
               <Login />
             </div>
           </div>
 
           <div id="sign_up_popup" class="sign_in_overlay">
             <div className="signIn_popup">
-              <a className="Gclose" href="#">&times;</a>
+              <a className="Gclose" href="/">&times;</a>
               <Signup />
             </div>
           </div>
@@ -58,7 +58,12 @@ class GeneralHeader extends Component {
           <div className="Gheader_content">
             <div className="Gheader_container">
               <h2>Share Your Data</h2>
-              <h3>To Earn Money Every Month</h3>
+              <h3>Earn Money Every Month</h3>
+            </div>
+            <div className="button_container">
+              <a className="startButton" href="#sign_up_popup">
+              <button className="start">Get started <a>></a> </button>
+              </a>
             </div>
           </div>
         </header>
