@@ -76,7 +76,6 @@ class Signup extends Component {
         </div>
         <div className="signup_content">
                     <ControlLabel> Register for an account </ControlLabel>
-                    <hr/>
                     <FormGroup controlId="uname" bsSize="large">
                       <ControlLabel> Username </ControlLabel>
                       <FormControl
@@ -88,7 +87,7 @@ class Signup extends Component {
                       />
                     </FormGroup>
                     <FormGroup controlId="password" bsSize="large">
-                      <ControlLabel> Password </ControlLabel>
+                      <ControlLabel placeholder="Password"> Password </ControlLabel>
                       <FormControl
                         autoFocus
                         type="password"

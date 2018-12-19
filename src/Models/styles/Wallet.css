@@ -1,7 +1,10 @@
 .background-container {
-  background-image: url("../images/mountains.png");
+  /* background-image: url("../images/mountains.png"); */
+  /* background-image: url("../images/wallet.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background: -webkit-gradient(linear, left bottom, left top, from( #8c1aff), to(#004080));
+  background: linear-gradient(0deg, #8c1aff 0%, #004080 100%);
 }
 
 .transaction-container {
@@ -19,9 +22,9 @@
   min-height: 300px;
   height: 50%;
   background-color: rgba(0, 0, 0, 0.3);
-  border: solid 1px #DDDDDD;
-  border-radius: 4px;
-  box-shadow: 2px 3px 4px grey;
+  /* border: solid 1px #DDDDDD; */
+  border-radius: 20px;
+  /* box-shadow: 2px 3px 4px grey; */
 }
 
 .transaction-history{
@@ -29,9 +32,9 @@
   min-height: 600px;
   height: 50%;
   background-color: rgba(255, 255, 255, 0.7);
-  border: solid 1px #DDDDDD;
-  border-radius: 4px;
-  box-shadow: 2px 3px 4px grey;
+  /* border: solid 1px #DDDDDD; */
+  border-radius: 20px;
+  /* box-shadow: 2px 3px 4px grey; */
 }
 
 .balance-container .balance {
@@ -71,8 +74,7 @@
 
 .current-contracts p {
   margin-bottom: 0px;
-  text-align: left;
-  margin-left: 65px;
+  text-align: center;
 }
 
 .redemption {
@@ -83,7 +85,7 @@
 .redemption button{
   color: #4682b4;
   border: 1px solid powderblue;
-  border-radius: 2px;
+  border-radius: 20px;
 }
 
 .transaction-history .history-label {
@@ -94,10 +96,10 @@
 }
 
 .transaction-history p {
-  text-align: left;
+  text-align: center;
   width: 20%;
   margin: 0 auto;
-  padding-left: 10px;
+  padding-right: 10px;
 }
 
 hr {
@@ -114,9 +116,9 @@ hr {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #DDDDDD;
+  /* border-bottom: 1px solid #DDDDDD; */
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 .transaction:hover{
@@ -125,6 +127,7 @@ hr {
 
 .transaction p{
   margin: 0px;
+  text-align: center;
 }
 
 .Deposit-Amount {

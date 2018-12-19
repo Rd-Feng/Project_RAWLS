@@ -7,11 +7,11 @@
     padding: 0px;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .signup_intro{
     border-radius: 20px 20px 0px 0px;
-    background-image: url('../images/signupBackground.jpg');
+    /* background-image: url('../images/signupBackground.jpg'); */
+    background-image: url('../images/bg6.png');
     text-align: left;
     padding-left: 30px;
     padding-top: 40px;
@@ -19,12 +19,13 @@
     background-repeat: no-repeat;
     background-position: 0px -20px; 
     min-height: 200px;
-    color: black;
+    color: white;
 }
 .signup_content{
     padding-left: 50px;
     padding-right:50px;
     padding-bottom: 10px;
+    margin-top: -20px;
 }
 .form-control {
   width: 80%;

@@ -3,20 +3,18 @@
 }
 .login_intro{
     border-radius: 20px 20px 0px 0px;
-    background-image: url('../images/loginBackground.png');
+    /* background-image: url('../images/loginBackground.png'); */
+    background-image: url('../images/bg1.jpg');
     text-align: left;
-    padding-left: 30px;
-    padding-top: 40px;
+    padding: 40px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 0px -20px;
-    min-height: 240px;
+    min-height: 200px;
     color: white;
 }
 .login_content{
-    padding-left: 50px;
-    padding-right:50px;
-    padding-bottom: 10px;
+   padding: 10px 50px;
 }
 .Login form {
     margin: 0 auto;
