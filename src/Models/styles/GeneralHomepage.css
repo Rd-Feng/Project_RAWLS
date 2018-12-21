@@ -5,4 +5,62 @@
 .smart_contract_text{
     min-height: 50vh;
     padding: 50px;
+    background-color: lightskyblue;
+
 }
+.how_to_start_collapse{
+    padding: 0px 60px 30px;
+    text-align: left;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+  }
+  .how_to_start {
+      padding: 30px;
+  }
+  .how_to_start h2{
+    padding: 30px;
+    text-align: center;
+    margin: 0px;
+    font-weight: 600;
+  }
+  div.how_to_start_container ul{
+    list-style: none;
+    text-align: left;
+    padding: 0px;
+  }
+  ul.how_to_start_title{
+    height: 200px;
+    width: 200px;
+  } 
+  ul.how_to_start_title li{
+    color:#737373;
+  }
+  ul.how_to_start_title li a{
+    color: #0073e6;
+  }
+
+  .step1_pic, .step2_pic, .step3_pic, .step4_pic{
+    height: 150px;
+    width: 150px;
+    /* border: 4px red solid; */
+    background-repeat: no-repeat;
+  }
+  .step1_pic{
+    background-size: 149%;
+    background-image: url('../images/step1.png');
+    background-position: -39px -25px;
+  }
+  .step2_pic{
+    background-size: 100%;
+    background-image: url('../images/step2.png');
+  }
+  .step3_pic{
+    background-size: 108%;
+    background-image: url('../images/step3.png');
+    background-position: -5px -8px;
+  }
+  .step4_pic{
+    background-size: 100%;
+    background-image: url('../images/step4.png');
+  }
