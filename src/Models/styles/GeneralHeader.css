@@ -124,18 +124,26 @@ header.Gheader_main .Gheader_content {
   background-color: #944dff;
   border-radius: 20px;
   color: white;
-  padding: 12px 20px;
+  padding: 10px 0px;
   text-align: center;
   display: inline-block;
   font-size: 16px;
   border: none;
+  width: 100px;
+  -webkit-transition: width 0.05s; /* For Safari 3.1 to 6.0 */
+  transition: width 0.5s;
 }
 .button_container{
   text-align:  center;
 }
-.button_container a{
-  color: red;
-  text-decoration: none;
+.start:hover{
+  width: 120px;
+}
+.start a{
+  display: none;
+}
+.start:hover a{
+  display: inline;
 }
 .start:focus,.start:active {
   outline: none !important;
