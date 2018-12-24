@@ -30,7 +30,7 @@ This is wonderful due to today's privacy concerns.
 Tech used was Solidity, React, the web trinity, and Firebase.
 Although primitive, our MVP works and this was a great learning experience for all.
 
-#### Future Implementations and Bugs
+### Future Implementations and Bugs
 
 Disclaimer: We are full time students and this was a side project. We completely changed the look of the site and did a full overhaul in the last month before demoing.
 
@@ -42,4 +42,8 @@ Disclaimer: We are full time students and this was a side project. We completely
 * Better visuals and custom artwork for branding.  
 
 
-#### The site used to look like this
+### The site used to look like this
+![Photo of the first home page](https://github.com/Rd-Feng/Project_RAWLS/blob/master/public/alphahomepage2.png)
+![Photo of the first wallet page](https://github.com/Rd-Feng/Project_RAWLS/blob/master/public/alphawallet.png)
+![Photo of the first about page](https://github.com/Rd-Feng/Project_RAWLS/blob/master/public/alphaabout.png)
+
