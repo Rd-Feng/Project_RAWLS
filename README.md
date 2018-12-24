@@ -43,7 +43,12 @@ Disclaimer: We are full time students and this was a side project. We completely
 
 
 ### The site used to look like this
+#### The original home page
 ![Photo of the first home page](https://github.com/Rd-Feng/Project_RAWLS/blob/master/public/alphahomepage2.png)
+
+#### The original wallet
 ![Photo of the first wallet page](https://github.com/Rd-Feng/Project_RAWLS/blob/master/public/alphawallet.png)
+
+#### The original about page
 ![Photo of the first about page](https://github.com/Rd-Feng/Project_RAWLS/blob/master/public/alphaabout.png)
 
