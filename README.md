@@ -1,6 +1,13 @@
 # Project_RAWLS
 
-#### What the site looks like
+### What the site looks like. Here is a section of the front page.
+![A screen shot of a section of the front page](https://github.com/Rd-Feng/Project_RAWLS/blob/master/public/front.png)
+
+### The wallet page.
+![A screen shot of the wallet page](https://github.com/Rd-Feng/Project_RAWLS/blob/master/public/wallet.png)
+
+###  The meet the team section in the about page.
+![A screen shot of a section of the about page. Meet the Team!!](https://github.com/Rd-Feng/Project_RAWLS/blob/master/public/about.png)
 
 
 ## Installation (must use Chrome)
