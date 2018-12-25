@@ -71,26 +71,21 @@ class GeneralHomepage extends Component {
         </div>
 
         </section>
-
-      
-      <section className="smart_contract_info">
-        <div className="smart_contract_text">
-        <h2>What is smart contract?</h2>
-        <p>Smart contracts help you exchange money, property, shares, or anything of value in a transparent, conflict-free way while avoiding the services of a middleman.</p>
-        </div>
-      </section>
- 
-      <section className="partnership_instruction">
-        <div className="partnership_text">
+      <section className="Partnership">
+        <div className="Partnership_Text">
           <h2>Our Partnerships</h2>
-          <ul className="how_to_start_title">
-              <li><a href="https://www.google.com/">Google Map</a></li>
-              <li><a href="https://www.amazon.com/">Amazon Prime</a></li>
-              <li><a href="https://www.fitbit.com/home">Fitbit</a></li>
+          <ul className="Partnership_Title">
+              <li><a href="https://www.google.com/"target="_blank">Google Map</a></li>
+              <li><a href="https://www.amazon.com/" target="_blank">Amazon Prime</a></li>
+              <li><a href="https://www.fitbit.com/home" target="_blank">Fitbit</a></li>
+              <li><a href="https://www.projectrawls.com/" target="_blank">Project RAWLS</a></li>
             </ul>
         </div>
-        <div className="partnership_pic_container">
-          <img className="partnership_pic" src={require('./images/partnership_logo.png')} />
+      </section>
+      <section className="smart_contract_info">
+        <div className="smart_contract_text">
+        <h2>Why use RAWLS to share your data?</h2>
+        <p>RAWLS uses smart contracts to help you exchange money and data in a transparent, conflict-free way while avoiding the services of a middleman. Each contract uses a method called Blockchain which cannot easily changed after they created.</p>
         </div>
       </section>
     </div >
