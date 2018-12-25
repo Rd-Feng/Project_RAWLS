@@ -65,7 +65,7 @@
 }
 div.container {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -75,7 +75,7 @@ div.container {
 
 ul.nav_item_container {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -97,7 +97,7 @@ ul.nav_item_container li a:hover{
   color: #f2f2f2;
 }
 li.navbar_item{
-  padding-left: 20px; 
+  padding-left: 20px;
 }
 
 header.Gheader_main {
@@ -111,7 +111,7 @@ header.Gheader_main {
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
-  
+
 }
 header.Gheader_main .Gheader_content {
   position: relative;
@@ -148,4 +148,27 @@ header.Gheader_main .Gheader_content {
 .start:focus,.start:active {
   outline: none !important;
   box-shadow: none;
+}
+
+.how_to_start_collapse{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.how_to_start_container{
+  text-align: center;
+  width: 100%;
+}
+
+.how_to_start_title,
+.step1_pic,
+.step3_pic,
+.step4_pic {
+  display: inline-block;
+  width: 100%;
+}
+
+.how_to_start_title p{
+  font-size: 20px;
 }
