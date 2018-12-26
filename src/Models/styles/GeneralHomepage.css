@@ -5,7 +5,7 @@
 .smart_contract_text{
     min-height: 50vh;
     padding: 50px;
-    background-color: lightskyblue;
+    background-color: azure;
 
 }
 .how_to_start_collapse{
@@ -63,4 +63,21 @@
   .step4_pic{
     background-size: 100%;
     background-image: url('../images/step4.png');
+  }
+
+  .Partnership{
+    background-image: url('../images/p1.jpg');
+    background-size: 100%;
+    min-height: 70vh;
+    padding: 50px;
+    text-align: center;
+  }
+  .Partnership_Text h2{
+    color: azure;
+    font-size: 50px;
+  }
+  .Partnership_Text ul.Partnership_Title li a{
+    color: azure;
+    font-size: 30px;
+    padding-right: 30px; 
   }

@@ -583,7 +583,6 @@ class App extends Component {
               <div className="content">
                 <GeneralHomepage contracts={this.state.contracts} />
               </div>
-              <br></br>
               <Footer />
             </div>
           )} />
@@ -594,7 +593,6 @@ class App extends Component {
               <div className="content">
                 <Homepage contracts={this.state.contracts} />
               </div>
-              <br></br>
               <Footer />
             </div>
           )} />
@@ -605,7 +603,6 @@ class App extends Component {
               <div className="content">
                 <Contracts contracts={this.state.contracts} account={this.state.ethAccount} />
               </div>
-              <br></br>
               <Footer />
             </div>
           )} />
@@ -628,7 +625,6 @@ class App extends Component {
               <div className="content">
                 <About contracts={this.state.contracts} />
               </div>
-              <br></br>
               <Footer />
             </div>
           )} />

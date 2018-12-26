@@ -27,8 +27,7 @@ class Header extends Component {
         <header className="header_home">
           <div className="header_content">
             <div className="header_container">
-              <h2>Share Your Data</h2>
-              <h3>To Earn Money Every Month</h3>
+              <h2>Welcome to RAWLS</h2>
             </div>
           </div>
         </header>
@@ -41,8 +40,8 @@ class Header extends Component {
           <header className="header_contract">
             <div className="header_content">
               <div className="header_container">
-                <h2>Share Your Data</h2>
-                <h3>To Earn Money Every Month</h3>
+                <h2>Control Your Data</h2>
+                <h3></h3>
               </div>
             </div>
           </header>
@@ -61,8 +60,8 @@ class Header extends Component {
               <header className="header_about">
                 <div className="header_content">
                   <div className="header_container">
-                    <h2>Share Your Data</h2>
-                    <h3>To Earn Money Every Month</h3>
+                    <h2>We Help You</h2>
+                    <h3>Share Your Data</h3>
                   </div>
                 </div>
               </header>
