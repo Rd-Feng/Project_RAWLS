@@ -62,6 +62,7 @@ class GeneralHeader extends Component {
             </div>
             <div className="button_container">
               <a className="startButton" href="#sign_up_popup">
+              <br></br>
               <button className="start">Get started <a>></a> </button>
               </a>
             </div>
