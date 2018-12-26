@@ -6,8 +6,6 @@ import Homepage from './Models/Homepage'
 import Contracts from './Models/Contracts'
 import Wallet from './Models/Wallet'
 import About from './Models/About'
-import Login from './Models/Login'
-import Signup from './Models/Signup'
 import GeneralHeader from './Models/GeneralHeader'
 import GeneralHomepage from './Models/generalHomepage'
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -589,7 +587,6 @@ class App extends Component {
             </div>
           )} />
 
-          <Route exact={true} path='/Signup' component={Signup} />
           <Route exact={true} path='/homepage' render={() => (
             <div>
               <Header active="home" />
