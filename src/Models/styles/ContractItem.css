@@ -4,11 +4,11 @@
   text-decoration: none;
   color: white;
   display: block;
-  width: 300px;
-  height: 150px;
+  width: 100%;
   padding: 0;
   margin: 0;
   border-radius: 20px;
+  position: relative;
 }
 
 img.company_logo {
@@ -16,20 +16,29 @@ img.company_logo {
   margin: 0px;
   width: 100%;
   height: 100%;
-  max-width: 300px;
-  max-height: 200px;
   border-radius: 20px;
 }
-
-.contract_box:hover {
-  opacity: .7;
-  text-decoration: none;
+.contract_item:hover .logo_overlay{
+  opacity: 1;
 }
 
-.contract_box a.contract_item:hover {
-  color: rgb(236, 234, 234);
+.logo_overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #00ace6;
+  border-radius: 25px;
+  color: white;
 }
-
+.logo_overlay h2{
+  padding-top: 40px; 
+}
 .contract_overlay {
  visibility: hidden;
  position: fixed;
@@ -103,7 +112,6 @@ div.info_contract {
   margin-left: 10px;
   float: left;
   position: relative;
-  display: inline-block;
   color: #5CA2D5;
 }
 .info_dp-content_contract {
@@ -135,10 +143,8 @@ div.info_contract {
 /* toggles */
 .switch {
   position: relative;
-  display: inline-block;
   width: 14%;
   height: 1.07em;
-  align: center;
   float: right;
 }
 .switch input {

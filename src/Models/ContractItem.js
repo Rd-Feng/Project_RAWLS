@@ -16,7 +16,7 @@ class ContractItem extends Component {
 		this.title = this.getContractName()
 		this.perms = this.getPerms()
 		this.payment = this.getPayment()
-		this.totle = this.getTotal();
+		this.total = this.getTotal();
 	}
 	getPerms () {
 		let i, l, r
@@ -106,7 +106,12 @@ class ContractItem extends Component {
 				<div className="contract_container">
 					<div className="contract_box">
 						<a className="contract_item" href={popupRef}>
-							<img className="comany_logo" src={require(`./images/${this.title}.png`)}/></a>
+							<img className="comany_logo" src={require(`./images/${this.title}.png`)}/>
+							<div className="logo_overlay">
+							<h2>{this.title}</h2>
+							<p>Click to see details</p>
+							</div>
+							</a>
 						</div>
 						<div id={popupId} className="contract_overlay">
 							<div className="contract_content">
@@ -115,7 +120,7 @@ class ContractItem extends Component {
 								<div className="text_box">
 									{permissions}
 									<p className="Total"> Total: ${this.payment} </p>
-									<p className="Total"> Potential earning: ${this.totle} </p>
+									<p className="Total"> Potential earning: ${this.total} </p>
 									<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
 										Submit
 									</button>
