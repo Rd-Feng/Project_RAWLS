@@ -32,12 +32,12 @@ img.company_logo {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #00ace6;
+  background-color: #66c2ff;
   border-radius: 25px;
   color: white;
 }
 .logo_overlay h2{
-  padding-top: 40px; 
+  padding-top: 40px;
 }
 .contract_overlay {
  visibility: hidden;

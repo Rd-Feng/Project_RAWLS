@@ -116,11 +116,12 @@ class ContractItem extends Component {
 						<div id={popupId} className="contract_overlay">
 							<div className="contract_content">
 								<a className="contract_close" href="#contract_box">&times;</a>
-								<p>{this.title}</p>
+								<h4>{this.title}</h4>
+								<p>Select the data you want to share by using the toggle switches. Once done, press the submit button or exit to cancel</p>
 								<div className="text_box">
 									{permissions}
-									<p className="Total"> Total: ${this.payment} </p>
-									<p className="Total"> Potential earning: ${this.total} </p>
+									<p className="Total"> Total: ${this.payment}/mo </p>
+									<p className="Total"> Potential earning: ${this.total}/mo </p>
 									<button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
 										Submit
 									</button>
