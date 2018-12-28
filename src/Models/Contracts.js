@@ -20,8 +20,17 @@ class Contracts extends Component {
       });
     }
     return (
-      <div className="contracts">
+      <div className="contract_page">
+        <div className="description">
+          <h1>Current Contracts</h1>
+          <p>Below are your current contracts.
+          You can earn money by sharing your data.
+          Click on each contract item below and
+          change the settings inside of them to earn more.</p>
+        </div>
+        <div className="contracts">
         {contractItems}
+        </div>
       </div>
     )
   }
