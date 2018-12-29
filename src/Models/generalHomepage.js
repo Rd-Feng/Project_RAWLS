@@ -31,7 +31,7 @@ class GeneralHomepage extends Component {
   render() {
     return (
       <div id="Ghompage_container">
-      <section className="how_to_start">
+      <section id="how_to_start">
           <h2>How to start</h2>
           <div className="how_to_start_collapse">
           <div className="how_to_start_container">

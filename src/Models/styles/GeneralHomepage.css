@@ -15,10 +15,10 @@
     display: flex;
     justify-content: space-between;
   }
-  .how_to_start {
+  #how_to_start {
       padding: 30px;
   }
-  .how_to_start h2{
+  #how_to_start h2{
     padding: 30px;
     text-align: center;
     margin: 0px;
