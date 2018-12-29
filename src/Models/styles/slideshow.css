@@ -1,0 +1,13 @@
+img {
+    height: 480px !important;
+}
+div.carousel-caption h3{
+   font-size: 40px;
+}
+div.carousel-caption p{
+    margin-bottom: 150px; 
+    font-size: 30px;
+}
+.carousel{
+    z-index: 0;
+}
