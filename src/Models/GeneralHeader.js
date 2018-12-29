@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './styles/GeneralHeader.css'
 import Login from './Login'
 import Signup from './Signup'
+import Slides from './slideshow'
 
 class GeneralHeader extends Component {
   constructor(props) {
@@ -52,23 +53,14 @@ class GeneralHeader extends Component {
             </div>
           </div>
 
-        </nav>
-
-        <header className="Gheader_main">
-          <div className="Gheader_content">
-            <div className="Gheader_container">
-              <h2>Share Your Data</h2>
-              <h3>Earn Money Every Month</h3>
-            </div>
-            <div className="button_container">
-              <a className="startButton" href="#sign_up_popup">
+        </nav>   
+        <Slides/>
+        <div className="button_container">
+              <a className="startButton" href="#how_to_start">
               <br></br>
               <button className="start">Get started <a>></a> </button>
               </a>
             </div>
-          </div>
-        </header>
-
       </div>
     )
   }
