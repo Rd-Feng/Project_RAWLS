@@ -33,12 +33,12 @@ ul.nav_item_container li a{
   letter-spacing: 0.1rem;
   font-weight: 700;
   text-decoration: none;
-  color: #808c99;
+  color: #cccccc;
   line-height: 40px;
 
 }
 ul.nav_item_container li a:hover{
-  color: #f2f2f2;
+  color: white;
 }
 li.navbar_item{
   padding-left: 20px; 

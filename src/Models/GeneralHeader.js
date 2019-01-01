@@ -1,21 +1,11 @@
 import React, { Component } from 'react'
 import './styles/GeneralHeader.css'
+import './styles/NavBar.css'
 import Login from './Login'
 import Signup from './Signup'
 import Slides from './slideshow'
 
 class GeneralHeader extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: this.props.email,
-      home: this.props.active == "home" ? 'current' : '',
-      contract: this.props.active == "contract" ? 'current' : '',
-      wallet: this.props.active == "wallet" ? 'current' : '',
-      about: this.props.active == "about" ? 'current' : '',
-      logout: this.props.active == "logout" ? 'current' : ''
-    }
-  }
   render() {
     if (window.location.pathname === '/Signup') {
       return null;
@@ -39,14 +29,14 @@ class GeneralHeader extends Component {
             </div>
           </div>
 
-          <div id="sign_in_popup" class="sign_in_overlay">
+          <div id="sign_in_popup" className="sign_in_overlay">
             <div className="signIn_popup">
               <a className="Gclose" href="/">&times;</a>
               <Login />
             </div>
           </div>
 
-          <div id="sign_up_popup" class="sign_in_overlay">
+          <div id="sign_up_popup" className="sign_in_overlay">
             <div className="signIn_popup">
               <a className="Gclose" href="/">&times;</a>
               <Signup />

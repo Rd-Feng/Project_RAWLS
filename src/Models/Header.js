@@ -2,17 +2,6 @@ import React, { Component } from 'react'
 import './styles/Header.css'
 import NavBar from './NavBar'
 class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: this.props.email,
-      home: this.props.active == "home" ? 'current' : '',
-      contract: this.props.active == "contract" ? 'current' : '',
-      wallet: this.props.active == "wallet" ? 'current' : '',
-      about: this.props.active == "about" ? 'current' : '',
-      logout: this.props.active == "logout" ? 'current' : ''
-    }
-  }
   render() {
     if (window.location.pathname === '/') {
       return null;
@@ -41,7 +30,7 @@ class Header extends Component {
             <div className="header_content">
               <div className="header_container">
                 <h2>Control Your Data</h2>
-                <h3></h3>
+                <h3>nnn</h3>
               </div>
             </div>
           </header>

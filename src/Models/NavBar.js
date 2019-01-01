@@ -6,11 +6,11 @@ class NavBar extends Component {
     super(props);
     this.state = {
       email: this.props.email,
-      home: this.props.active == "home" ? 'current' : '',
-      contract: this.props.active == "contract" ? 'current' : '',
-      wallet: this.props.active == "wallet" ? 'current' : '',
-      about: this.props.active == "about" ? 'current' : '',
-      logout: this.props.active == "logout" ? 'current' : ''
+      home: this.props.active === "home" ? 'current' : '',
+      contract: this.props.active === "contract" ? 'current' : '',
+      wallet: this.props.active === "wallet" ? 'current' : '',
+      about: this.props.active === "about" ? 'current' : '',
+      logout: this.props.active === "logout" ? 'current' : ''
     }
   }
   render() {

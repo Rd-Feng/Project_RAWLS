@@ -58,14 +58,14 @@ class Homepage extends Component {
             <ul className="hompage_info_title">
               <h2>Partnerships</h2>
               <li>
-                <a className="hompage_info_text" href="https://www.projectrawls.com/" target="_blank">Project RAWLS Partnerships</a>
+                <a className="hompage_info_text" href="https://www.projectrawls.com/" target="_blank" rel="noopener noreferrer">Project RAWLS Partnerships</a>
               </li>
             </ul>
           </div>
         </section>
         <section className="contract_instruction">
           <div className="contract_instruct_pic_container">
-            <img className="contract_instruct_pic" src={require('./images/socialShareImage.img.png')} />
+            <img className="contract_instruct_pic" alt="social share" src={require('./images/socialShareImage.img.png')} />
           </div>
           <div className="contract_instruct_text">
             <h2>How to change permission?</h2>
@@ -78,7 +78,7 @@ class Homepage extends Component {
             <p>Go to visit our <a href="#hompage_container">Partnerships</a> ' Homepage to explore more useful products. Once you become a customer of our Partnerships, a new contract will automatically add to your contract page. Then, you can start sharing your permission by turning on the toggle button </p>
           </div>
           <div className="partnership_pic_container">
-            <img className="partnership_pic" src={require('./images/partnership_logo.png')} />
+            <img className="partnership_pic" alt="partnership" src={require('./images/partnership_logo.png')} />
           </div>
         </section>
       </div >

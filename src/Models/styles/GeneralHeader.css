@@ -1,3 +1,8 @@
+/* Navbar css style
+  in NavBar.css file
+*/
+
+/* sign in css style */
 .sign_in_overlay {
   z-index: 2;
   position: fixed;
@@ -19,7 +24,6 @@
   opacity: 1;
   z-index: 2;
 }
-
 .signIn_popup{
   border-radius: 20px;
   z-index: 2;
@@ -29,7 +33,6 @@
   width: 35%;
   position: relative;
 }
-
 .signIn_popup h2 {
   margin-top: 0;
   color: #333;
@@ -52,54 +55,7 @@
   max-height: 30%;
   overflow: auto;
 }
-
-
-.navbar_main {
-  height: 70px;
-	width: 100%;
-  z-index: 1;
-  overflow: visible;
-  position: fixed;
-  padding: 1rem 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-div.container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-ul.nav_item_container {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-.company_name{
-  color: #f2f2f2;
-}
-ul.nav_item_container li a{
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: #808c99;
-  line-height: 40px;
-
-}
-ul.nav_item_container li a:hover{
-  color: #f2f2f2;
-}
-li.navbar_item{
-  padding-left: 20px;
-}
-
+/* Banner/header css style */
 header.Gheader_main {
   position: relative;
   overflow: hidden;
@@ -120,6 +76,7 @@ header.Gheader_main .Gheader_content {
   text-align: center;
   color: #f2f2f2;
 }
+/* start button css style */
 .start{
   background-color: #944dff;
   border-radius: 20px;
@@ -130,7 +87,7 @@ header.Gheader_main .Gheader_content {
   font-size: 16px;
   border: none;
   width: 100px;
-  -webkit-transition: width 0.05s; /* For Safari 3.1 to 6.0 */
+  -webkit-transition: width 0.05s; 
   transition: width 0.5s;
   position: relative;
 }
@@ -153,25 +110,3 @@ header.Gheader_main .Gheader_content {
   box-shadow: none;
 }
 
-.how_to_start_collapse{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.how_to_start_container{
-  text-align: center;
-  width: 100%;
-}
-
-.how_to_start_title,
-.step1_pic,
-.step3_pic,
-.step4_pic {
-  display: inline-block;
-  width: 100%;
-}
-
-.how_to_start_title p{
-  font-size: 20px;
-}

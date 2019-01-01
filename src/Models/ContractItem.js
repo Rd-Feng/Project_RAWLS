@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Collapse, Button, CardBody, Card, CardTitle, CardText } from 'reactstrap'
 import './styles/ContractItem.css'
 import Web3 from 'web3'
 
@@ -106,7 +105,7 @@ class ContractItem extends Component {
 				<div className="contract_container">
 					<div className="contract_box">
 						<a className="contract_item" href={popupRef}>
-							<img className="comany_logo" src={require(`./images/${this.title}.png`)}/>
+							<img className="comany_logo"  alt="company logo" src={require(`./images/${this.title}.png`)}/>
 							<div className="logo_overlay">
 							<h2>{this.title}</h2>
 							<p>Click to see details</p>

@@ -1,5 +1,4 @@
-
-
+/* Header section */
 header{
   position: relative;
   overflow: hidden;
@@ -12,6 +11,14 @@ header{
   background-size: cover;
   
 }
+header.header_main .header_content {
+  position: relative;
+}
+.header_container{
+  text-align: center;
+  color: #f2f2f2;
+}
+/* banner background pic */
 .header_home{
   background: -webkit-gradient(linear, left bottom, left top, from(#6666ff), to(#ee0979));
   background: linear-gradient(0deg, #6666ff 0%, #ee0979 100%);
@@ -28,10 +35,4 @@ header{
   background: -webkit-gradient(linear, left bottom, left top, from(#ff3300), to(#0066cc));
   background: linear-gradient(0deg, #ff3300 0%, #0066cc 100%);
 }
-header.header_main .header_content {
-  position: relative;
-}
-.header_container{
-  text-align: center;
-  color: #f2f2f2;
-}
+

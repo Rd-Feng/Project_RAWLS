@@ -2,13 +2,9 @@ import React, { Component } from 'react'
 import './styles/About.css'
 
 class About extends Component {
-
-
   render () {
     return(
     <div className="aboutContainer">
-
-
 
       <section className="aboutLogo">
 
@@ -27,7 +23,7 @@ class About extends Component {
         </div>
 
         <div className="logo">
-        <img src={require('./team/rawls1.png')} className="flexLogo"/>
+        <img src={require('./team/rawls1.png')} alt="rawl logo" className="flexLogo"/>
         </div>
 
       </section>
@@ -56,43 +52,41 @@ class About extends Component {
         <div className="photosContainer">
           <div className="photos">
 
-            <a href="https://twitter.com/3_sumin" target="_blank">
-              <img src={require('./team/sumin.jpg')} className="photo sumin" alt="picture of Sumin"/>
+            <a href="https://twitter.com/3_sumin" target="_blank" rel="noopener noreferrer">
+              <img src={require('./team/sumin.jpg')} className="photo sumin" alt="Sumin"/>
             </a>
             <span className="nameText">Sumin Yu</span>
           </div>
 
           <div className="photos">
-            <a href="https://twitter.com/FengRui94" target="_blank">
-            <img src={require('./team/rui.JPG')} className="photo rui" alt="picture of Rui"/>
+            <a href="https://twitter.com/FengRui94" target="_blank" rel="noopener noreferrer">
+            <img src={require('./team/rui.JPG')} className="photo rui" alt="Rui"/>
             </a>
             <span className="nameText">Rui Feng</span>
           </div>
 
           <div className="photos">
-            <a href="https://twitter.com/BynLeung" target="_blank">
-              <img src={require('./team/bryan.jpeg')} className="photo bryan" alt="picture of Bryan"/>
+            <a href="https://twitter.com/BynLeung" target="_blank" rel="noopener noreferrer">
+              <img src={require('./team/bryan.jpeg')} className="photo bryan" alt="Bryan"/>
             </a>
             <span className="nameText">Bryan Leung</span>
           </div>
 
           <div className="photos">
-            <a href="https://twitter.com/GeonAitch" target="_blank">
-              <img src={require('./team/jian.png')} className="photo jian" alt="picture of Jian"/>
+            <a href="https://twitter.com/GeonAitch" target="_blank" rel="noopener noreferrer">
+              <img src={require('./team/jian.png')} className="photo jian" alt="Jian"/>
             </a>
             <span className="nameText">Jian Huang</span>
           </div>
 
           <div className="photos">
-            <a href="https://twitter.com/Nicolette_Swan" target="_blank">
-              <img src={require('./team/nicole.jpg')} className="photo nicole" alt="picture of Nicole"/>
+            <a href="https://twitter.com/Nicolette_Swan" target="_blank" rel="noopener noreferrer">
+              <img src={require('./team/nicole.jpg')} className="photo nicole" alt="Nicole"/>
             </a>
             <span className="nameText">Nicole Swanson</span>
           </div>
         </div>
       </section>
-
-
 
     </div>
     )

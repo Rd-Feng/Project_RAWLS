@@ -1,4 +1,4 @@
-
+/* Contract pop up section */
 .contract_item {
   text-align: center;
   text-decoration: none;
@@ -60,7 +60,7 @@ img.company_logo {
   opacity: 1;
   z-index: 2;
 }
-
+/* Contract content section */
 .contract_content {
   padding: 20px;
   min-width: 200px;
@@ -72,7 +72,6 @@ img.company_logo {
   z-index: 2;
   overflow: auto;
 }
-
 .contract_close {
   position: absolute;
   top: 0px;
@@ -83,14 +82,8 @@ img.company_logo {
   text-decoration: none;
   color: #333;
 }
-
 .contract_close:hover {
   color: orangered;
-}
-
-/* contract popup items */
-.title{
-  padding: 1%;
 }
 div.info_contract {
   margin-top: 15px;
@@ -106,7 +99,6 @@ div.info_contract {
   font-weight: bold;
   font-size: 50px;
 }
-
 .info_dp_contract{
   margin-top: -13px;
   margin-left: 10px;
@@ -135,11 +127,11 @@ div.info_contract {
 .info_dp_contract:hover .info_dp-content_contract{
   display: block;
 }
-
 .text_box {
   padding-top: 20px;
   margin: 10px;
 }
+
 /* toggles */
 .switch {
   position: relative;
@@ -190,6 +182,8 @@ input:checked+.slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+/* submit button */
 .submitButton {
   font-size: .65em;
   border-radius: 2em;
@@ -203,25 +197,14 @@ input:checked+.slider:before {
 .submitButton:hover {
   background-color: #70D642;
 }
+
 /* remove blue outline when clicked */
 .submitButton:focus,.submitButton:active {
   outline: none !important;
   box-shadow: none;
 }
 
-/* remove blue outline when clicked */
-.closeButton:focus,.closeButton:active {
-  outline: none !important;
-  box-shadow: none;
-} */
-.buttonContainer {
- text-align: center;
- display: flex;
- justify-content: center;
- align-items: center;
- height: 100%;
-}
-
+/* permission change */
 .switch {
  width: 15%;
  min-width: 2.7em;

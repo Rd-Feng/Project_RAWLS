@@ -1,19 +1,7 @@
-
+/* PROJECT RAWLS COMPONENTS */
 .content {
   padding: 0;
 }
-
-/*
-header or
-.header_main or
-.header_content {
-  display: none;
-}
-
-can hide the same repeated banner ??
-*/
-
-
 
 .aboutContainer {
   display: block;
@@ -30,7 +18,6 @@ can hide the same repeated banner ??
   margin-top: 20vh;
   min-height: 70vh;
 }
-
 
 .about {
   display: inline-block;
@@ -57,7 +44,6 @@ can hide the same repeated banner ??
 
 }
 
-
 .logo {
   height: 50%;
   max-width: 25%;
@@ -70,9 +56,7 @@ can hide the same repeated banner ??
   transform: translateX(15%);
 }
 
-
-
-/* ABOVE THIS IS THE WHAT IS PROJECT RAWLS COMPONENTS */
+/* mission section */
 
 .mission {
   background-image: url("../team/background1.png");
@@ -104,9 +88,7 @@ can hide the same repeated banner ??
 
 }
 
-
-/* above this is the mission section */
-
+/* Team section  */
 .meet {
   padding-top: 15vh;
   min-height: 50vh;
@@ -132,9 +114,7 @@ can hide the same repeated banner ??
 }
 
 
-
-
-/* PICTURE TIMEEEEE about us pert */
+/* PICTURE Team section */
 
 .photo {
   height: 19vh;
@@ -169,83 +149,5 @@ can hide the same repeated banner ??
 
 }
 
-/*
-.sumin,
-.rui,
-.bryan,
-.jian,
-.nicole {
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-
-  min-height: 45vh;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-
-  box-shadow: inset 0px 10px 10px 20px RGB(5, 60, 30);
-  font-size: calc(1.4rem);
-  font-style: oblique;
-  font-weight: bold;
-  text-shadow: 1.25px 1px #121212;
 
 
-}
-*/
-
-.sumin {
-
-  /*
-  background-image: url("../team/suminbackground2.png");
-  color: #4F42FF;
-  font-family: Arial;
-  */
-
-}
-
-
-.rui {
-
-  /*
-  background-image: url("../team/ruibackground.png");
-  font-family: "Helvetica Neue";
-    color: #00FFFF;
-    */
-}
-
-
-.bryan {
-  /*
-  box-shadow: 0px 10px 10px 5px RGB(90,90,90);
-  */
-  /*
-  background-image: url("../team/bryanbackground.png");
-    font-family: Helvetica;
-    */
-}
-
-
-.jian {
-
-  /*
-  background-image: url("../team/jianbackground.png");
-  font-family: sans-serif;
-  color: #FFA37B;
-  */
-}
-
-
-.nicole {
-
-  /*
-  background-image: url("../team/nicolebackground.png");
-  font-family: serif;
-  color: #111111;
-  */
-}

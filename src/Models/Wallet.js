@@ -37,7 +37,7 @@ class Wallet extends Component {
               <p> 9009 </p>
               <p> July 20, 2018 </p>
               <p>
-                <img src={require(`./images/Amazon Prime.png`)}/>
+                <img alt="Amazon" src={require(`./images/Amazon Prime.png`)}/>
               </p>
               <p> Deposit </p>
               <p className="Deposit-Amount"> +$4.00 </p>
@@ -46,7 +46,7 @@ class Wallet extends Component {
               <p> 9008 </p>
               <p> July 19, 2018 </p>
               <p>
-                <img src={require(`./images/Fitbit.png`)}/>
+                <img alt="FittBit"src={require(`./images/Fitbit.png`)}/>
               </p>
               <p> Deposit </p>
               <p className="Deposit-Amount"> +$3.00 </p>
@@ -55,7 +55,7 @@ class Wallet extends Component {
               <p> 9007 </p>
               <p> July 15, 2018 </p>
               <p>
-                <img src={require(`./images/Google Map.png`)}/>
+                <img alt="Google Map" src={require(`./images/Google Map.png`)}/>
               </p>
               <p> Deposit </p>
               <p className="Deposit-Amount"> +$1.00 </p>
@@ -71,7 +71,7 @@ class Wallet extends Component {
               <p> 9005 </p>
               <p> June 20, 2018 </p>
               <p>
-                <img src={require(`./images/Amazon Prime.png`)}/>
+                <img alt="Amazon" src={require(`./images/Amazon Prime.png`)}/>
               </p>
               <p> Deposit </p>
               <p className="Deposit-Amount"> +$4.00 </p>
@@ -80,7 +80,7 @@ class Wallet extends Component {
               <p> 9004 </p>
               <p> June 19, 2018 </p>
               <p>
-                <img src={require(`./images/Fitbit.png`)}/>
+                <img alt="Fitbit" src={require(`./images/Fitbit.png`)}/>
               </p>
               <p> Deposit </p>
               <p className="Deposit-Amount"> +$3.00 </p>
@@ -89,7 +89,7 @@ class Wallet extends Component {
               <p> 9003 </p>
               <p> June 15, 2018 </p>
               <p>
-                <img src={require(`./images/Google Map.png`)}/>
+                <img alt="Google Map" src={require(`./images/Google Map.png`)}/>
               </p>
               <p> Deposit </p>
               <p className="Deposit-Amount"> +$1.00 </p>
