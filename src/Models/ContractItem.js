@@ -28,7 +28,7 @@ class ContractItem extends Component {
 			l.push({
 				title: perm[0],
 				desc: perm[1],
-				price: perm[2].toNumber(),
+				price: perm[2].toNumber() / 10,
 				perm: perm[3],
 				idx: perm[4],
 				reference: r,
@@ -41,10 +41,10 @@ class ContractItem extends Component {
 		return this.curContract.contractName()
 	}
 	getPayment () {
-		return this.curContract.payment().toNumber()
+		return this.curContract.payment().toNumber() / 10
 	}
 	getTotal () {
-		return this.curContract.total().toNumber()
+		return this.curContract.total().toNumber() / 10
 	}
 	togglePanel() {
 		let news = !this.state.show_panel
