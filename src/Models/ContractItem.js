@@ -24,11 +24,13 @@ class ContractItem extends Component {
 			r = React.createRef()
 			this.permRefs.push(r)
 			let perm = this.curContract.getPerms(i)
+			console.log(perm);
 			l.push({
 				title: perm[0],
-				price: perm[1].toNumber(),
-				perm: perm[2],
-				idx: perm[3],
+				desc: perm[1],
+				price: perm[2].toNumber(),
+				perm: perm[3],
+				idx: perm[4],
 				reference: r,
 				changed: false
 			})
@@ -83,7 +85,7 @@ class ContractItem extends Component {
 					<div className="info_dp_contract">
 						<div className="info_contract">i</div>
 						<div className="info_dp-content_contract">
-							<p className="infoTextContract">PermPrice info</p>
+							<p className="infoTextContract">{perm.desc}</p>
 						</div>
 					</div>
 					<p className="contractText">{perm.title}
