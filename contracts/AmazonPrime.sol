@@ -3,6 +3,7 @@ pragma solidity ^0.4.11;
 contract AmazonPrime {
     struct Perm {
         string name;
+		string desc;
         int256 price;
         bool state;
     }
@@ -24,15 +25,19 @@ contract AmazonPrime {
         permList[0].name = 'Mailing Addresses';
         permList[0].price = 2;
         permList[0].state = true;
+		permList[0].desc = 'Address you use to receive orders';
         permList[1].name = 'Wish List';
         permList[1].price = 1;
         permList[1].state = true;
+		permList[1].desc = 'Your Amazon wish list';
         permList[2].name = 'Shopping List';
         permList[2].price = 3;
         permList[2].state = true;
+		permList[2].desc = 'Your Amazon shopping list';
         permList[3].name = 'Browse History';
         permList[3].price = 5;
         permList[3].state = true;
+		permList[3].desc = 'The products you have browsed before';
         numPerms = 4;
         updatePayment();
         updateTotal();
@@ -48,12 +53,14 @@ contract AmazonPrime {
 
     function getPerms (uint256 index) public view returns (
             string,
+			string,
             int256,
             bool,
             uint256
         ) {
         return (
             permList[index].name,
+			permList[index].desc,
             permList[index].price,
             permList[index].state,
             index

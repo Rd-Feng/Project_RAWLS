@@ -3,6 +3,7 @@ pragma solidity ^0.4.11;
 contract Fitbit {
     struct Perm {
         string name;
+		string desc;
         int256 price;
         bool state;
     }
@@ -24,15 +25,19 @@ contract Fitbit {
         permList[0].name = 'Gender';
         permList[0].price = 2;
         permList[0].state = true;
+		permList[0].desc = 'The gender you identify yourself as';
         permList[1].name = 'Age';
         permList[1].price = 1;
         permList[1].state = true;
+		permList[1].desc = 'Your age';
         permList[2].name = 'Location';
         permList[2].price = 1;
         permList[2].state = true;
+		permList[2].desc = 'Your realtime location while using Fitbit';
         permList[3].name = 'Sleep Cycle';
         permList[3].price = 1;
         permList[3].state = true;
+		permList[3].desc = 'Your sleep cycle';
         numPerms = 4;
         updatePayment();
         updateTotal();
@@ -48,11 +53,13 @@ contract Fitbit {
 
     function getPerms (uint256 index) public view returns (
             string,
+			string,
             int256,
             bool
         ) {
         return (
             permList[index].name,
+			permList[index].desc,
             permList[index].price,
             permList[index].state
         );
