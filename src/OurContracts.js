@@ -1,5 +1,5 @@
 { //Amazon Prime
-	addr: '0x7d390a6fc5f2945f7f16e52a179eb8340fb868c9',
+	addr: '0x991b772c950c364df506dc0f6d6e97e1de012909',
 	abi: [
 		{
 			"constant": false,
@@ -149,6 +149,10 @@
 			],
 			"name": "getPerms",
 			"outputs": [
+				{
+					"name": "",
+					"type": "string"
+				},
 				{
 					"name": "",
 					"type": "string"
@@ -189,7 +193,7 @@
 	]
 },
 {//Google map
-	addr: '0xda0e1d522bead97e0fcec3ce085237de25a92c08',
+	addr: '0xba0d90ff7094e4977d088ebd144747df7706e6d7',
 	abi: [
 		{
 			"constant": true,
@@ -327,6 +331,10 @@
 				},
 				{
 					"name": "",
+					"type": "string"
+				},
+				{
+					"name": "",
 					"type": "int256"
 				},
 				{
@@ -361,7 +369,7 @@
 	]
 },
 {//Fitbit
-	addr: '0x38f3793d42aaf22b87140717d2780d5cba0d7c7a',
+	addr: '0xd5444e14051c023425573d2c849999dd6668eecb',
 	abi: [
 		{
 			"constant": false,
@@ -511,6 +519,10 @@
 			],
 			"name": "getPerms",
 			"outputs": [
+				{
+					"name": "",
+					"type": "string"
+				},
 				{
 					"name": "",
 					"type": "string"
