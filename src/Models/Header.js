@@ -29,10 +29,14 @@ class Header extends Component {
           <header className="header_contract">
             <div className="header_content">
               <div className="header_container">
-                <h2>Control Your Data</h2>
-                <h3>nnn</h3>
+                <h1>Current Contracts</h1>
               </div>
             </div>
+            <div class="circle1 circle"></div>
+            <div class="circle2 circle"></div>
+            <div class="circle3 circle"></div>
+            <div class="circle4 circle"></div>
+            <div class="circle5 circle"></div>
           </header>
         </div>
       )}
@@ -49,10 +53,16 @@ class Header extends Component {
               <header className="header_about">
                 <div className="header_content">
                   <div className="header_container">
-                    <h2>We Help You</h2>
-                    <h3>Share Your Data</h3>
+                    <h1>ABOUT US</h1>
                   </div>
                 </div>
+                <div class="triangle1 triangle"></div>
+                <div class="triangle2 triangle"></div>
+                <div class="triangle3 triangle"></div>
+                <div class="triangle4 triangle"></div>
+                <div class="triangle5 triangle"></div>
+                <div class="triangle6 triangle"></div>
+                <div class="triangle7 triangle"></div>
               </header>
             </div>
           )}
