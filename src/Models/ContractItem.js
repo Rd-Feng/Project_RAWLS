@@ -110,7 +110,7 @@ class ContractItem extends Component {
 							<img className="comany_logo"  alt="company logo" src={require(`./images/${this.title}.png`)}/>
 							<div className="logo_overlay">
 							<h2>{this.title}</h2>
-							<p>Click to see details</p>
+							<b>${this.payment}{'\u00A0'}/{'\u00A0'}${this.total}</b>
 							</div>
 							</a>
 						</div>
