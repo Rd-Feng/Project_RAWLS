@@ -10,7 +10,8 @@
   background-size: cover;
 }
 .header_home{
-  padding-bottom: 7rem;
+  padding-bottom: 3rem;
+  padding-top: calc(3rem + 72px);
 }
 header.header_main .header_content {
   position: relative;
@@ -27,6 +28,14 @@ header.header_main .header_content {
   padding-top: 30px;
   margin-bottom: 0px;
   line-height: 0.8;
+}
+/* border for banner -- home page */
+div.header_content div.home_border{
+  border: 20px solid #6666ff;  
+  border-image-source: linear-gradient(to left, #ee0979 0%, #6666ff 100%);
+  border-image-slice: 20;
+  margin: 0px 450px;
+
 }
 /* circle for contract page */
 .circle{

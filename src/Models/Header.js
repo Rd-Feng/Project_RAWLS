@@ -15,8 +15,10 @@ class Header extends Component {
       <NavBar/>
         <header className="header_home">
           <div className="header_content">
-            <div className="header_container">
-              <h2>Welcome to RAWLS</h2>
+            <div className="home_border header_container">
+              <h2>Welcome</h2>
+              <h2>to</h2>
+              <h2>RAWLS</h2>
             </div>
           </div>
         </header>
