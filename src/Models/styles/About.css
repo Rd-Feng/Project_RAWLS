@@ -32,8 +32,10 @@
 }
 
 .aboutTitle h1 {
-  font-size: calc(2rem + 20px);
-  margin-top: 7%;
+  font-size: calc(1rem + 20px);
+  font-weight: bold;
+  color: #668cff;
+  margin-top: -20px;
 }
 
 .aboutText {
