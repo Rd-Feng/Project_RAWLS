@@ -12,7 +12,7 @@
 .how_to_start_collapse{
     text-align: left;
     flex-direction: row;
-    display: block;
+    display: flex;
     justify-content: space-around;
   }
   #how_to_start {
@@ -29,6 +29,7 @@
     width: 100%;
     display: block;
     border-bottom: solid gray 2px;
+
   }
 
   .how_to_start_title,
@@ -40,8 +41,10 @@
   padding-bottom: 20px;
 }
   .how_to_start_title p{
-    font-size: 30px;
+    font-size: 16px;
     list-style: none;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
     .how_to_start_title li{
@@ -49,14 +52,14 @@
     }
 
   .how_to_start_title h3{
-    font-size: 40px;
+    font-size: 30px;
   }
   .how_to_start_title{
   }
 
   .step1_pic, .step2_pic, .step3_pic, .step4_pic, .step5_pic{
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 175px;
     background-repeat: no-repeat;
     margin-top: 20px;
     border-radius: 50%;
@@ -65,31 +68,37 @@
     float: left;
     margin-left: 100px;
  }
+
+ .step5_pic{
+   background-size: 100%;
+   background-image: url('../images/step5.png');
+   border-radius: 50%;
+   background-position: 0px 10px;
+ }
   .step1_pic{
-    background-size: 149%;
+    background-size: 152%;
     background-image: url('../images/step1.png');
-    background-position: -52px -29px;
+    background-position: -48px -28px;
   }
+
+  /*
   .step2_pic{
-    background-size: 100%;
+    background-size: 150%;
     background-image: url('../images/step2.png');
   }
+
+  */
   .step3_pic{
-    background-size: 108%;
+    background-size: 110%;
     background-image: url('../images/step3.png');
-    background-position: -5px -8px;
+    background-position: -6px -8px;
 
   }
   .step4_pic{
     background-size: 100%;
     background-image: url('../images/step4.png');
   }
-  .step5_pic{
-    background-size: 100%;
-    background-image: url('../images/step5.png');
-    border-radius: 50%;
-    background-position: 0px 10px;
-  }
+
 
   /* Partnership section css style */
   .Partnership{

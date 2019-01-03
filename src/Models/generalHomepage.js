@@ -6,7 +6,7 @@ class GeneralHomepage extends Component {
     return (
       <div id="Ghompage_container">
       <section id="how_to_start">
-          <h2>How to start</h2>
+          <h2>How To Get Started</h2>
           <div className="how_to_start_collapse">
 
 
@@ -18,8 +18,8 @@ class GeneralHomepage extends Component {
               <br></br>
               <h3>Step 1</h3>
               <p>
-                Install MetaMask (Chrome Extension) and create an account.<br />
-                This will enable you to use our site.
+                Install MetaMask (Chrome Extension) and create an account.
+                MetaMask is required for this site to function.
               </p>
               <p className="cheating"> FUCKEN </p>
 
@@ -36,8 +36,9 @@ class GeneralHomepage extends Component {
             <div className="how_to_start_title">
               <br></br>
               <h3>Step 2</h3>
-              <p>Sign up for a free Rawls account.</p>
-              <p className="cheating"> I'm a </p>
+              <p>Create a free Rawls account and then sign in.
+              </p>
+              <p className="cheating"> Im a </p>
             </div>
           </div>
 
@@ -51,8 +52,8 @@ class GeneralHomepage extends Component {
               <br></br>
               <h3>Step 3</h3>
               <p>
-                Sign in and start earning. It's easy and hassle free!<br />
-                Create smart contracts with companies by simply swiping.
+                Start earning!
+                Accept any contracts you choose to collect monthly earnings.
 
               </p>
               <p className="cheating"> GENIUSSSS </p>
@@ -66,8 +67,8 @@ class GeneralHomepage extends Component {
               <br></br>
               <h3>Step 4</h3>
               <p>
-                Redeem your monthly earnings in your Ethereum wallet.<br />
-                View and accept more contracts for easy passive income!
+                Redeem your monthly earnings.
+                View and accept more contracts to generate more passive income!
               </p>
               <p className="cheating"> SCREW CSS BRYAN IS A GOD </p>
 
@@ -83,7 +84,10 @@ class GeneralHomepage extends Component {
       <section className="partnership_instruction">
         <div className="partnership_text">
           <h2>Our Partnerships</h2>
-          <p> Rawls partners are generous companies that use data to enhance their consumer experience. Rawls enables you to earn money for services that you use on the daily. You already give them your data when you use their products, so why not get some cash for it? Here are some of our partners who want to be fair and transparent.
+          <p> Rawls partners are generous companies that use data to enhance their consumer experience.
+          Rawls enables you to earn money for services that you use on the daily.
+          You already give them your data when you use their products, so why not get some cash for it?
+          Here are some of our partners who want to be fair and transparent.
           </p>
           <ul className="how_to_start_title">
               <li><a href="https://www.google.com/">Google Map</a></li>
