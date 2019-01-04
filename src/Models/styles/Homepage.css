@@ -37,13 +37,25 @@ ul.hompage_info_title li a{
 .contract_instruct_pic{
   width: 342px;
 }
-.partnership_instruction{
+.how_to_earn_more{
   flex-direction: row;
   display: flex;
   justify-content: space-between;
   padding: 50px 50px;
   min-height: 70vh;
+  background-image: url('../images/p1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px -70px;
 }
-.partnership_pic{
-  width: 400px;
+.how_to_earn_more_text{
+  margin: 0px 280px;
+  text-align: center;
+  color: white;
+}
+.how_to_earn_more_text a{
+  color: lightpink;
+}
+.how_to_earn_more_text a:hover{
+  color: palevioletred;
 }
