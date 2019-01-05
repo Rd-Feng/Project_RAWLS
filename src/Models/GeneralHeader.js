@@ -31,26 +31,26 @@ class GeneralHeader extends Component {
 
           <div id="sign_in_popup" className="sign_in_overlay">
             <div className="signIn_popup">
-              <a className="Gclose" href="/">&times;</a>
+              <a className="Gclose" href="/#">&times;</a>
               <Login />
             </div>
           </div>
 
           <div id="sign_up_popup" className="sign_in_overlay">
             <div className="signIn_popup">
-              <a className="Gclose" href="/">&times;</a>
+              <a className="Gclose" href="/#">&times;</a>
               <Signup />
             </div>
           </div>
 
-        </nav>   
-        <Slides/>
+        </nav>
+        <Slides />
         <div className="button_container">
-              <a className="startButton" href="#how_to_start">
-              <br></br>
-              <button className="start">Get started <a>></a> </button>
-              </a>
-            </div>
+          <a className="startButton" href="#how_to_start">
+            <br></br>
+            <button className="start">Get started <a>></a> </button>
+          </a>
+        </div>
       </div>
     )
   }

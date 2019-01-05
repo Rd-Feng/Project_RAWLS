@@ -27,13 +27,14 @@
 
 .aboutTitle {
   display: block;
-  font-family: "Courier New";
+  /* font-family: "Courier New"; */
 
 }
 
 .aboutTitle h1 {
-  font-size: calc(2rem + 20px);
-  margin-top: 7%;
+  font-size: calc(1rem + 20px);
+  color: #668cff;
+  margin-top: -20px;
 }
 
 .aboutText {
@@ -85,12 +86,12 @@
 .mission li {
   padding: 10px;
   font-size: calc(1.5rem);
-
 }
 
 /* Team section  */
 .meet {
   padding-top: 15vh;
+  padding-bottom: 15vh;
   min-height: 50vh;
   justify-content: center;
   align-items: center;
@@ -109,7 +110,7 @@
   width: 50%;
   padding-top: 2%;
   margin: 0 auto;
-  padding-bottom: 9%;
+  padding-bottom: 4%;
   font-family: Georgia;
 }
 
@@ -148,6 +149,12 @@
   vertical-align: middle;
 
 }
-
-
+/* twitter icon */
+.twitter{
+  height: 10vh;
+  max-height: 5vh;
+  display: inline-flex;
+  padding-right: 5px; 
+  margin-bottom: 10px; 
+}
 
