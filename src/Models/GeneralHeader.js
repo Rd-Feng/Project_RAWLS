@@ -32,7 +32,7 @@ class GeneralHeader extends Component {
           <div id="sign_in_popup" className="sign_in_overlay">
             <div className="signIn_popup">
               <a className="Gclose" href="/#">&times;</a>
-              <Login />
+              <Login contracts={this.props.contracts}/>
             </div>
           </div>
 

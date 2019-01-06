@@ -22,7 +22,6 @@ class Contracts extends Component {
     return (
       <div className="contract_page">
         <div className="description">
-          
           <p>Below are your current contracts.
           You can earn money by sharing your data.
           Click on each contract item below and

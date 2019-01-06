@@ -19,6 +19,7 @@ class App extends Component {
 			ethAccount: '0xce8458cb49f4fa890bd22f936eafcca66d81ac2e',
 			contracts: [
 				{ //Amazon Prime
+					company: "Amazon",
 					addr: '0x991b772c950c364df506dc0f6d6e97e1de012909',
 					abi: [
 						{
@@ -213,6 +214,7 @@ class App extends Component {
 					]
 				},
 				{//Google map
+					company: "Google",
 					addr: '0xba0d90ff7094e4977d088ebd144747df7706e6d7',
 					abi: [
 						{
@@ -389,6 +391,7 @@ class App extends Component {
 					]
 				},
 				{//Fitbit
+					company: "Fitbit",
 					addr: '0xd5444e14051c023425573d2c849999dd6668eecb',
 					abi: [
 						{
@@ -591,7 +594,7 @@ class App extends Component {
 				<div className="main">
 					<Route exact={true} path='/' render={() => (
 						<div>
-							<GeneralHeader active="/" />
+							<GeneralHeader active="/" contracts={this.state.contracts} />
 							<div className="content">
 								<GeneralHomepage contracts={this.state.contracts} />
 							</div>

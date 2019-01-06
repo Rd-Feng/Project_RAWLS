@@ -42,6 +42,7 @@ class Login extends Component {
 						err_msg: "logging in"
 					}, () => {
 						this.handleSubmit();
+						this.updateLocalStorage();
 					})
 				}
 				else {
@@ -51,6 +52,7 @@ class Login extends Component {
 						err_msg: ""
 					}, () => {
 						this.handleSubmit();
+						this.updateLocalStorage();
 					});
 				}
 			}
@@ -62,6 +64,12 @@ class Login extends Component {
 
 	componentWillUnmount() {
 		document.removeEventListener('keydown', this.handleKeyPress);
+	}
+
+	updateLocalStorage() {
+		localStorage.clear();
+		localStorage.setItem("email", this.state.email);
+		localStorage.setItem("addr", this.props.address);
 	}
 
 	handleKeyPress(event) {
@@ -77,8 +85,16 @@ class Login extends Component {
 	handleSubmit() {
 		if (this.state.correctuname == '')
 			this.setState({err_msg: 'username not found'});
-		else if (this.state.password == this.state.correctpasswd)
+		else if (this.state.password == this.state.correctpasswd) {
+			var ref = fire.database().ref('Users')
+			var userRef = ref.child(this.state.email);
+			this.props.contracts.map(contract => {
+        userRef.update({
+					[contract.company] : contract.addr
+				});
+			})
 			this.props.history.push('/homepage');
+		}
 		else
 			this.setState({err_msg: 'incorrect password'})
 	}
