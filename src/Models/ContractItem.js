@@ -44,7 +44,7 @@ class ContractItem extends Component {
 		return this.curContract.payment().toNumber() / 10
 	}
 	getTotal () {
-		return this.curContract.total().toNumber() / 10
+		return this.curContract.total().toNumber() /10
 	}
 	togglePanel() {
 		let news = !this.state.show_panel
@@ -72,7 +72,7 @@ class ContractItem extends Component {
 				}
 			}
 		});
-		if (changed) alert('Your changes will take effect after around 1 min');
+		if (changed) alert('Your changes will take effect in ~1 min');
 	}
 
 	render() {
@@ -119,7 +119,8 @@ class ContractItem extends Component {
 							<div className="contract_content">
 								<a className="contract_close" href="#contract_box">&times;</a>
 								<h4>{this.title}</h4>
-								<p>Select the data you want to share by using the toggle switches. Once done, press the submit button or exit to cancel</p>
+								<p>Select the data you want to share by using the toggle switches.
+								Once done, press the submit button or the "X" to cancel</p>
 								<div className="text_box">
 									{permissions}
 									<p className="Total"> Total: ${this.payment}/mo </p>

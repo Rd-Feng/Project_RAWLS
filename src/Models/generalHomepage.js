@@ -26,7 +26,7 @@ class GeneralHomepage extends Component {
               <div className="how_to_start_title">
                 <br></br>
                 <h3>Step 2</h3>
-                <p>Create a free Rawls account and then sign in.
+                <p>Sign up for a free Rawls account and sign in to start earning.
               </p>
               </div>
             </div>
@@ -37,8 +37,10 @@ class GeneralHomepage extends Component {
                 <br></br>
                 <h3>Step 3</h3>
                 <p>
-                  Start earning!
+
                   Accept any contracts you choose to collect monthly earnings.
+
+
 
               </p>
               </div>
@@ -70,6 +72,7 @@ class GeneralHomepage extends Component {
             Rawls enables you to earn money for services that you use on the daily.
             You already give them your data when you use their products, so why not get some cash for it?
             Here are some of our partners who want to be fair and transparent.
+            
           </p>
             <ul className="how_to_start_title">
               <li><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Google Map</a></li>

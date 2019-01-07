@@ -44,10 +44,9 @@ class About extends Component {
 
         <section className="meet">
           <h1 className="meetTitle">MEET THE TEAM</h1>
-          <p>A team of 5 Holberton students created this as a side project
-          and they are seeking more challenges in the future.
-          The Twitter icon also link to their Twitter accounts.
-        Follow or DM any of us!</p>
+          <p>A team of 5 Holberton students created this to tackle new concepts.
+          <br/>They are seeking more challenges in the future to learn about tech.
+          <br/>Follow or DM any of us!</p>
 
           <div className="photosContainer">
             <div className="photos">
