@@ -9,7 +9,7 @@ class Wallet extends Component {
             <br></br>
             <div className="balance">
               <p> Account Balance </p>
-              <p className="balance-amount"> $ <b>3</b>.20 </p>
+              <p className="balance-amount"> $ <b>2</b>.20 </p>
               <p className="redeemed"> Amount redeemed: $1.00 </p>
             </div>
             <br></br>
@@ -40,7 +40,7 @@ class Wallet extends Component {
                 <img alt="Amazon" src={require(`./images/Amazon Prime.png`)}/>
               </p>
               <p> Deposit </p>
-              <p className="Deposit-Amount"> +$0.10 </p>
+              <p className="Deposit-Amount"> +$1.00 </p>
             </div>
             <div className="transaction">
               <p> 9008 </p>
@@ -49,7 +49,7 @@ class Wallet extends Component {
                 <img alt="FittBit"src={require(`./images/Fitbit.png`)}/>
               </p>
               <p> Deposit </p>
-              <p className="Deposit-Amount"> +$0.05 </p>
+              <p className="Deposit-Amount"> +$0.50 </p>
             </div>
             <div className="transaction">
               <p> 9007 </p>
@@ -58,7 +58,7 @@ class Wallet extends Component {
                 <img alt="Google Map" src={require(`./images/Google Map.png`)}/>
               </p>
               <p> Deposit </p>
-              <p className="Deposit-Amount"> +$0.05 </p>
+              <p className="Deposit-Amount"> +$0.10 </p>
             </div>
             <div className="transaction">
               <p> 9006 </p>
@@ -74,7 +74,7 @@ class Wallet extends Component {
                 <img alt="Amazon" src={require(`./images/Amazon Prime.png`)}/>
               </p>
               <p> Deposit </p>
-              <p className="Deposit-Amount"> +$0.10 </p>
+              <p className="Deposit-Amount"> +$1.00 </p>
             </div>
             <div className="transaction">
               <p> 9004 </p>
@@ -83,7 +83,7 @@ class Wallet extends Component {
                 <img alt="Fitbit" src={require(`./images/Fitbit.png`)}/>
               </p>
               <p> Deposit </p>
-              <p className="Deposit-Amount"> +$0.05 </p>
+              <p className="Deposit-Amount"> +$0.50 </p>
             </div>
             <div className="transaction">
               <p> 9003 </p>
@@ -92,7 +92,7 @@ class Wallet extends Component {
                 <img alt="Google Map" src={require(`./images/Google Map.png`)}/>
               </p>
               <p> Deposit </p>
-              <p className="Deposit-Amount"> +$0.05 </p>
+              <p className="Deposit-Amount"> +$0.10 </p>
             </div>
           </div>
         </div>
