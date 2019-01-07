@@ -11,6 +11,7 @@ import fire from './fire'
 import "./styles/Login.css";
 
 const UsernameContext = React.createContext();
+const bcrypt = require('bcryptjs')
 
 class Login extends Component {
 	constructor(props) {
@@ -82,10 +83,11 @@ class Login extends Component {
 			[event.target.id]: event.target.value,
 		});
 	}
+
 	handleSubmit() {
 		if (this.state.correctuname == '')
 			this.setState({err_msg: 'username not found'});
-		else if (this.state.password == this.state.correctpasswd) {
+		else if (bcrypt.compareSync(this.state.password, this.state.correctpasswd)){
 			var ref = fire.database().ref('Users')
 			var userRef = ref.child(this.state.email);
 			this.props.contracts.map(contract => {

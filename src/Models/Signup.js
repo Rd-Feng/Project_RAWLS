@@ -10,6 +10,9 @@ import {
 import fire from './fire'
 import "./styles/Signup.css";
 
+const bcrypt = require('bcryptjs')
+var salt = bcrypt.genSaltSync(10);
+
 class Signup extends Component {
     constructor(props) {
         super(props);
@@ -55,15 +58,24 @@ class Signup extends Component {
           }
           else {
             var userRef = ref.child(this.inputUname.value);
+            this.hashPassword()
             userRef.set({
                 Username: this.inputUname.value,
-                Password: this.inputPassword.value
+                Password: this.state.password
             });
             alert('Your account has been successfully created. Please login');
             this.props.history.push('/')
           }
         }
       );
+    }
+
+    hashPassword() {
+        var hash = bcrypt.hashSync(this.state.password, salt);
+        this.setState({
+          password: hash,
+          cpassword: hash
+        })
     }
 
     render() {
