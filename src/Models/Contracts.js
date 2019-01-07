@@ -22,10 +22,10 @@ class Contracts extends Component {
     return (
       <div className="contract_page">
         <div className="description">
-          <p>Below are your current contracts.
-          You can earn money by sharing your data.
-          Click on each contract item below and
-          change the settings inside of them to earn more.</p>
+          <p>Here are your current contracts.
+
+          <br/>Clicking on a company below and opens your contract.
+          <br/>Change the settings to control how your data is used.</p>
         </div>
         <div className="contracts">
         {contractItems}
