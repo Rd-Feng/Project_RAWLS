@@ -68,9 +68,10 @@ contract GoogleMap {
         );
     }
 
-    function changeState (uint256 index, bool state) public payable {
-        if (msg.sender == company) revert();
-        permList[index].state = state;
+    function changeState (uint256[] ids, uint256 count) public payable {
+        require(msg.sender == user);
+        for (uint256 i = 0; i < count; i++)
+            permList[ids[i]].state = !permList[ids[i]].state;
         updatePayment();
     }
 
