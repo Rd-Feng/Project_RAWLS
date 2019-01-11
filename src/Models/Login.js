@@ -86,19 +86,19 @@ class Login extends Component {
 
 	handleSubmit() {
 		if (this.state.correctuname == '')
-			this.setState({err_msg: 'username not found'});
-		else if (bcrypt.compareSync(this.state.password, this.state.correctpasswd)){
+			this.setState({ err_msg: 'username not found' });
+		else if (bcrypt.compareSync(this.state.password, this.state.correctpasswd)) {
 			var ref = fire.database().ref('Users')
 			var userRef = ref.child(this.state.email);
 			this.props.contracts.map(contract => {
-        userRef.update({
-					[contract.company] : contract.addr
+				userRef.update({
+					[contract.company]: contract.addr
 				});
 			})
 			this.props.history.push('/homepage');
 		}
 		else
-			this.setState({err_msg: 'incorrect password'})
+			this.setState({ err_msg: 'incorrect password' })
 	}
 
 	render() {
