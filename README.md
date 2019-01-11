@@ -16,9 +16,9 @@
   ``$ git clone https://github.com/Rd-Feng/Project_RAWLS``
 * Install dependencies
   1. MetaMask on Google Chrome Browser
-  2. npm package manager
-  3. firebase
-  4. bcryptjs
+  2. npm package manager ``$ npm install``
+  3. firebase ``$ npm -install firebase --save``
+  4. bcryptjs ``$ npm -install bcryptjs --save``
 
 ## About Rawls
 
