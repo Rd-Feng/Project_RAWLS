@@ -5,7 +5,6 @@
   color: white;
   display: block;
   width: 100%;
-  padding: 0;
   margin: 0;
   border-radius: 20px;
   position: relative;
@@ -64,13 +63,12 @@ img.company_logo {
 .contract_content {
   padding: 20px;
   min-width: 200px;
-  height: 60%;
+  height: 75%;
   border-radius: 20px;
   background-color: #fff;
   width: 35%;
-  position: relative;
   z-index: 2;
-  overflow: auto;
+  position: relative;
 }
 .contract_close {
   position: absolute;
@@ -130,6 +128,19 @@ div.info_contract {
 .text_box {
   padding-top: 20px;
   margin: 10px;
+  overflow: auto;
+  position: relative;
+  height: 50%;
+}
+.total_amount{
+  display: inline;
+}
+.total_text{
+  padding-bottom: 10px;
+}
+.total_text p{
+  padding: 0px;
+  margin: 0px;
 }
 
 /* toggles */
@@ -193,6 +204,7 @@ input:checked+.slider:before {
   cursor: pointer;
   background-color: #81E870;
   margin: 3%;
+  float: right;
 }
 .submitButton:hover {
   background-color: #70D642;

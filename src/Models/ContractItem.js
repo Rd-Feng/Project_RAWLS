@@ -124,12 +124,17 @@ class ContractItem extends Component {
                                 Once done, press the submit button or the "X" to cancel</p>
                                 <div className="text_box">
                                     {permissions}
-                                    <p className="Total"> Total: ${this.payment}/mo </p>
-                                    <p className="Total"> Potential earning: ${this.total}/mo </p>
-                                    <button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
-                                        Submit
-                                    </button>
+                                    
                                 </div>
+                                <div className="total_text">
+                                <p className="total_amount"> Total: ${this.payment}/mo </p>
+                                <span><button className="submitButton right" onClick={() => { this.handleSubmit(); }}>
+                                        Submit
+                                    </button></span>
+                                    <p className="Total"> Potential earning: ${this.total}/mo </p>
+                                    
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
