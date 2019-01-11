@@ -12,11 +12,13 @@
 
 ## Installation (must use Chrome)
 
-* Clone this repo  
-* Have or install node.js  
-* cd into the dirextory and npm install  
-* Install and sign up for MetaMask  
-* Sign into MetaMask, turn it on, and npm start. Enjoy the site!  
+* Clone repository 
+  ``$ git clone https://github.com/Rd-Feng/Project_RAWLS``
+* Install dependencies
+  1. MetaMask on Google Chrome Browser
+  2. npm package manager
+  3. firebase
+  4. bcryptjs
 
 ## About Rawls
 
