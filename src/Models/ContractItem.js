@@ -24,7 +24,6 @@ class ContractItem extends Component {
             r = React.createRef()
             this.permRefs.push(r)
             let perm = this.curContract.getPerms(i)
-            console.log(perm);
             l.push({
                 title: perm[0],
                 desc: perm[1],
@@ -124,7 +123,7 @@ class ContractItem extends Component {
                                 Once done, press the submit button or the "X" to cancel</p>
                                 <div className="text_box">
                                     {permissions}
-                                    
+
                                 </div>
                                 <div className="total_text">
                                 <p className="total_amount"> Total: ${this.payment}/mo </p>
@@ -132,9 +131,9 @@ class ContractItem extends Component {
                                         Submit
                                     </button></span>
                                     <p className="Total"> Potential earning: ${this.total}/mo </p>
-                                    
+
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
