@@ -12,12 +12,12 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
 
-	constructor(props) {
-		super(props)
+    constructor(props) {
+        super(props)
 
-		this.state = {
-			ethAccount: '0xce8458cb49f4fa890bd22f936eafcca66d81ac2e',
-			contracts: [
+        this.state = {
+            ethAccount: '0xce8458cb49f4fa890bd22f936eafcca66d81ac2e',
+            contracts: [
                 { //Amazon Prime
                     addr: '0x55b7740dab4ac4e123cc70a7368cae7861e4c2d1',
                     abi: [
@@ -389,52 +389,24 @@ class App extends Component {
                     ]
                 },
                 {//Fitbit
-                    addr: '0x89105344b7d3beaa03f5b7debf15583945f32b45',
+                    addr: '0xa6d59274ae3a35128beacf3cfd815779e87590a4',
                     abi: [
                         {
                             "constant": false,
-                            "inputs": [],
-                            "name": "updatePayment",
-                            "outputs": [],
-                            "payable": false,
-                            "stateMutability": "nonpayable",
-                            "type": "function"
-                        },
-                        {
-                            "constant": true,
-                            "inputs": [],
-                            "name": "getCompany",
-                            "outputs": [
+                            "inputs": [
                                 {
-                                    "name": "",
-                                    "type": "address"
+                                    "name": "ids",
+                                    "type": "uint256[]"
+                                },
+                                {
+                                    "name": "count",
+                                    "type": "uint256"
                                 }
                             ],
-                            "payable": false,
-                            "stateMutability": "view",
-                            "type": "function"
-                        },
-                        {
-                            "constant": false,
-                            "inputs": [],
-                            "name": "pay",
+                            "name": "changeState",
                             "outputs": [],
-                            "payable": false,
-                            "stateMutability": "nonpayable",
-                            "type": "function"
-                        },
-                        {
-                            "constant": true,
-                            "inputs": [],
-                            "name": "total",
-                            "outputs": [
-                                {
-                                    "name": "",
-                                    "type": "int256"
-                                }
-                            ],
-                            "payable": false,
-                            "stateMutability": "view",
+                            "payable": true,
+                            "stateMutability": "payable",
                             "type": "function"
                         },
                         {
@@ -447,32 +419,47 @@ class App extends Component {
                             "type": "function"
                         },
                         {
-                            "constant": true,
+                            "constant": false,
                             "inputs": [],
-                            "name": "payment",
-                            "outputs": [
-                                {
-                                    "name": "",
-                                    "type": "int256"
-                                }
-                            ],
+                            "name": "pay",
+                            "outputs": [],
                             "payable": false,
-                            "stateMutability": "view",
+                            "stateMutability": "nonpayable",
                             "type": "function"
                         },
                         {
-                            "constant": true,
+                            "constant": false,
                             "inputs": [],
-                            "name": "numPerms",
-                            "outputs": [
+                            "name": "updatePayment",
+                            "outputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "function"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [],
+                            "name": "updateTotal",
+                            "outputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "function"
+                        },
+                        {
+                            "inputs": [
                                 {
-                                    "name": "",
-                                    "type": "uint256"
+                                    "name": "u",
+                                    "type": "address"
                                 }
                             ],
                             "payable": false,
-                            "stateMutability": "view",
-                            "type": "function"
+                            "stateMutability": "nonpayable",
+                            "type": "constructor"
+                        },
+                        {
+                            "payable": true,
+                            "stateMutability": "payable",
+                            "type": "fallback"
                         },
                         {
                             "constant": true,
@@ -491,7 +478,7 @@ class App extends Component {
                         {
                             "constant": true,
                             "inputs": [],
-                            "name": "getUser",
+                            "name": "getCompany",
                             "outputs": [
                                 {
                                     "name": "",
@@ -500,33 +487,6 @@ class App extends Component {
                             ],
                             "payable": false,
                             "stateMutability": "view",
-                            "type": "function"
-                        },
-                        {
-                            "constant": false,
-                            "inputs": [],
-                            "name": "updateTotal",
-                            "outputs": [],
-                            "payable": false,
-                            "stateMutability": "nonpayable",
-                            "type": "function"
-                        },
-                        {
-                            "constant": false,
-                            "inputs": [
-                                {
-                                    "name": "ids",
-                                    "type": "uint256[]"
-                                },
-                                {
-                                    "name": "count",
-                                    "type": "uint256"
-                                }
-                            ],
-                            "name": "changeState",
-                            "outputs": [],
-                            "payable": true,
-                            "stateMutability": "payable",
                             "type": "function"
                         },
                         {
@@ -561,88 +521,122 @@ class App extends Component {
                             "type": "function"
                         },
                         {
-                            "inputs": [
+                            "constant": true,
+                            "inputs": [],
+                            "name": "getUser",
+                            "outputs": [
                                 {
-                                    "name": "u",
+                                    "name": "",
                                     "type": "address"
                                 }
                             ],
                             "payable": false,
-                            "stateMutability": "nonpayable",
-                            "type": "constructor"
+                            "stateMutability": "view",
+                            "type": "function"
                         },
                         {
-                            "payable": true,
-                            "stateMutability": "payable",
-                            "type": "fallback"
+                            "constant": true,
+                            "inputs": [],
+                            "name": "numPerms",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [],
+                            "name": "payment",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "int256"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [],
+                            "name": "total",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "int256"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
                         }
                     ]
                 }
-			]
-		}
-	}
-	render() {
-		if (!window.ethereum && !window.web3)
-		return (
-			<div>No Metamask installed. Please add Metamask extension to your browser!</div>
-		)
-		return (
-			<BrowserRouter>
-				<div className="main">
-					<Route exact={true} path='/' render={() => (
-						<div>
-							<GeneralHeader active="/" contracts={this.state.contracts} />
-							<div className="content">
-								<GeneralHomepage contracts={this.state.contracts} />
-							</div>
-							<Footer />
-						</div>
-					)} />
-
-					<Route exact={true} path='/homepage' render={() => (
-						<div>
-							<Header active="home" />
-							<div className="content">
-								<Homepage contracts={this.state.contracts} />
-							</div>
-							<Footer />
-						</div>
-					)} />
-
-					<Route exact={true} path='/contract' render={() => (
-						<div>
-							<Header active="contract" />
-							<div className="content">
-								<Contracts contracts={this.state.contracts} account={this.state.ethAccount} />
-							</div>
-							<Footer />
-						</div>
-					)} />
-
-					<Route exact={true} path='/wallet' render={() => (
-						<div>
-							<Header active="wallet" />
-
-							<div className="content">
-								<Wallet contracts={this.state.contracts} />
-							</div>
-							<Footer />
-						</div>
-					)} />
-
-					<Route exact={true} path='/about' render={() => (
-						<div>
-							<Header active="about" />
-
-							<div className="content">
-								<About contracts={this.state.contracts} />
-							</div>
-							<Footer />
-						</div>
-					)} />
-				</div>
-			</BrowserRouter>
-		);
-	}
+            ]
+        }
+    }
+    render() {
+        if (!window.ethereum && !window.web3)
+        return (
+            <div>No Metamask installed. Please add Metamask extension to your browser!</div>
+        )
+        return (
+            <BrowserRouter>
+                <div className="main">
+                    <Route exact={true} path='/' render={() => (
+                        <div>
+                            <GeneralHeader active="/" contracts={this.state.contracts} />
+                            <div className="content">
+                                <GeneralHomepage contracts={this.state.contracts} />
+                            </div>
+                            <Footer />
+                        </div>
+                    )} />
+                    <Route exact={true} path='/homepage' render={() => (
+                        <div>
+                            <Header active="home" />
+                            <div className="content">
+                                <Homepage contracts={this.state.contracts} />
+                            </div>
+                            <Footer />
+                        </div>
+                    )} />
+                    <Route exact={true} path='/contract' render={() => (
+                        <div>
+                            <Header active="contract" />
+                            <div className="content">
+                                <Contracts contracts={this.state.contracts} account={this.state.ethAccount} />
+                            </div>
+                            <Footer />
+                        </div>
+                    )} />
+                    <Route exact={true} path='/wallet' render={() => (
+                        <div>
+                            <Header active="wallet" />
+                            <div className="content">
+                                <Wallet contracts={this.state.contracts} />
+                            </div>
+                            <Footer />
+                        </div>
+                    )} />
+                    <Route exact={true} path='/about' render={() => (
+                        <div>
+                            <Header active="about" />
+                            <div className="content">
+                                <About contracts={this.state.contracts} />
+                            </div>
+                            <Footer />
+                        </div>
+                    )} />
+                </div>
+            </BrowserRouter>
+        );
+    }
 }
 export default App;
