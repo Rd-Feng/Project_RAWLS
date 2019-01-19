@@ -389,7 +389,7 @@ class App extends Component {
                     ]
                 },
                 {//Fitbit
-                    addr: '0xa6d59274ae3a35128beacf3cfd815779e87590a4',
+                    addr: '0x1575fb953073426f9ea58e51a5d059f808e6d9a7',
                     abi: [
                         {
                             "constant": false,
@@ -514,6 +514,10 @@ class App extends Component {
                                 {
                                     "name": "",
                                     "type": "bool"
+                                },
+                                {
+                                    "name": "",
+                                    "type": "uint256"
                                 }
                             ],
                             "payable": false,
