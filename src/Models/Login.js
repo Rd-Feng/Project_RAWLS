@@ -102,6 +102,13 @@ class Login extends Component {
 	}
 
 	render() {
+		if (!window.ethereum && !window.web3)
+		return (
+			<div className="metamask_msg">
+			<h4>No Metamask installed. Please add Metamask extension to your browser!</h4>
+			<p>Install MetaMask (<a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en" target="_blank" rel="noopener noreferrer">Chrome</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/" target="_blank" rel="noopener noreferrer">Firefox </a>Extension)</p>
+			</div>
+		)
 		return (
 			<div className="Login">
 				<form onSubmit={this.registerUser}>
