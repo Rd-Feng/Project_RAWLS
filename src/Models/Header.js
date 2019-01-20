@@ -34,11 +34,11 @@ class Header extends Component {
                 <h1>Current Contracts</h1>
               </div>
             </div>
-            <div class="circle1 circle"></div>
-            <div class="circle2 circle"></div>
-            <div class="circle3 circle"></div>
-            <div class="circle4 circle"></div>
-            <div class="circle5 circle"></div>
+            <div className="circle1 circle"></div>
+            <div className="circle2 circle"></div>
+            <div className="circle3 circle"></div>
+            <div className="circle4 circle"></div>
+            <div className="circle5 circle"></div>
           </header>
         </div>
       )}
