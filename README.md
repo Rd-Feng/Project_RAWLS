@@ -17,8 +17,6 @@
 * Install dependencies
   1. MetaMask on Google Chrome Browser
   2. npm package manager ``$ npm install``
-  3. firebase ``$ npm -install firebase --save``
-  4. bcryptjs ``$ npm -install bcryptjs --save``
 
 ## About Rawls
 
