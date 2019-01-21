@@ -1,0 +1,112 @@
+/* Navbar css style
+  in NavBar.css file
+*/
+
+/* sign in css style */
+.sign_in_overlay {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.sign_in_overlay:target {
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+.signIn_popup{
+  border-radius: 20px;
+  z-index: 2;
+  margin: 30px auto;
+  padding: 0px;
+  background: #fff;
+  width: 35%;
+  position: relative;
+}
+.signIn_popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.signIn_popup .Gclose {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  /* transition: all 200ms; */
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.signIn_popup .Gclose:hover {
+  color: orangered;
+}
+.signIn_popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+/* Banner/header css style */
+header.Gheader_main {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ee0979), to(#ff6a00));
+  background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+
+}
+header.Gheader_main .Gheader_content {
+  position: relative;
+}
+.Gheader_container{
+  text-align: center;
+  color: #f2f2f2;
+}
+/* start button css style */
+.start{
+  background-color: #944dff;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 0px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border: none;
+  width: 100px;
+  -webkit-transition: width 0.05s; 
+  transition: width 0.5s;
+  position: relative;
+}
+.button_container{
+  text-align:  center;
+  margin-top: -150px;
+  margin-bottom: 80px;
+}
+.start:hover{
+  width: 120px;
+}
+.start a{
+  display: none;
+}
+.start:hover a{
+  display: inline;
+}
+.start:focus,.start:active {
+  outline: none !important;
+  box-shadow: none;
+}
+

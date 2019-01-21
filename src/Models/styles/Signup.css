@@ -1,0 +1,136 @@
+.Signup {
+    padding: 0px;
+}
+
+.Signup form {
+    margin: 0 auto;
+    padding: 0px;
+    background-color: white;
+    border-radius: 20px;
+}
+.signup_intro{
+    border-radius: 20px 20px 0px 0px;
+    /* background-image: url('../images/signupBackground.jpg'); */
+    background-image: url('../images/bg6.png');
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px -20px; 
+    min-height: 200px;
+    color: white;
+}
+.signup_content{
+    padding-left: 50px;
+    padding-right:50px;
+    padding-bottom: 10px;
+    margin-top: -20px;
+}
+.form-control {
+  width: 80%;
+}
+
+.submit{
+    margin: 0 auto;
+}
+.buttons{
+  padding-right: 4px;
+}
+.control-label{
+    margin-bottom:0px;
+}
+.signup_content .form-group{
+    margin-bottom:5px;
+}
+
+
+/* pop up */
+
+/* popup container */
+div.submit .buttons .submit_popup {
+    position: relative;
+    border-radius: .25rem;
+}
+  
+/* popup content */
+.submit_success {
+    position: absolute;
+    z-index: 1; 
+    text-align: center;
+    border-radius: 6px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    margin-top:-200px; 
+    visibility: hidden;
+    width: 590px;
+    height: 250px;
+    color:black;
+    background-color:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.Congratulation{
+    padding: 30px;
+    background-color: white;
+    border-radius: 6px 6px 0px 0px;
+}
+.submit_success p{
+    padding-top: 0px;
+}
+.submit_success .signIn_button{
+  background-color: #944dff;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 0px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border: none;
+  width: 100px;
+  /* -webkit-transition: width 0.05s; 
+  transition: width 0.5s; */
+  position: relative;
+  margin-bottom: 30px;
+}
+.signIn_button:hover{
+    width: 120px;
+  }
+.signIn_button span{
+    display: none;
+}
+.signIn_button:hover span{
+    display: inline;
+  }
+/* submit popup arrow */
+.submit_success::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+  
+  /* show the popup */
+  .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  .hide{
+    visibility: hidden;
+  }
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }

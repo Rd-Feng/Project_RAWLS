@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ContractItem from './ContractItem'
-import './Contracts.css'
+import './styles/Contracts.css'
 
 class Contracts extends Component {
   constructor(props){
@@ -20,8 +20,16 @@ class Contracts extends Component {
       });
     }
     return (
-      <div className="contracts">
+      <div className="contract_page">
+        <div className="description">
+          <p>Here are your current contracts.
+
+          <br/>Clicking on a company below and opens your contract.
+          <br/>Change the settings to control how your data is used.</p>
+        </div>
+        <div className="contracts">
         {contractItems}
+        </div>
       </div>
     )
   }

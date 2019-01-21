@@ -3,6 +3,7 @@ pragma solidity ^0.4.11;
 contract GoogleMap {
     struct Perm {
         string name;
+		string desc;
         int256 price;
         bool state;
     }
@@ -25,15 +26,19 @@ contract GoogleMap {
         permList[0].name = 'Search History';
         permList[0].price = 2;
         permList[0].state = true;
+		permList[0].desc = 'The locations that you have searched';
         permList[1].name = 'Email Address';
         permList[1].price = 1;
         permList[1].state = true;
+		permList[1].desc = 'Your email address associated with your GoogleMap app';
         permList[2].name = 'Work Location';
         permList[2].price = 3;
         permList[2].state = true;
+		permList[2].desc = 'The location you go regularly is identified as your work location';
         permList[3].name = 'Home Location';
         permList[3].price = 5;
         permList[3].state = true;
+		permList[3].desc = 'The location you identified as home in your GoogleMap app';
         numPerms = 4;
         updatePayment();
         updateTotal();
@@ -49,21 +54,24 @@ contract GoogleMap {
 
     function getPerms (uint256 index) public view returns (
             string,
+			string,
             int256,
             bool,
             uint256
         ) {
         return (
             permList[index].name,
+			permList[index].desc,
             permList[index].price,
             permList[index].state,
             index
         );
     }
 
-    function changeState (uint256 index, bool state) public payable {
-        if (msg.sender == company) revert();
-        permList[index].state = state;
+    function changeState (uint256[] ids, uint256 count) public payable {
+        require(msg.sender == user);
+        for (uint256 i = 0; i < count; i++)
+            permList[ids[i]].state = !permList[ids[i]].state;
         updatePayment();
     }
 

@@ -1,0 +1,45 @@
+.navbar_main {
+  height: 70px;
+	width: 100%;
+  z-index: 1;
+  overflow: visible;
+  position: fixed;
+  padding: 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+div.container {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ul.nav_item_container {
+  display: flex;
+  justify-content: space-between; 
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.company_name{
+  color: #f2f2f2;
+}
+ul.nav_item_container li a{
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #cccccc;
+  line-height: 40px;
+
+}
+ul.nav_item_container li a:hover{
+  color: white;
+}
+li.navbar_item{
+  padding-left: 20px; 
+}

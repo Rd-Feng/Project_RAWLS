@@ -1,0 +1,116 @@
+/* homepage container css style */
+.Ghompage_container{
+    padding: 0px;
+    margin: 0px;
+}
+/* How to start section css style */
+
+.how_to_start_collapse{
+    text-align: left;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+  }
+#how_to_start{
+  padding: 0px 40px;
+}
+#how_to_start h2{
+    padding: 80px;
+    text-align: center;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 65px;
+  }
+  .how_to_start_container{
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .how_to_start_title,
+  .step1_pic,
+  .step3_pic,
+  .step4_pic,
+  .step5_pic {
+  display: inline-block;
+  padding-bottom: 20px;
+}
+  .how_to_start_title p{
+    font-size: 16px;
+    list-style: none;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .how_to_start_title li{
+    list-style: none;
+  }
+
+  .how_to_start_title h3{
+    font-size: 30px;
+  }
+  
+  .step1_pic, .step2_pic, .step3_pic, .step4_pic, .step5_pic{
+    height: 175px; 
+    width: 175px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+ .step5_pic{
+   background-size: 100%;
+   background-image: url('../images/step5.png');
+   border-radius: 50%;
+   background-position: 0px 10px;
+ }
+  .step1_pic{
+    background-size: 152%;
+    background-image: url('../images/step1.png');
+    background-position: -48px -28px;
+  }
+
+  .step3_pic{
+    background-size: 110%;
+    background-image: url('../images/step3.png');
+    background-position: -6px -8px;
+
+  }
+  .step4_pic{
+    background-size: 100%;
+    background-image: url('../images/step4.png');
+  }
+
+  /* Partnership section css style */
+  .partnership_instruction{
+    min-height: 40vh;
+    background-color:  #b3e6ff;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px;
+}
+
+  .partnership_text h2{
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 10px;
+    }
+
+  .partnership_text p{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 40px;
+    }
+
+  .partnership_pic{
+    width: 50vw;
+    margin-left: -50px;
+  }
+  .Partnership_Text ul.Partnership_Title li a{
+    color: azure;
+    font-size: 30px;
+    padding-right: 30px;
+    list-style: none;
+  }

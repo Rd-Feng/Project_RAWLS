@@ -1,138 +1,162 @@
 import React, { Component } from "react";
 import { Route, withRouter } from 'react-router-dom';
 import {
-  ButtonToolbar,
-  ButtonGroup,
-  Button, FormGroup,
-  FormControl,
-  ControlLabel
+	ButtonToolbar,
+	ButtonGroup,
+	Button, FormGroup,
+	FormControl,
+	ControlLabel
 } from "react-bootstrap";
 import fire from './fire'
-import "./Login.css";
+import "./styles/Login.css";
 
 const UsernameContext = React.createContext();
+const bcrypt = require('bcryptjs')
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.state = {
-      email: '',
-      password: '',
-      correctuname: '',
-      correctpasswd: ''
-    };
+	constructor(props) {
+		super(props);
+		this.handleKeyPress = this.handleKeyPress.bind(this);
+		this.state = {
+			email: '',
+			password: '',
+			correctuname: '',
+			correctpasswd: '',
+			err_msg: ''
+		}
+	}
 
-  }
+	queryDatabase(uname) {
+		var db = fire.database();
+		var ref = db.ref('Users');
 
-  queryDatabase(uname) {
-    var db = fire.database();
-    var ref = db.ref('Users');
+		if (this.state.email == '' || this.state.password == '') {
+			this.setState({err_msg: "username or password missing"});
+			return;
+		}
+		db.ref('Users').child(uname).once('value').then(
+			data => {
+				if (data.val()) {
+					this.setState({
+						correctpasswd: data.val().Password,
+						correctuname: data.val().Username,
+						err_msg: "logging in"
+					}, () => {
+						this.handleSubmit();
+						this.updateLocalStorage();
+					})
+				}
+				else {
+					this.setState({
+						correctpasswd: '',
+						correctuname: '',
+						err_msg: ""
+					}, () => {
+						this.handleSubmit();
+						this.updateLocalStorage();
+					});
+				}
+			}
+		).catch(err => {console.log(err)});
+	}
+	componentWillMount() {
+		document.addEventListener('keydown', this.handleKeyPress);
+	}
 
-    db.ref('Users').child(uname).once('value').then(
-      data => {
-        this.setState({
-          correctpasswd: data.val().Password,
-          correctuname: this.state.email
-        }, () => {
-          this.handleSubmit();
-        })
-      }
-    ).catch(err => { });
-  }
+	componentWillUnmount() {
+		document.removeEventListener('keydown', this.handleKeyPress);
+	}
 
-  validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
-  }
+	updateLocalStorage() {
+		localStorage.clear();
+		localStorage.setItem("email", this.state.email);
+		localStorage.setItem("addr", this.props.address);
+	}
 
-  componentWillMount() {
-    document.addEventListener('keydown', this.handleKeyPress);
-  }
+	handleKeyPress(event) {
+		if (event.keyCode != 13) return;
+		this.queryDatabase(this.state.email);
+	}
 
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyPress);
-  }
+	handleChange = event => {
+		this.setState({
+			[event.target.id]: event.target.value,
+		});
+	}
 
-  handleKeyPress(event) {
-    if (event.keyCode != 13) return;
-    this.handleSubmit();
-  }
+	handleSubmit() {
+		if (this.state.correctuname == '')
+			this.setState({ err_msg: 'username not found' });
+		else if (bcrypt.compareSync(this.state.password, this.state.correctpasswd)) {
+			var ref = fire.database().ref('Users')
+			var userRef = ref.child(this.state.email);
+			this.props.contracts.map(contract => {
+				userRef.update({
+					[contract.company]: contract.addr
+				});
+			})
+			this.props.history.push('/homepage');
+		}
+		else
+			this.setState({ err_msg: 'incorrect password' })
+	}
 
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  }
-  handleSubmit() {
-    if (this.state.email == this.state.correctuname && this.state.password == this.state.correctpasswd) {
-      this.props.history.push('/homepage')
-    }
-    else {
-      alert("Please enter valid credentials or register for an account");
-    }
-  }
-
-  handleRegister() {
-    this.props.history.push('/Signup')
-  }
-
-
-  render() {
-    return (
-      <div className="Login">
-        <form onSubmit={this.registerUser}>
-        <img className="logo_login" src={require('./logo5.png')} />
-          <FormGroup controlId="email" bsSize="large">
-            <ControlLabel> Username </ControlLabel>
-            <FormControl
-              autoFocus
-              type="text"
-              value={this.state.email}
-              onChange={this.handleChange}
-              inputRef={ref => { this.inputEmail = ref }}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
-            <ControlLabel> Password </ControlLabel>
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              type="password"
-              inputRef={ref => { this.inputPassword = ref }}
-            />
-          </FormGroup>
-          <div>
-            <ButtonToolbar >
-              <div className='buttonDIV'>
-                <ButtonGroup className="touchCSSJian">
-                  <Button
-                    bsStyle="info"
-                    disabled={!this.validateForm()}
-                    onClick={() => {
-                      this.queryDatabase(this.state.email);
-                    }}
-                  >
-                    Login
-                    </Button>
-                </ButtonGroup>
-
-                <ButtonGroup className="touchCSSJian">
-                  <Button
-                    type="submit"
-                    onClick={() => {
-                      this.handleRegister();
-                    }}
-                  >
-                    Register
-                      </Button>
-
-                </ButtonGroup>
-              </div>
-            </ButtonToolbar>
-          </div>
-        </form>
-      </div>
-    );
-  }
-}
-export default Login;
+	render() {
+		if (!window.ethereum && !window.web3)
+		return (
+			<div className="metamask_msg">
+			<h4>No Metamask installed. Please add Metamask extension to your browser!</h4>
+			<p>Install MetaMask (<a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en" target="_blank" rel="noopener noreferrer">Chrome</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/" target="_blank" rel="noopener noreferrer">Firefox </a>Extension)</p>
+			</div>
+		)
+		return (
+			<div className="Login">
+				<form onSubmit={this.registerUser}>
+					<div className="login_intro">
+						<h3>RAWLS</h3>
+						<p>Giving control and transparency on the privacy and monetary value of your data.</p>
+					</div>
+					<div className="login_content">
+						<FormGroup controlId="email" bsSize="large">
+							<ControlLabel> Username </ControlLabel>
+							<FormControl
+								autoFocus
+								type="text"
+								onChange={this.handleChange}
+								inputRef={ref => { this.inputEmail = ref }}
+							/>
+						</FormGroup>
+						<FormGroup controlId="password" bsSize="large">
+							<ControlLabel> Password </ControlLabel>
+							<FormControl
+								type="password"
+								onChange={this.handleChange}
+								inputRef={ref => { this.inputPassword = ref }}
+							/>
+						</FormGroup>
+						<div>
+							<div className="errormsg">
+								<p>{this.state.err_msg}</p>
+							</div>
+							<ButtonToolbar >
+								<div className='buttonDIV'>
+									<ButtonGroup className="touch">
+										<Button
+											bsStyle="info"
+											onClick={() => {
+												this.queryDatabase(this.state.email);
+											}}
+											>
+												Login
+											</Button>
+										</ButtonGroup>
+									</div>
+								</ButtonToolbar>
+							</div>
+						</div>
+					</form>
+				</div>
+			);
+		}
+	}
+	export default withRouter (Login);

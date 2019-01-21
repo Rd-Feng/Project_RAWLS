@@ -1,50 +1,48 @@
 import React, { Component } from 'react'
-import './NavBar.css'
+import './styles/NavBar.css'
 
 class NavBar extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      home: this.props.active == "home" ? 'current' : '',
-      contract: this.props.active == "contract" ? 'current' : '',
-      wallet: this.props.active == "wallet" ? 'current' : '',
-      about: this.props.active == "about" ? 'current' : '',
-      logout: this.props.active == "logout" ? 'current' : ''
+      email: this.props.email,
+      home: this.props.active === "home" ? 'current' : '',
+      contract: this.props.active === "contract" ? 'current' : '',
+      wallet: this.props.active === "wallet" ? 'current' : '',
+      about: this.props.active === "about" ? 'current' : '',
+      logout: this.props.active === "logout" ? 'current' : ''
     }
   }
-  render () {
+  render() {
     return (
-      <div className="sidebar">
-        <img className="logo_pic" src={require('./logo5.png')} />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <a className={this.state.home} href="homepage">
-        <div className="faContainer">
-          <i className="fa fa-fw fa-home faPic"></i>
-          <div className="faText">Home</div>
-        </div>
-      </a>
-      <a className={this.state.contract} href="contract">
-        <div className="faContainer">
-          <i className="fa fa-fw fa-file faPic"></i>
-          <div className="faText">Contracts</div>
-        </div>
-      </a>
-      <a className={this.state.wallet} href="wallet">
-        <div className="faContainer">
-          <i className="fa fa-fw fa-money faPic"></i>
-          <div className="faText">Wallet</div>
-        </div>
-      </a>
-      <a className={this.state.about} href="about">
-        <div className="faContainer">
-          <i className="fa fa-fw fa-question faPic"></i>
-          <div className="faText">About</div>
-        </div>
-      </a>
-
-    </div>
-  )
-}
+        <nav className="navbar_main">
+          <div className="container">
+            <div className="company_name">
+              <h2>RAWLS</h2>
+            </div>
+            <div className="navbar_collapse">
+              <ul className="nav_item_container">
+                <li className="Home">
+                  <a className={this.state.home} href="homepage">Home</a>
+                </li>
+                <li className="navbar_item">
+                  <a className={this.state.contract} href="contract">Contracts</a>
+                </li>
+                <li className="navbar_item">
+                  <a className={this.state.wallet} href="wallet">Wallet</a>
+                </li>
+                <li className="navbar_item">
+                  <a className={this.state.about} href="about">About</a>
+                </li>
+                <li className="navbar_item">
+                  <a className={this.state.logout} href="/">sign out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    )
+  }
 }
 
 export default NavBar;

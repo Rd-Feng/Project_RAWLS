@@ -1,0 +1,48 @@
+/* metamask */
+.metamask_msg {
+    padding: 40px;
+    text-align: center;
+}
+
+/* login */
+.Login {
+    padding: 0px;
+}
+.login_intro{
+    border-radius: 20px 20px 0px 0px;
+    background-image: url('../images/bg1.jpg');
+    text-align: left;
+    padding: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px -20px;
+    min-height: 200px;
+    color: white;
+}
+.login_content{
+   padding: 10px 50px;
+}
+.Login form {
+    margin: 0 auto;
+    padding: 0px;
+    background-color:white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.form-control {
+  width: 80%;
+}
+
+.buttonDIV{
+    margin: 0 auto;
+}
+
+.touch{
+  padding-right: 4px;
+}
+
+.errormsg{
+	color: red;
+	font-size: 80%;
+	text-align: center;
+}

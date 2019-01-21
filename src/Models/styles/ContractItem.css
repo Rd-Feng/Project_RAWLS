@@ -1,0 +1,225 @@
+/* Contract pop up section */
+.contract_item {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  margin: 0;
+  border-radius: 20px;
+  position: relative;
+}
+
+img.company_logo {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.contract_item:hover .logo_overlay{
+  opacity: 1;
+}
+
+.logo_overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #66c2ff;
+  border-radius: 25px;
+  color: white;
+}
+.logo_overlay h2{
+  padding-top: 20px;
+}
+.contract_overlay {
+ visibility: hidden;
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background: rgba(0, 0, 0, 0.7);
+ transition: opacity 500ms;
+ visibility: hidden;
+ opacity: 0;
+}
+
+.contract_overlay:target {
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 2;
+}
+/* Contract content section */
+.contract_content {
+  padding: 20px;
+  min-width: 200px;
+  height: 75%;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 35%;
+  z-index: 2;
+  position: relative;
+}
+.contract_close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.contract_close:hover {
+  color: orangered;
+}
+div.info_contract {
+  margin-top: 15px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: lightslategray;
+  font-size: 10px !important;
+  border: 2px solid lightslategray;
+  margin-right: 16px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 50px;
+}
+.info_dp_contract{
+  margin-top: -13px;
+  margin-left: 10px;
+  float: left;
+  position: relative;
+  color: #5CA2D5;
+}
+.info_dp-content_contract {
+  z-index: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: none;
+  left: 0%;
+  min-width: 220px;
+}
+.infoTextContract{
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 10px 10px;
+}
+.info_dp_contract:hover .info_dp-content_contract{
+  display: block;
+}
+.text_box {
+  padding-top: 20px;
+  margin: 10px;
+  overflow: auto;
+  position: relative;
+  height: 50%;
+}
+.total_amount{
+  display: inline;
+}
+.total_text{
+  padding-bottom: 10px;
+}
+.total_text p{
+  padding: 0px;
+  margin: 0px;
+}
+
+/* toggles */
+.switch {
+  position: relative;
+  width: 14%;
+  height: 1.07em;
+  float: right;
+}
+.switch input {
+  display: none
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-right: 10%
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: .82em;
+  width: .82em;
+  left: .126em;
+  bottom: .126em;
+  background-color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+input:checked+.slider {
+  background-color: #5CA2D5;
+}
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked+.slider:before {
+  -webkit-transform: translateX(1.4em);
+  -ms-transform: translateX(1.82em);
+  transform: translateX(1.4em);
+}
+.slider.round {
+  border-radius: 1.9em;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* submit button */
+.submitButton {
+  font-size: .65em;
+  border-radius: 2em;
+  border: none;
+  color: white;
+  padding: .6em 1em;
+  cursor: pointer;
+  background-color: #81E870;
+  margin: 3%;
+  float: right;
+}
+.submitButton:hover {
+  background-color: #70D642;
+}
+
+/* remove blue outline when clicked */
+.submitButton:focus,.submitButton:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+/* permission change */
+.switch {
+ width: 15%;
+ min-width: 2.7em;
+ max-width: 2.7em;
+ margin: 0;
+}

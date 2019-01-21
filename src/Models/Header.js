@@ -1,33 +1,73 @@
 import React, { Component } from 'react'
-import './Header.css'
-
+import './styles/Header.css'
+import NavBar from './NavBar'
 class Header extends Component {
-  constructor(props){
-    super(props);
-    this.state = {email: this.props.email}
-  }
-  render () {
-    if(window.location.pathname==='/'){
+  render() {
+    if (window.location.pathname === '/') {
       return null;
     }
-    if(window.location.pathname==='/Signup'){
+    if (window.location.pathname === '/Signup') {
       return null;
     }
+    if (window.location.pathname === '/homepage') {
     return (
-
-      <div className="header">
-
-      <div className="dropdown">
-      <div className="dropbtn"> Hi, {this.props.username}</div>
-      <div className="dropdown-content">
-      <a className="signOut left" href="/" >sign out</a>
+      <div className="body">
+      <NavBar/>
+        <header className="header_home">
+          <div className="header_content">
+            <div className="home_border header_container">
+              <h2>Welcome</h2>
+              <h2>to</h2>
+              <h2>RAWLS</h2>
+            </div>
+          </div>
+        </header>
       </div>
-      </div>
-      <img className="profile_pic" src={require('./userLogo.png')} />
-
-      </div>
-
-    )
+    )}
+    if (window.location.pathname === '/contract') {
+      return (
+        <div className="body">
+        <NavBar/>
+          <header className="header_contract">
+            <div className="header_content">
+              <div className="header_container">
+                <h1>Current Contracts</h1>
+              </div>
+            </div>
+            <div className="circle1 circle"></div>
+            <div className="circle2 circle"></div>
+            <div className="circle3 circle"></div>
+            <div className="circle4 circle"></div>
+            <div className="circle5 circle"></div>
+          </header>
+        </div>
+      )}
+      if (window.location.pathname === '/wallet') {
+        return (
+          <div className="body">
+          <NavBar/>
+          </div>
+        )}
+        if (window.location.pathname === '/about') {
+          return (
+            <div className="body">
+            <NavBar/>
+              <header className="header_about">
+                <div className="header_content">
+                  <div className="header_container">
+                    <h1>ABOUT US</h1>
+                  </div>
+                </div>
+                <div class="triangle1 triangle"></div>
+                <div class="triangle2 triangle"></div>
+                <div class="triangle3 triangle"></div>
+                <div class="triangle4 triangle"></div>
+                <div class="triangle5 triangle"></div>
+                <div class="triangle6 triangle"></div>
+                <div class="triangle7 triangle"></div>
+              </header>
+            </div>
+          )}
   }
 }
 

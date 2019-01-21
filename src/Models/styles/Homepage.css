@@ -1,0 +1,61 @@
+.hompage_container{
+  padding: 0px;
+  margin: 0px;
+}
+.hompage_info_collapse{
+  padding: 30px 100px;
+  text-align: left;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+div.hompage_info_container ul{
+  list-style: none;
+  text-align: left;
+  padding: 0px;
+}
+ul.hompage_info_title h2{
+  font-weight: 600;
+}
+ul.hompage_info_title li{
+  color:#737373;
+}
+ul.hompage_info_title li a{
+  color: #0073e6;
+}
+.contract_instruction{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 98%);
+  min-height: 70vh;
+  padding: 50px 50px;
+}
+.contract_instruct_text{
+  padding: 30px 50px;
+}
+.contract_instruct_pic{
+  width: 342px;
+}
+.how_to_earn_more{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 50px;
+  min-height: 70vh;
+  background-image: url('../images/p1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px -70px;
+}
+.how_to_earn_more_text{
+  margin: 0px 280px;
+  text-align: center;
+  color: white;
+}
+.how_to_earn_more_text a{
+  color: lightpink;
+}
+.how_to_earn_more_text a:hover{
+  color: palevioletred;
+}

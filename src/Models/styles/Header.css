@@ -1,0 +1,154 @@
+/* Header section */
+.header_home, .header_contract, .header_about{
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.header_home{
+  padding-bottom: 3rem;
+  padding-top: calc(3rem + 72px);
+}
+header.header_main .header_content {
+  position: relative;
+}
+.header_container{
+  text-align: center;
+  color: #f2f2f2;
+}
+/* Header text */
+.header_container h1{
+  text-align: left;
+  font-size: 80px;
+  padding-left: 50px;
+  padding-top: 30px;
+  margin-bottom: 0px;
+  line-height: 0.8;
+}
+/* border for banner -- home page */
+div.header_content div.home_border{
+  border: 20px solid #6666ff;  
+  border-image-source: linear-gradient(to left, #ee0979 0%, #6666ff 100%);
+  border-image-slice: 20;
+  margin: 0px 450px;
+  width: 20%;
+}
+/* circle for contract page */
+.circle{
+  height: 50px;
+  width: 50px;
+  background-color:white;
+  border-radius: 50%;
+  position: absolute;
+}
+.circle1{
+  bottom: 6rem;
+  left: 45rem;
+  opacity: 0.3;
+}
+.circle2{
+  bottom: 3rem;
+  left: 49rem;
+  opacity: 0.5;
+}
+.circle3{
+  bottom: 1rem;
+  left: 40rem;
+  opacity: 0.4;
+}
+.circle4{
+  bottom: 4rem;
+  left: 58rem;
+  opacity: 0.3;
+}
+.circle5{
+  bottom: 8rem;
+  left: 52rem;
+  opacity: 0.6;
+}
+/* triangle for about page */
+.triangle{
+  z-index: 0;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.triangle1 {
+  bottom: 2rem;
+  left: 49rem;
+  opacity: 0.5;
+  border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid white;
+}
+.triangle2{
+  bottom: 4rem;
+  left: 45rem;
+  opacity: 0.4;
+  border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid white;
+}
+.triangle3{
+  bottom: 4rem;
+  left: 55rem;
+  opacity: 0.6;
+  border-top: 25px solid transparent;
+	border-right: 50px solid white;
+	border-bottom: 25px solid transparent;
+}
+.triangle4{
+  bottom: 6rem;
+  left: 50rem;
+  opacity: 0.3;
+  border-top: 25px solid transparent;
+	border-left: 50px solid white;
+	border-bottom: 25px solid transparent;
+}
+.triangle5{
+  bottom: 3rem;
+  left: 40rem;
+  opacity: 0.4;
+  border-top: 25px solid transparent;
+	border-left: 50px solid white;
+	border-bottom: 25px solid transparent;
+}
+.triangle6{
+  bottom: 8rem;
+  left: 53rem;
+  opacity: 0.7;
+  border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid white;
+}
+.triangle7 {
+  bottom: 7rem;
+  left: 40rem;
+  opacity: 0.5;
+  border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid white;
+}
+/* banner background pic */
+.header_home{
+  background: -webkit-gradient(linear, left bottom, left top, from(#6666ff), to(#ee0979));
+  background: linear-gradient(0deg, #6666ff 0%, #ee0979 100%);
+}
+.header_contract{
+  background: -webkit-gradient(linear, left bottom, left top, from(#66c2ff), to(#4d4dff));
+  background: linear-gradient(0deg, #66c2ff 0%, #4d4dff 100%);
+}
+.header_wallet{
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff99ff), to(#9999ff));
+  background: linear-gradient(0deg, #ff99ff 0%, #9999ff 100%);
+}
+.header_about{
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff3300), to(#0066cc));
+  /* background: linear-gradient(0deg, #ff3300 0%, #0066cc 100%); */
+  background: linear-gradient(0deg, #9999ff 0%,  #ff99ff 100%);
+}
+
